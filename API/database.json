@@ -1,0 +1,29 @@
+
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "",
+            "password": ""
+        }
+    ],
+
+
+    "notebooks": [
+    {
+        "id": 1,
+        "subject": "Physics",
+        "userId": ""
+    },
+    {
+        "id": 2,
+        "subject": "Anatomy",
+        "userId": ""
+    },
+    {
+        "id": 3,
+        "subject": "React",
+        "userId": ""
+    }
+    ]
+}
