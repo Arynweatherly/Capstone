@@ -15,6 +15,7 @@ class NavBar extends Component {
           <ul className="container">
             <li><Link className="nav-link" to="/">Home</Link></li>
             <li><Link className="nav-link" to="/notebooks">Notebooks</Link></li>
+            <li><Link className="nav-link" to="/auth">Login</Link></li>
             <li>Tasks</li>
             <li>Dates</li>
             <li>Friends</li>

@@ -12,5 +12,14 @@ export default {
         method: "DELETE"
     })
     .then(result => result.json())
-  }
+  },
+  post(newNotebook) {
+    return fetch(`${remoteURL}/notebooks`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newNotebook)
+    }).then(data => data.json())
+}
 }

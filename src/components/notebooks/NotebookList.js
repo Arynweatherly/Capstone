@@ -18,20 +18,44 @@ componentDidMount(){
             notebooks: notebooks
         })
     })
-}
+};
+deleteNotebook = id => {
+    NotebookManager.delete(id)
+    .then(() => {
+      NotebookManager.getAll()
+      .then((newNotebooks) => {
+        this.setState({
+            notebooks: newNotebooks
+        })
+      })
+    })
+  }
+
 
 render(){
-    console.log("NOTEBOOK LIST: Render");
-    console.log(this.state.notebooks)
+    console.log("NotebookList: Render");
 
     return(
-        <div className="container-cards">
-            {this.state.notebooks.map(notebook =>
-            <NotebookCard key={notebook.id} notebook={notebook}/>
-            )}
-        </div>
+        <>
+        <section className="section-content">
+            <button type="button"
+                className="btn"
+                onClick={() => {this.props.history.push("/notebooks/new")}}>
+      Add Notebook
+  </button>
+</section>
+      <div className="container-cards">
+        {this.state.notebooks.map(notebook =>
+          <NotebookCard
+            key={notebook.id}
+            notebook={notebook}
+            deleteNotebook={this.deleteNotebook}
+          />
+        )}
+      </div>
+      </>
     )
-}
+  }
 }
 
 export default NotebookList
