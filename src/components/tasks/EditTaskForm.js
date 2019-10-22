@@ -68,7 +68,7 @@ class TaskEditForm extends Component {
                     id="completionDate"
                     value={this.state.date}
                   />
-    
+
                   <label htmlFor="synopsis">Status</label>
                   <input
                     type="checkbox"
@@ -94,5 +94,5 @@ class TaskEditForm extends Component {
         );
       }
     }
-    
-    export default TaskEditForm;
+
+    export default TaskEditForm; 

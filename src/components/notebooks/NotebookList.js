@@ -10,10 +10,10 @@ class NotebookList extends Component {
     }
 
 componentDidMount(){
-    console.log("NOTEBOOK LIST: ComponentDidMount");
+    console.log("NOTEBOOK LIST: ComponentDidMount", sessionStorage.getItem("credentials"));
     //getAll from AnimalManager and hang on to that data; put it in state
-    NotebookManager.getAll()
-    .then((notebooks) => {
+    NotebookManager.getMyNotebooks(sessionStorage.getItem("credentials"))
+    .then(notebooks => {
         this.setState({
             notebooks: notebooks
         })

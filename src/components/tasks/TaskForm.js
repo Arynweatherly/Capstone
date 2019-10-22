@@ -20,13 +20,17 @@ import "./TaskForm.css"
 constructNewTask = evt => {
     evt.preventDefault();
     if (this.state.taskName === "" ) {
+      let sessionUserId = parseInt(sessionStorage.getItem("credentials"));
         window.alert("Please input an animal name and breed");
     } else {
+      let sessionUserId = parseInt(sessionStorage.getItem("credentials"));
         this.setState({ loadingStatus: true });
         const task = {
             taskName: this.state.taskName,
             completed: this.state.completed,
-            date:this.state.date
+            date:this.state.date,
+            userId: sessionUserId
+  
 
         };
 
@@ -75,4 +79,4 @@ constructNewTask = evt => {
   }
 }
 
-export default TaskForm;
+export default TaskForm; 

@@ -54,7 +54,7 @@ getData = e => {
                     this.props.history.push("/");
                 } else {
                     window.alert("You already have an account!")
-                    return this.props.history.push("/auth/login-form")
+                    return this.props.history.push("/login/login-form")
                 }
             })
         }

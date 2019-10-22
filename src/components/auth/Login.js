@@ -7,10 +7,10 @@ class Login extends Component {
     return (
       <React.Fragment>
         <div className="loginHome">
-        <Link to="/auth/login-form">
+        <Link to="/login/login-form">
           <button type="submit" className="signInBtn">Login</button>
         </Link>
-        <Link to="/auth/register-form">
+        <Link to="/login/register-form">
           <button type="button" className="registerBtn">Register</button>
         </Link>
         </div>

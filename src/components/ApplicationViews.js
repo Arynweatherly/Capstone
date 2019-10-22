@@ -15,7 +15,8 @@ import UserForm from './auth/registerForm'
 //only include these once they are built - previous practice exercise
 class ApplicationViews extends Component {
 
-    isAuthenticated = () => localStorage.getItem("credentials") !== null
+    isAuthenticated = () => localStorage.getItem("credentials") !== null;
+    isRemebered = () => localStorage.getItem("credentials") !== null;
 
   render() {
 
@@ -51,22 +52,21 @@ class ApplicationViews extends Component {
             return <TaskEditForm {...props} />
         }} />
 
-        <Route
-          exact path="/auth/login-form"
+<Route
+          exact
+          path="/login"
           render={props => {
-            // if (this.isAuthenticated || this.isRemebered) {
-              return (
-                <LoginForm
-                  rememberMe={this.props.rememberMe}
-                  setUser={this.props.setUser}
-                  {...props}
-                />
-              )
+            if (this.isAuthenticated || this.isRemebered) {
+              return <Login {...props} />;
+            } else {
+              return <Redirect to="/login" />;
+            }
           }}
         />
-
         <Route
-            exact path="/auth/register-form" render={props => {
+          exact
+          path="/login/register-form"
+          render={props => {
             if (this.isAuthenticated || this.isRemebered) {
               return (
                 <UserForm
@@ -76,16 +76,24 @@ class ApplicationViews extends Component {
                 />
               );
             } else {
-              return <Redirect to="/auth" />;
+              return <Redirect to="/login" />;
             }
           }}
         />
-
-        <Route exact path="/auth" render={props => {
+        <Route
+          exact
+          path="/login/login-form"
+          render={props => {
             if (this.isAuthenticated || this.isRemebered) {
-              return <Login {...props} />;
+              return (
+                <LoginForm
+                  rememberMe={this.props.rememberMe}
+                  setUser={this.props.setUser}
+                  {...props}
+                />
+              );
             } else {
-              return <Redirect to="/auth" />;
+              return <Redirect to="/login" />;
             }
           }}
         />
