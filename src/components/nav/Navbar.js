@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom"
+import { Link, withRouter, Redirect } from "react-router-dom";
 import './Navbar.css'
 
 class NavBar extends Component {
+  handleLogout = () => {
+    this.props.clearUser();
+    this.props.history.push("/");
+  };
 
   render(){
 
@@ -19,6 +23,9 @@ class NavBar extends Component {
             <li>Tasks</li>
             <li>Dates</li>
             <li>Friends</li>
+            <li className='nav-item'>
+							<button size='small' onClick={this.handleLogout}>Logout</button>
+						</li>
           </ul>
         </nav>
       </header>
@@ -26,4 +33,70 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default withRouter (NavBar);
+
+// import React, { Component } from "react";
+// import { Link, withRouter, Redirect } from "react-router-dom";
+// import "./Navbar.css";
+
+// class NavBar extends Component {
+//   handleLogout = () => {
+//     this.props.clearUser();
+//     this.props.history.push("/");
+//   };
+
+//   render() {
+//     return (
+//       <header>
+//         <div id="headerimage">
+//           <h1 className="site-title">
+//             Pass A Note
+//             <br />
+//             <small>Share your classnotes!</small>
+//           </h1>
+//         </div>
+
+//         <nav>
+//           <ul className="container">
+//             {this.props.user ? (
+//               <li>
+//                 <Link className="nav-link" to="/">Home</Link>
+//               </li>
+//             ) : (
+//               <Redirect to="/auth" />
+//             )}
+//             {this.props.user ? (
+//               <li>
+//                 <Link className="nav-link" to="/friends">Classmates</Link>
+//               </li>
+//             ) : (
+//               <Redirect to="/auth" />
+//             )}
+//             {this.props.user ? (
+//               <>
+//                <li>
+//                   <Link className="nav-link" to="/notebooks">Notebooks</Link>
+//                 </li>
+//                 <li>
+//                   <Link className="nav-link" to="/dueDates">Due-Dates</Link>
+//                 </li>
+
+//                 <li>
+//                   <Link className="nav-link" to="/tasks">Tasks</Link>
+//                 </li>
+
+//               	<li className='nav-item'>
+// 							<button size='small' onClick={this.handleLogout}>
+// 								Logout
+// 							</button>
+// 						</li>
+//               </>
+//             ) : null}
+//           </ul>
+//         </nav>
+//       </header>
+//     );
+//   }
+// }
+
+// export default withRouter(NavBar);

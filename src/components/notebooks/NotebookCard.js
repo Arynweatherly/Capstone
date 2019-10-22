@@ -13,7 +13,8 @@ class NotebookCard extends Component {
           </picture>
           <h3>class subject: <span className="card-notebookSubject">{this.props.notebook.subject}</span></h3>
         <button type="button" onClick={() => this.props.deleteNotebook(this.props.notebook.id)}>Delete</button>
-        <Link to={`/notebooks/${this.props.notebook.id}`}><button>Details</button></Link>
+        <button type="button" onClick={() => {this.props.history.push(`/notebooks/${this.props.notebook.id}/edit`)}}>Edit</button>
+        <Link to={`/notebooks/${this.props.notebook.id}`}><button>View Notes</button></Link>
         </div>
       </div>
     );

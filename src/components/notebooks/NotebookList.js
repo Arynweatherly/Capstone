@@ -50,6 +50,7 @@ render(){
             key={notebook.id}
             notebook={notebook}
             deleteNotebook={this.deleteNotebook}
+            {...this.props}
           />
         )}
       </div>

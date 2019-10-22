@@ -21,5 +21,14 @@ export default {
         },
         body: JSON.stringify(newNotebook)
     }).then(data => data.json())
+},
+update(editedNotebook) {
+  return fetch(`${remoteURL}/notebooks/${editedNotebook.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(editedNotebook)
+  }).then(data => data.json());
 }
 }
