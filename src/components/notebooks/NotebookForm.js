@@ -19,11 +19,14 @@ class NotebookForm extends Component {
     constructNewNotebook = evt => {
         evt.preventDefault();
         if (this.state.notebookSubject === "" ) {
+             let sessionUserId = parseInt(sessionStorage.getItem("credentials"));
             window.alert("Please input an animal name and breed");
         } else {
+            let sessionUserId = parseInt(sessionStorage.getItem("credentials"));
             this.setState({ loadingStatus: true });
             const notebook = {
                 subject: this.state.notebookSubject,
+                userId: sessionUserId
             };
 
             // Create the animal and redirect user to animal list

@@ -1,50 +1,56 @@
 import React, { Component } from "react";
-import "./news.css";
+import "./Note.css";
 import { Button } from "reactstrap";
 
 class NoteCard extends Component {
   render() {
     console.log("renderingggg");
     return (
-      <div className="newsContainer">
-        <div className="articleContainer"></div>
+      <div className="noteContainer">
+        <div className="secondContainer"></div>
         <p className="sectionTitle">
           <b>
-            <u></u>
+            <u>Title</u>
           </b>
         </p>
         <p className="bigTitle">{this.props.notes.title}</p>
         <p className="sectionTitle">
           <b>
-            <u>Synopsis:</u>
+            <u>topics:</u>
           </b>
         </p>
-        <p>{this.props.article.synopsis}</p>
+        <p className="bigTitle">{this.props.notes.topics}</p>
         <p className="sectionTitle">
           <b>
-            <u>URL:</u>
+            <u>instructor:</u>
           </b>
         </p>
-        <p>{this.props.article.URL}</p>
+        <p className="bigTitle">{this.props.notes.instructor}</p>
         <p className="sectionTitle">
           <b>
-            <u>Published Date:</u>
+            <u>content:</u>
           </b>
         </p>
-        <p>{this.props.article.date}</p>
-        <div className="newsButtons">
+        <p>{this.props.note.content}</p>
+        <p className="sectionTitle">
+          <b>
+            <u>date:</u>
+          </b>
+        </p>
+        <p>{this.props.note.date}</p>
+        <div className="noteButton">
           <Button
-            type="deleteNewsbutton"
+            type="deleteNotebutton"
             color="danger"
-            onClick={() => this.props.deleteArticle(this.props.article.id)}
+            onClick={() => this.props.deleteNote(this.props.note.id)}
           >
             Delete
           </Button>
           <Button
-            type="editNewsbutton"
+            type="editNotes"
             color="warning"
             onClick={() => {
-              this.props.history.push(`/news/${this.props.article.id}/edit`);
+              this.props.history.push(`/notes/${this.props.note.id}/edit`);
             }}
           >
             Edit

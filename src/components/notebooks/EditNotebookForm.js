@@ -5,6 +5,7 @@ import "./NotebookForm.css"
 class NotebookEditForm extends Component {
     //set the initial state
     state = {
+      currentUser: this.props.currentUser,
       notebookSubject: "",
       loadingStatus: true,
     };
@@ -21,6 +22,7 @@ class NotebookEditForm extends Component {
       const editedNotebook = {
         id: this.props.match.params.notebookId,
         subject: this.state.notebookSubject,
+        userId: this.state.currentUser
       };
 
       NotebookManager.update(editedNotebook)

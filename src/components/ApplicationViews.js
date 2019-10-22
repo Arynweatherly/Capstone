@@ -6,9 +6,11 @@ import NotebookCard from './notebooks/NotebookCard'
 import NotebookEditForm from './notebooks/EditNotebookForm'
 import NotebookList from './notebooks/NotebookList'
 import NotebookForm from './notebooks/NotebookForm'
+import TaskForm from './tasks/TaskForm'
+import TaskEditForm from './tasks/EditTaskForm'
+import TaskList from './tasks/TaskList'
 import LoginForm from './auth/loginForm'
 import Login from './auth/login'
-
 import UserForm from './auth/registerForm'
 //only include these once they are built - previous practice exercise
 class ApplicationViews extends Component {
@@ -28,7 +30,6 @@ class ApplicationViews extends Component {
         <Route exact path="/notebooks" render={(props) => {
                 return <NotebookList {...props} />
         }} />
-
         <Route path="/notebooks/:notebookId(\d+)" render={(props) => {
         // Pass the animalId to the AnimalDetailComponent
             return <NotebookDetail notebookId={parseInt(props.match.params.notebookId)} {...props}/>
@@ -38,6 +39,16 @@ class ApplicationViews extends Component {
         }} />
         <Route path="/notebooks/:notebookId(\d+)/edit" render={props => {
             return <NotebookEditForm {...props} />
+        }} />
+
+        <Route exact path="/tasks" render={(props) => {
+                return <TaskList {...props} />
+        }} />
+        <Route path="/tasks/new" render={(props) => {
+            return <TaskForm {...props} />
+        }} />
+        <Route path="/tasks/:taskId(\d+)/edit" render={props => {
+            return <TaskEditForm {...props} />
         }} />
 
         <Route
