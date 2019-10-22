@@ -1,0 +1,75 @@
+{
+  "notes": [],
+  "tasks": [
+    {
+      "taskName": "Study react",
+      "completed": "on",
+      "date": "2019-10-23",
+      "id": 2,
+      "userId": ""
+    },
+    {
+      "id": 5,
+      "taskName": "sleepy sleeps",
+      "completed": "false",
+      "date": "2019-10-25",
+      "userId": ""
+    },
+    {
+      "taskName": "Study react",
+      "completed": "on",
+      "date": "2019-10-17",
+      "id": 8,
+      "userId": ""
+    },
+    {
+      "taskName": "Ask mo all the questions",
+      "completed": "on",
+      "date": "2019-10-16",
+      "id": 9,
+      "userId": ""
+    }
+  ],
+  "dueDates": [],
+  "friends": [],
+
+  "users": [
+    {
+      "id": 1,
+      "username": "heidi@heidi.com",
+      "password": "heidi"
+    },
+    {
+      "username": "sage@sage.com",
+      "password": "sage",
+      "id": 2
+    },
+    {
+      "username": "aryn@aryn.com",
+      "password": "aryn",
+      "id": 3
+    },
+    {
+      "username": "a@a.com",
+      "password": "a",
+      "id": 4
+    }
+  ],
+  "notebooks": [
+    {
+      "subject": "Anatomy",
+      "userId": 4,
+      "id": 3
+    },
+    {
+      "subject": "Anatomy",
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "subject": "physics",
+      "userId": 4,
+      "id": 5
+    }
+  ]
+}
