@@ -4,6 +4,11 @@ export default {
   get(id) {
     return fetch(`${remoteURL}/tasks/${id}`).then(result => result.json())
   },
+
+  getMyTasks(currentUserId) {
+    return fetch(`${remoteURL}/tasks/?userId=${currentUserId}`)
+    .then(result => result.json())
+  },
   getAll() {
     return fetch(`${remoteURL}/tasks`).then(result => result.json())
   },

@@ -33,6 +33,7 @@ export default class LoginForm extends Component {
           this.props.history.push("/");
         }
       } else {
+          console.log("last else")
         // return this.props.history.push("/login/register-form");
       }
     });

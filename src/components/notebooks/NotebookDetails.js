@@ -19,7 +19,7 @@ class NotebookDetail extends Component {
   componentDidMount(){
     console.log("NotebookDetail: ComponentDidMount");
     //get(id) from AnimalManager and hang on to the data; put it into state
-    NotebookManager.get(this.props.notebookId)
+    NotebookManager.getMyNotebooks(this.props.notebookId)
     .then((notebook) => {
       this.setState({
         subject: notebook.subject,

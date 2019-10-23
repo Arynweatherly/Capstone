@@ -55,7 +55,6 @@ export default {
         });
       })
       .then(() => {
-       
         return fetch(
             `http://localhost:5002/messages/?&_sort=date&_order=asc&_expand=user`
             ).then(response => response.json());

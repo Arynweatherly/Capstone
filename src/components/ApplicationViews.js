@@ -9,13 +9,17 @@ import NotebookForm from './notebooks/NotebookForm'
 import TaskForm from './tasks/TaskForm'
 import TaskEditForm from './tasks/EditTaskForm'
 import TaskList from './tasks/TaskList'
+import DeadlineList from './deadlines/DeadlineList'
+import DeadlineForm from './deadlines/DeadlineForm'
+import DeadlineEditForm from './deadlines/EditDeadlineForm'
 import LoginForm from './auth/loginForm'
 import Login from './auth/login'
 import UserForm from './auth/registerForm'
 //only include these once they are built - previous practice exercise
 class ApplicationViews extends Component {
 
-    isAuthenticated = () => localStorage.getItem("credentials") !== null
+    isAuthenticated = () => localStorage.getItem("credentials") !== null;
+    isRemebered = () => localStorage.getItem("credentials") !== null;
 
   render() {
 
@@ -51,22 +55,32 @@ class ApplicationViews extends Component {
             return <TaskEditForm {...props} />
         }} />
 
-        <Route
-          exact path="/auth/login-form"
+        <Route exact path="/deadlines" render={(props) => {
+            return <DeadlineList {...props} />
+        }} />
+        <Route path="/deadlines/new" render={(props) => {
+            return <DeadlineForm {...props} />
+        }} />
+        <Route path="/deadlines/:deadlineId(\d+)/edit" render={props => {
+    return <DeadlineEditForm {...props} />
+  }}
+
+/>
+<Route
+          exact
+          path="/login"
           render={props => {
-            // if (this.isAuthenticated || this.isRemebered) {
-              return (
-                <LoginForm
-                  rememberMe={this.props.rememberMe}
-                  setUser={this.props.setUser}
-                  {...props}
-                />
-              )
+            if (this.isAuthenticated || this.isRemebered) {
+              return <Login {...props} />;
+            } else {
+              return <Redirect to="/login" />;
+            }
           }}
         />
-
         <Route
-            exact path="/auth/register-form" render={props => {
+          exact
+          path="/login/register-form"
+          render={props => {
             if (this.isAuthenticated || this.isRemebered) {
               return (
                 <UserForm
@@ -76,16 +90,24 @@ class ApplicationViews extends Component {
                 />
               );
             } else {
-              return <Redirect to="/auth" />;
+              return <Redirect to="/login" />;
             }
           }}
         />
-
-        <Route exact path="/auth" render={props => {
+        <Route
+          exact
+          path="/login/login-form"
+          render={props => {
             if (this.isAuthenticated || this.isRemebered) {
-              return <Login {...props} />;
+              return (
+                <LoginForm
+                  rememberMe={this.props.rememberMe}
+                  setUser={this.props.setUser}
+                  {...props}
+                />
+              );
             } else {
-              return <Redirect to="/auth" />;
+              return <Redirect to="/login" />;
             }
           }}
         />
