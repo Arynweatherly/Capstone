@@ -13,7 +13,7 @@ import DeadlineList from './deadlines/DeadlineList'
 import DeadlineForm from './deadlines/DeadlineForm'
 import DeadlineEditForm from './deadlines/EditDeadlineForm'
 import LoginForm from './auth/loginForm'
-import Login from './auth/login'
+import Login from './auth/Login'
 import UserForm from './auth/registerForm'
 //only include these once they are built - previous practice exercise
 class ApplicationViews extends Component {
