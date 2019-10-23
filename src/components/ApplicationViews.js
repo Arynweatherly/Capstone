@@ -9,6 +9,9 @@ import NotebookForm from './notebooks/NotebookForm'
 import TaskForm from './tasks/TaskForm'
 import TaskEditForm from './tasks/EditTaskForm'
 import TaskList from './tasks/TaskList'
+import DeadlineList from './deadlines/DeadlineList'
+import DeadlineForm from './deadlines/DeadlineForm'
+import DeadlineEditForm from './deadlines/EditDeadlineForm'
 import LoginForm from './auth/loginForm'
 import Login from './auth/login'
 import UserForm from './auth/registerForm'
@@ -52,6 +55,17 @@ class ApplicationViews extends Component {
             return <TaskEditForm {...props} />
         }} />
 
+        <Route exact path="/deadlines" render={(props) => {
+            return <DeadlineList {...props} />
+        }} />
+        <Route path="/deadlines/new" render={(props) => {
+            return <DeadlineForm {...props} />
+        }} />
+        <Route path="/deadlines/:deadlineId(\d+)/edit" render={props => {
+    return <DeadlineEditForm {...props} />
+  }}
+
+/>
 <Route
           exact
           path="/login"

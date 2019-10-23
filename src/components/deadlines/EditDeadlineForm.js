@@ -1,13 +1,15 @@
 import React, { Component } from "react"
-import NotebookManager from "../../modules/NotebookManager"
-import "./NotebookForm.css"
+import DeadlineManager from "../../modules/DeadlineManager"
+import "./DeadlineForm.css"
 
-class NotebookEditForm extends Component {
+class DeadlineEditForm extends Component {
     //set the initial state
     state = {
       currentUser: parseInt(sessionStorage.getItem("credentials")),
-      notebookSubject: "",
+      deadlineTitle: "",
+      date: "",
       loadingStatus: true,
+      userId:""
     };
 
     handleFieldChange = evt => {
@@ -16,26 +18,27 @@ class NotebookEditForm extends Component {
       this.setState(stateToChange)
     }
 
-    updateExistingNotebook = evt => {
+    updateExistingDeadline = evt => {
       evt.preventDefault()
       this.setState({ loadingStatus: true });
-      const editedNotebook = {
-        id: this.props.match.params.notebookId,
-        subject: this.state.notebookSubject,
+      const editedDeadline = {
+        id: this.props.match.params.deadlineId,
+        title: this.state.deadlineTitle,
+        date: this.state.date,
         userId: this.state.currentUser
       };
 
-      NotebookManager.update(editedNotebook)
-      .then(() => this.props.history.push("/notebooks"))
+      DeadlineManager.update(editedDeadline)
+      .then(() => this.props.history.push("/deadlines"))
     }
 
     componentDidMount() {
-      NotebookManager.get(this.props.match.params.notebookId)
-      .then(notebook => {
+      DeadlineManager.get(this.props.match.params.deadlineId)
+      .then(deadline => {
           this.setState({
-            notebookSubject: notebook.subject,
+            deadlineTitle: deadline.title,
+            date: deadline.date,
             loadingStatus: false,
-            userId: this.state.userId
           });
       });
     }
@@ -51,16 +54,25 @@ class NotebookEditForm extends Component {
                 required
                 className="form-control"
                 onChange={this.handleFieldChange}
-                id="notebookSubject"
-                value={this.state.notebookSubject}
+                id="deadlineTitle"
+                value={this.state.deadlineTitle}
               />
-              <label htmlFor="notebookSubject">Notebook Subject </label>
+              <label htmlFor="deadlineTitle">Description</label>
 
+              <input
+                type="date"
+                required
+                className="form-control"
+                onChange={this.handleFieldChange}
+                id="date"
+                value={this.state.date}
+              />
+              <label htmlFor="breed">Date</label>
             </div>
             <div className="alignRight">
               <button
                 type="button" disabled={this.state.loadingStatus}
-                onClick={this.updateExistingNotebook}
+                onClick={this.updateExistingDeadline}
                 className="btn btn-primary"
               >Submit</button>
             </div>
@@ -71,4 +83,4 @@ class NotebookEditForm extends Component {
     }
 }
 
-export default NotebookEditForm
+export default DeadlineEditForm

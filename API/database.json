@@ -3,27 +3,60 @@
   "tasks": [
     {
       "taskName": "eat food",
-      "completed": "on",
+      "completed": true,
       "date": "2019-10-24",
       "id": 10,
       "userId": ""
     },
     {
       "taskName": "ask mo for help",
-      "completed": "on",
+      "completed": true,
       "date": "2019-10-24",
       "id": 11,
       "userId": ""
     },
     {
       "taskName": "eat foods",
-      "completed": "on",
+      "completed": true,
       "date": "2019-10-17",
       "userId": 4,
       "id": 12
+    },
+    {
+      "id": 13,
+      "taskName": "working now",
+      "completed": false,
+      "date": "2019-01-01",
+      "userId": 4
+    },
+    {
+      "id": 14,
+      "taskName": "eat food ",
+      "completed": true,
+      "date": "2019-10-26",
+      "userId": 4
     }
   ],
-  "dueDates": [],
+  "deadlines": [
+    {
+      "title": "ROUND TABLE TALKSS",
+      "date": "2019-10-24",
+      "userId": 4,
+      "id": 2
+    },
+    {
+      "id": 4,
+      "title": "lalalala momo",
+      "date": "2019-01-01",
+      "userId": 4
+    },
+    {
+      "id": 5,
+      "title": "work on capstone!!",
+      "date": "2019-10-25",
+      "userId": 4
+    }
+  ],
   "friends": [],
   "users": [
     {
@@ -51,11 +84,6 @@
     {
       "subject": "Anatomy",
       "userId": 4,
-      "id": 3
-    },
-    {
-      "subject": "Anatomy",
-      "userId": 4,
       "id": 4
     },
     {
@@ -72,6 +100,16 @@
       "subject": "java",
       "userId": 3,
       "id": 7
+    },
+    {
+      "id": 9,
+      "subject": "MO",
+      "userId": 4
+    },
+    {
+      "id": 10,
+      "subject": "MOMOMOmomo",
+      "userId": 4
     }
   ]
 }
