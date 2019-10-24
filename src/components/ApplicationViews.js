@@ -39,14 +39,17 @@ class ApplicationViews extends Component {
         // Pass the animalId to the AnimalDetailComponent
             return <NoteList notebookId={parseInt(props.match.params.notebookId)} {...props}/>
         }} />
-         <Route path="/notes/:noteId(\d+)" render={(props) => {
+         <Route exact path="/notes/:notebookId(\d+)" render={(props) => {
         // Pass the animalId to the AnimalDetailComponent
-        return <NoteDetail noteId={parseInt(props.match.params.noteId)} {...props}/>
+        return <NoteDetail notebookId={parseInt(props.match.params.notebookId)} {...props}/>
         }} />
         <Route path="/notes/new/:notebookId(\d+)/" render={(props) => {
             return <NoteForm {...props} />
         }} />
-        <Route path="/notes/:noteId(\d+)/edit" render={props => {
+        {/* <Route path="/notes/:noteId(\d+)/edit" render={props => {
+            return <NoteEditForm {...props} />
+        }} /> */}
+         <Route exact path="/notes/:noteId(\d+)/edit" render={props => {
             return <NoteEditForm {...props} />
         }} />
 

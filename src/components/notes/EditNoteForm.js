@@ -10,8 +10,9 @@ class NoteEditForm extends Component {
       topics: "",
       instructor: "",
       content: "",
-      loadingStatus: true,
       notebookId: "",
+      loadingStatus: true,
+      id: ""
     };
 
     handleFieldChange = evt => {
@@ -34,7 +35,7 @@ class NoteEditForm extends Component {
       };
 
       NoteManager.update(editedNote)
-      .then(() => this.props.history.push("/notes"))
+      .then(() => this.props.history.push(`/notes/${this.state.id}`))
     }
 
     componentDidMount() {
@@ -46,7 +47,9 @@ class NoteEditForm extends Component {
             topics: note.topics,
             instructor: note.instructor,
             content: note.content,
+            notebookId: note.notebookId,
             loadingStatus: false,
+            id: note.id
           });
       });
     }

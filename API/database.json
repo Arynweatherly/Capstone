@@ -2,101 +2,42 @@
   "notes": [
     {
       "id": 1,
-      "title": "some bullshit title for user3",
+      "title": "React Notes",
       "date": "2019-10-17",
-      "topics": "react",
-      "instructor": "brenda",
-      "content": "booooooooootssstrappppppppppppppp",
+      "topics": "state, props",
+      "instructor": "Brenda Long",
+      "content": "A component is created by extending upon the React-component class. You then define the methods for the component, such as render. Inside render, you'll return a description of what you want react to draw on the page.                          There are 2 types of data in react. The first is props. props are external and not controlled by the component itself. they are passed down from components higher up in the hierarchy who also control the data. The other type of data is called state. state is private and can be changed within the component itself. if you want the data in your app to change, for example based on user interactions, it must be stored in componets state somewhere in the app. to initialize state, simply set this.state in the constructor method of the class. to update/modify state, call this.setState, passing in the new state object as the argument.",
       "notebookId": 7
     },
     {
-      "id": 1,
-      "title": "some bullshit title",
-      "date": "2019-10-17",
-      "topics": "react",
-      "instructor": "brenda",
-      "content": "booooooooootssstrappppppppppppppp",
-      "notebookId": 4
-    },
-    {
-      "id": 2,
-      "title": "did this work?",
-      "date": "2019-10-17",
-      "topics": "react",
-      "instructor": "brenda",
-      "content": "did the edit work?",
-      "notebookId": ""
-    },
-    {
-      "id": 3,
-      "title": "some bullshit title",
-      "date": "2019-10-17",
-      "topics": "react",
-      "instructor": "brenda",
-      "content": "booooooooootssstrappppppkhulgykftvlgppppppppp",
-      "notebookId": 4
-    },
-    {
       "id": 4,
-      "title": "some bullshit title",
-      "date": "2019-10-17",
-      "topics": "react",
-      "instructor": "brenda",
-      "content": "booooooooootssstrappppppppppppppp",
-      "notebookId": 4
+      "title": "React Lifecycle method",
+      "date": "2019-10-19",
+      "topics": "lifecycle methods, componentDidMount",
+      "instructor": "Brenda Long",
+      "content": "Each component in react has several lifecycle methods that you can override to run code at particular times in the process. Mounting methods are called in the following order when an instance of a component is being created and insterted into the DOM: constructor(), static getDerivedStateFromProps(), render(), componentDidMount(). An update can be caused by changes to props or state. these methods are called in the following order when a component is being re-rendered: static getDerivedStateFromProps(), shouldComponetUpdate(), render(), getSnapshotBeforeUpdate(), componentDidUpdate().                 The unmounting method is called when a component is being removed from the DOM: componentWillUnmount().                going into detail regarding some of the methods.... the render() method is the only required method in a class componet. when called it should examine this.props and this.state and return one of the following elements: react elements, arrays and fragments, portals, strings and numbers, booleans or null.                 componentDidMount() is invoked immediately after a component is mounted. initialization that requires DOM nodes should go here. if you need to load data from a remote endpoint, this is a good place to instantiate the network request. you may call setState() immediately in componentDidMount(). it will trigger an extra rendering, but it will happen before the browser updates the screen. this guarantees that even though the render() will be called twice in this case, the user won't see the intermediate state. ",
+      "notebookId": 7
     },
     {
       "id": 5,
-      "title": "some bullshit title",
-      "date": "2019-10-17",
-      "topics": "react",
-      "instructor": "brenda",
-      "content": "booooooooootssstrappppppppppppppp",
-      "notebookId": 5
+      "title": "Quiz questions and answers",
+      "date": "2016-01-25",
+      "topics": "dieting, stretching, resistance training",
+      "instructor": "Dr. Lewis",
+      "content": "1.Dehydration of what percent of body weight will decrease performance? ->1.5%.          2.RM and 1RM mean what? rep max and 1 rep max              3.Rest and recovery occurs between what?  -sets, reps, exercises                    4.Less rest between sets is effective in what?   -increasing muscle size                  5.Difference b/w linear and nonlinear periodization: linear means theres a target date you're shooting for. nonlinear cna change up weekly or every workout.                    6. Define supersetting: doing 2 different exercises for 2 different muscle groups. do push then pull                   7. What does SSC stand for? what does it replace?     -stretch shortening cycle, plyometrics",
+      "notebookId": 9
     },
     {
-      "title": "did I fix it?",
-      "date": "2019-01-01",
-      "topics": "well",
-      "instructor": "well",
-      "content": "well",
-      "notebookId": 4,
-      "id": 9
-    },
-    {
-      "title": "please",
-      "date": "2019-01-02",
-      "topics": "a",
-      "instructor": "a",
-      "content": "a",
-      "notebookId": 4,
-      "id": 10
-    },
-    {
-      "title": "THIS IS THE ONE",
-      "date": "2019-01-01",
-      "topics": "S",
-      "instructor": "A",
-      "content": "A",
-      "notebookId": 4,
-      "id": 11
+      "title": "Intro to physics notes",
+      "date": "2019-10-26",
+      "topics": "newton's laws, levers, ",
+      "instructor": "Professor Wright",
+      "content": "Force = mass x acceleration         there are different types of levers. third class levers create speed. second class levers are the most powerful and are your prime accelerators.",
+      "notebookId": 5,
+      "id": 6
     }
   ],
   "tasks": [
-    {
-      "taskName": "eat food",
-      "completed": true,
-      "date": "2019-10-24",
-      "id": 10,
-      "userId": ""
-    },
-    {
-      "taskName": "ask mo for help",
-      "completed": true,
-      "date": "2019-10-24",
-      "id": 11,
-      "userId": ""
-    },
     {
       "taskName": "eat foods",
       "completed": true,
@@ -179,14 +120,14 @@
       "id": 6
     },
     {
-      "subject": "java",
-      "userId": 3,
+      "subject": "React",
+      "userId": 4,
       "id": 7
     },
     {
       "id": 9,
-      "subject": "MO",
-      "userId": 4
+      "subject": "Principles of Resistance Training",
+      "userId": 3
     },
     {
       "id": 10,
