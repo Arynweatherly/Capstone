@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NotebookManager from '../../modules/NotebookManager';
+import NoteManager from '../../modules/NoteManager'
 import './Notebook.css'
 
 class NotebookDetail extends Component {
@@ -19,10 +20,11 @@ class NotebookDetail extends Component {
   componentDidMount(){
     console.log("NotebookDetail: ComponentDidMount");
     //get(id) from AnimalManager and hang on to the data; put it into state
-    NotebookManager.getMyNotebooks(this.props.notebookId)
-    .then((notebook) => {
+    NoteManager.getMyNotes(this.props.notebookId)
+    .then((note) => {
       this.setState({
-        subject: notebook.subject,
+        title: note.title,
+        date: note.date,
         loadingStatus: false
       });
     });

@@ -1,5 +1,87 @@
 {
-  "notes": [],
+  "notes": [
+    {
+      "id": 1,
+      "title": "some bullshit title for user3",
+      "date": "2019-10-17",
+      "topics": "react",
+      "instructor": "brenda",
+      "content": "booooooooootssstrappppppppppppppp",
+      "notebookId": 7
+    },
+    {
+      "id": 1,
+      "title": "some bullshit title",
+      "date": "2019-10-17",
+      "topics": "react",
+      "instructor": "brenda",
+      "content": "booooooooootssstrappppppppppppppp",
+      "notebookId": 4
+    },
+    {
+      "id": 2,
+      "title": "did this work?",
+      "date": "2019-10-17",
+      "topics": "react",
+      "instructor": "brenda",
+      "content": "did the edit work?",
+      "notebookId": ""
+    },
+    {
+      "id": 3,
+      "title": "some bullshit title",
+      "date": "2019-10-17",
+      "topics": "react",
+      "instructor": "brenda",
+      "content": "booooooooootssstrappppppkhulgykftvlgppppppppp",
+      "notebookId": 4
+    },
+    {
+      "id": 4,
+      "title": "some bullshit title",
+      "date": "2019-10-17",
+      "topics": "react",
+      "instructor": "brenda",
+      "content": "booooooooootssstrappppppppppppppp",
+      "notebookId": 4
+    },
+    {
+      "id": 5,
+      "title": "some bullshit title",
+      "date": "2019-10-17",
+      "topics": "react",
+      "instructor": "brenda",
+      "content": "booooooooootssstrappppppppppppppp",
+      "notebookId": 5
+    },
+    {
+      "title": "did I fix it?",
+      "date": "2019-01-01",
+      "topics": "well",
+      "instructor": "well",
+      "content": "well",
+      "notebookId": 4,
+      "id": 9
+    },
+    {
+      "title": "please",
+      "date": "2019-01-02",
+      "topics": "a",
+      "instructor": "a",
+      "content": "a",
+      "notebookId": 4,
+      "id": 10
+    },
+    {
+      "title": "THIS IS THE ONE",
+      "date": "2019-01-01",
+      "topics": "S",
+      "instructor": "A",
+      "content": "A",
+      "notebookId": 4,
+      "id": 11
+    }
+  ],
   "tasks": [
     {
       "taskName": "eat food",
