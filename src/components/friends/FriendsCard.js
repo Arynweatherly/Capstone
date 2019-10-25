@@ -49,6 +49,7 @@
 
 
 import React, { Component } from 'react';
+import './friend.css'
 
 class FriendCard extends Component {
     render() {

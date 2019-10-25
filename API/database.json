@@ -92,7 +92,7 @@
       "id": 12
     },
     {
-      "userId": 2,
+      "userId": 6,
       "friendInitiate": 3,
       "id": 23
     },
@@ -100,11 +100,6 @@
       "userId": 4,
       "friendInitiate": 3,
       "id": 26
-    },
-    {
-      "userId": 5,
-      "friendInitiate": 3,
-      "id": 27
     },
     {
       "userId": 2,
@@ -133,11 +128,6 @@
     },
     {
       "userId": 4,
-      "friendInitiate": 6,
-      "id": 34
-    },
-    {
-      "userId": 4,
       "friendInitiate": 5,
       "id": 36
     },
@@ -148,11 +138,6 @@
     },
     {
       "userId": 2,
-      "friendInitiate": 5,
-      "id": 38
-    },
-    {
-      "userId": 2,
       "friendInitiate": 1,
       "id": 41
     },
@@ -160,28 +145,49 @@
       "userId": 4,
       "friendInitiate": 1,
       "id": 42
+    },
+    {
+      "userId": 2,
+      "friendInitiate": "3",
+      "id": 43
     }
   ],
   "users": [
     {
       "id": 1,
       "username": "heidi",
+      "name": "heidi",
       "password": "heidi"
     },
     {
       "username": "sage",
+      "name": "sage",
       "password": "sage",
       "id": 2
     },
     {
       "username": "aryn@aryn.com",
       "password": "aryn",
+      "name": "aryn",
       "id": 3
     },
     {
-      "username": "aryn",
-      "password": "a",
+      "username": "taylor",
+      "name": "taylor",
+      "password": "taylor",
       "id": 4
+    },
+    {
+      "username": "nate",
+      "name": "nate",
+      "password": "nate",
+      "id": 5
+    },
+    {
+      "username": "phil",
+      "name": "phil",
+      "password": "phil",
+      "id": 6
     }
   ],
   "notebooks": [
@@ -216,43 +222,5 @@
       "userId": 4
     }
   ],
-    "reviews": [
-      {
-        "id": 1,
-        "userId": "",
-        "username": "",
-        "noteId": "",
-        "title": "",
-        "comment": "",
-        "ratimg": ""
-      },
-      {
-        "id": 1,
-        "userId": "",
-        "username": "",
-        "noteId": "",
-        "title": "",
-        "comment": "",
-        "ratimg": ""
-      },
-      {
-        "id": 1,
-        "userId": "",
-        "username": "",
-        "noteId": "",
-        "title": "",
-        "comment": "",
-        "ratimg": ""
-      },
-      {
-        "id": 1,
-        "userId": "",
-        "username": "",
-        "noteId": "",
-        "title": "",
-        "comment": "",
-        "ratimg": ""
-      }
-
-    ]
+  "reviews": []
 }

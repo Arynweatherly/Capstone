@@ -6,6 +6,7 @@ export default class UserForm extends Component {
     state = {
         username: "",
         password: "",
+        name: "",
         users: []
     }
 
@@ -14,6 +15,7 @@ export default class UserForm extends Component {
         let user = {
             username: this.state.username,
             password: this.state.password,
+            name: this.state.name
         }
         AuthManager.post("users", user).then(() => this.handleLogin())
      }

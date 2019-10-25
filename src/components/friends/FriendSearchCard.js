@@ -6,7 +6,7 @@ class FriendSearchCard extends Component {
 	render() {
 		return (
 			<div className='friendSearchRow'>
-				<h5>{this.props.friend.userName}</h5>
+				<h5>{this.props.friend.name}</h5>
 				<button
 					type='button'
 					className='btn'

@@ -15,7 +15,7 @@ class App extends Component {
 
   //function that checks if there's a user logged in 
   isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
-  isRemembered = () => localStorage.getItem("credentials") !== null;
+  isRemembered = () => sessionStorage.getItem("credentials") !== null;
 
 
 //set user

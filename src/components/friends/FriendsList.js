@@ -16,16 +16,15 @@ class FriendsList extends Component {
     //define what this component needs to render
     state = {
         friends: [],
-        currentFriend: false 
+        currentFriend: false
     };
 
     deleteFriend = id => {
         FriendsManager.delete(id).then(() => {
-            FriendsManager.getFriends(this.props.currentUserId).then(newFriends => {
+            FriendsManager.getFriends(sessionStorage.getItem("credentials")).then(newFriends => {
                 this.setState({
                     friends: newFriends
                 });
-                this.props.refresh();
             });
         });
     };
@@ -33,9 +32,10 @@ class FriendsList extends Component {
     addFriend = id => {
         const newFriend = {
             userId: id,
-            friendInitiate: this.props.currentUserId
+            friendInitiate: sessionStorage.getItem("credentials")
         };
-        FriendsManager.getFriends(this.props.currentUserId).then(data => {
+
+        FriendsManager.getFriends(sessionStorage.getItem("credentials")).then(data => {
             data.forEach(obj => {
                 if (obj.userId === id) {
                     this.setState({
@@ -44,27 +44,30 @@ class FriendsList extends Component {
                 }
             });
 
-            if (newFriend.userId === this.props.currentUserId) {
+            if (newFriend.userId === sessionStorage.getItem("credentials")) {
                 alert("sorry, you can't be friends with yourself.")
             } else if (this.state.currentFriend === true) {
                 alert ("you're already friends with this user")
             } else {
-                FriendsManager.getFriends(this.props.currentUserId).then(
+                FriendsManager.post(newFriend).then(() => {
+                FriendsManager.getFriends(sessionStorage.getItem("credentials")).then(
                     newFriends => {
                         this.setState({
                             friends: newFriends
+                        })
                             //call a set state function for all modules
-                        });
-                        this.props.refresh();
-                    }
-                )
+                        }
+                        )
+
+                    })
+                }
+            })
             }
-        })
-    }
+
 
     componentDidMount() {
         //getAll from FriendsManager and hang on to that data, put in state 
-        FriendsManager.getFriends(this.props.currentUserId).then(friends => {
+        FriendsManager.getFriends(sessionStorage.getItem("credentials")).then(friends => {
             this.setState({
                 friends: friends
             })
@@ -72,6 +75,7 @@ class FriendsList extends Component {
     }
 
     render() {
+        console.log(this.state.friends)
         return (
             <>
             <FriendsSearch {...this.props} addFriend={this.addFriend} />
