@@ -19,6 +19,7 @@ import NoteEditForm from './notes/EditNoteForm'
 import LoginForm from './auth/loginForm'
 import Login from './auth/Login'
 import UserForm from './auth/registerForm'
+import FriendList from './friends/FriendsList'
 //only include these once they are built - previous practice exercise
 class ApplicationViews extends Component {
 
@@ -89,6 +90,23 @@ class ApplicationViews extends Component {
   }}
 
 />
+
+
+
+
+<Route
+          exact
+          path="/friends"
+          render={props => {
+            if (this.isAuthenticated || this.isRemebered) {
+              return <FriendList currentUser={this.props.currentUser} {...props} />;
+            } else {
+              return <Redirect to="/login" />;
+            }
+          }}
+        />
+
+      
 <Route
           exact
           path="/login"

@@ -80,15 +80,96 @@
       "userId": 4
     }
   ],
-  "friends": [],
+  "friends": [
+    {
+      "userId": 5,
+      "friendInitiate": 1,
+      "id": 10
+    },
+    {
+      "userId": 3,
+      "friendInitiate": 2,
+      "id": 12
+    },
+    {
+      "userId": 2,
+      "friendInitiate": 3,
+      "id": 23
+    },
+    {
+      "userId": 4,
+      "friendInitiate": 3,
+      "id": 26
+    },
+    {
+      "userId": 5,
+      "friendInitiate": 3,
+      "id": 27
+    },
+    {
+      "userId": 2,
+      "friendInitiate": 4,
+      "id": 28
+    },
+    {
+      "userId": 5,
+      "friendInitiate": 4,
+      "id": 29
+    },
+    {
+      "userId": 2,
+      "friendIntiate": 5,
+      "id": 30
+    },
+    {
+      "userId": 1,
+      "friendInitiate": 5,
+      "id": 31
+    },
+    {
+      "userId": 2,
+      "friendInitiate": 6,
+      "id": 32
+    },
+    {
+      "userId": 4,
+      "friendInitiate": 6,
+      "id": 34
+    },
+    {
+      "userId": 4,
+      "friendInitiate": 5,
+      "id": 36
+    },
+    {
+      "userId": 3,
+      "friendInitiate": 5,
+      "id": 37
+    },
+    {
+      "userId": 2,
+      "friendInitiate": 5,
+      "id": 38
+    },
+    {
+      "userId": 2,
+      "friendInitiate": 1,
+      "id": 41
+    },
+    {
+      "userId": 4,
+      "friendInitiate": 1,
+      "id": 42
+    }
+  ],
   "users": [
     {
       "id": 1,
-      "username": "heidi@heidi.com",
+      "username": "heidi",
       "password": "heidi"
     },
     {
-      "username": "sage@sage.com",
+      "username": "sage",
       "password": "sage",
       "id": 2
     },
@@ -98,7 +179,7 @@
       "id": 3
     },
     {
-      "username": "a@a.com",
+      "username": "aryn",
       "password": "a",
       "id": 4
     }
@@ -134,5 +215,44 @@
       "subject": "MOMOMOmomo",
       "userId": 4
     }
-  ]
+  ],
+    "reviews": [
+      {
+        "id": 1,
+        "userId": "",
+        "username": "",
+        "noteId": "",
+        "title": "",
+        "comment": "",
+        "ratimg": ""
+      },
+      {
+        "id": 1,
+        "userId": "",
+        "username": "",
+        "noteId": "",
+        "title": "",
+        "comment": "",
+        "ratimg": ""
+      },
+      {
+        "id": 1,
+        "userId": "",
+        "username": "",
+        "noteId": "",
+        "title": "",
+        "comment": "",
+        "ratimg": ""
+      },
+      {
+        "id": 1,
+        "userId": "",
+        "username": "",
+        "noteId": "",
+        "title": "",
+        "comment": "",
+        "ratimg": ""
+      }
+
+    ]
 }

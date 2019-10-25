@@ -1,0 +1,9 @@
+.cardTitle {
+    color: white;
+}
+
+.cardDeck{
+    border: outset 5px darkgray;
+    border-radius: 5%;
+    background: #674d72;
+}
