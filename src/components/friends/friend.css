@@ -1,0 +1,11 @@
+.cardTitle {
+    color: white;
+}
+
+.friendCardNav{
+    border: outset 5px darkgray;
+    border-radius: 5%;
+    background: maroon;
+    color: white;
+}
+

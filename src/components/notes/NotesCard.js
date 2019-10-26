@@ -1,64 +1,22 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom'
 import "./Note.css";
-import { Button } from "reactstrap";
 
 class NoteCard extends Component {
-  render() {
-    console.log("renderingggg");
-    return (
-      <div className="noteContainer">
-        <div className="secondContainer"></div>
-        <p className="sectionTitle">
-          <b>
-            <u>Title</u>
-          </b>
-        </p>
-        <p className="bigTitle">{this.props.notes.title}</p>
-        <p className="sectionTitle">
-          <b>
-            <u>topics:</u>
-          </b>
-        </p>
-        <p className="bigTitle">{this.props.notes.topics}</p>
-        <p className="sectionTitle">
-          <b>
-            <u>instructor:</u>
-          </b>
-        </p>
-        <p className="bigTitle">{this.props.notes.instructor}</p>
-        <p className="sectionTitle">
-          <b>
-            <u>content:</u>
-          </b>
-        </p>
-        <p>{this.props.note.content}</p>
-        <p className="sectionTitle">
-          <b>
-            <u>date:</u>
-          </b>
-        </p>
-        <p>{this.props.note.date}</p>
-        <div className="noteButton">
-          <Button
-            type="deleteNotebutton"
-            color="danger"
-            onClick={() => this.props.deleteNote(this.props.note.id)}
-          >
-            Delete
-          </Button>
-          <Button
-            type="editNotes"
-            color="warning"
-            onClick={() => {
-              this.props.history.push(`/notes/${this.props.note.id}/edit`);
-            }}
-          >
-            Edit
-          </Button>
+render () {
+  return (
+  <div className="card">
+        <div className="card-content">
+          <h3>title: <span className="card-note">{this.props.note.title}</span></h3>
+          <p>date: {this.props.note.date}</p>
+          {/* <button type="button" onClick={() => this.props.deleteNotes(this.props.note.id)}>delete</button>
+          <button type="button" onClick={() => {this.props.history.push(`/notes/${this.props.note.id}/edit`)}}>Edit</button> */}
+          <Link to={`/notes/${this.props.note.id}`}><button>View Note</button></Link>
         </div>
       </div>
     );
   }
 }
+
 
 export default NoteCard;

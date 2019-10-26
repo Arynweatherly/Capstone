@@ -12,9 +12,14 @@ import TaskList from './tasks/TaskList'
 import DeadlineList from './deadlines/DeadlineList'
 import DeadlineForm from './deadlines/DeadlineForm'
 import DeadlineEditForm from './deadlines/EditDeadlineForm'
+import NoteList from './notes/NotesList'
+import NoteForm from './notes/NotesForm'
+import NoteDetail from './notes/NoteDetail'
+import NoteEditForm from './notes/EditNoteForm'
 import LoginForm from './auth/loginForm'
-import Login from './auth/login'
+import Login from './auth/Login'
 import UserForm from './auth/registerForm'
+import FriendList from './friends/FriendsList'
 //only include these once they are built - previous practice exercise
 class ApplicationViews extends Component {
 
@@ -31,12 +36,31 @@ class ApplicationViews extends Component {
           return <Home />
         }} />
 
+        <Route path="/notebooks/:notebookId(\d+)/" render={(props) => {
+        // Pass the animalId to the AnimalDetailComponent
+            return <NoteList notebookId={parseInt(props.match.params.notebookId)} {...props}/>
+        }} />
+         <Route exact path="/notes/:notebookId(\d+)" render={(props) => {
+        // Pass the animalId to the AnimalDetailComponent
+        return <NoteDetail notebookId={parseInt(props.match.params.notebookId)} {...props}/>
+        }} />
+        <Route path="/notes/new/:notebookId(\d+)/" render={(props) => {
+            return <NoteForm {...props} />
+        }} />
+        {/* <Route path="/notes/:noteId(\d+)/edit" render={props => {
+            return <NoteEditForm {...props} />
+        }} /> */}
+         <Route exact path="/notes/:noteId(\d+)/edit" render={props => {
+            return <NoteEditForm {...props} />
+        }} />
+
+      {/* <Route path="/notes/:noteId(\d+)" render={(props) => {
+        // Pass the animalId to the AnimalDetailComponent
+        return <NotebookDetail notebookId={parseInt(props.match.params.notebookI)} {...props}/>
+        }} /> */}
+
         <Route exact path="/notebooks" render={(props) => {
                 return <NotebookList {...props} />
-        }} />
-        <Route path="/notebooks/:notebookId(\d+)" render={(props) => {
-        // Pass the animalId to the AnimalDetailComponent
-            return <NotebookDetail notebookId={parseInt(props.match.params.notebookId)} {...props}/>
         }} />
         <Route path="/notebooks/new" render={(props) => {
             return <NotebookForm {...props} />
@@ -66,6 +90,23 @@ class ApplicationViews extends Component {
   }}
 
 />
+
+
+
+
+<Route
+          exact
+          path="/friends"
+          render={props => {
+            if (this.isAuthenticated || this.isRemebered) {
+              return <FriendList currentUser={this.props.currentUser} {...props} />;
+            } else {
+              return <Redirect to="/login" />;
+            }
+          }}
+        />
+
+      
 <Route
           exact
           path="/login"
