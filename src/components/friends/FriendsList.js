@@ -80,7 +80,7 @@ class FriendsList extends Component {
             <>
             <FriendsSearch {...this.props} addFriend={this.addFriend} />
 
-            <div className="container-cards">
+            <div className="friends-container-card">
                 <h4>Your Friends</h4>
                 {this.state.friends.map(friend => (
                     <FriendCard

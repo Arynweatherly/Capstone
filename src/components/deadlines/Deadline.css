@@ -29,7 +29,7 @@
 }
 
 .card button {
-  background-color: maroon;
+  background-color: #FECCC3;
   border: none;
   color: white;
   text-align: center;
@@ -43,5 +43,5 @@
 }
 
 .card button:hover {
-  background-color: maroon;
+  background-color: #FECCC3;
 }

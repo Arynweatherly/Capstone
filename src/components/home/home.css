@@ -1,5 +1,66 @@
 .friendsListCard {
-    background-color: maroon;
-    color:white;
+    background-color: #C6C1BE;
+    color:black;
     justify-content: flex;
+    flex-direction: row;
+    width: 50%;
+}
+.friendCardNav {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-direction: column;
+    margin: 5px;
+    max-width: 200px
+
+    
+
+}
+.deleteFriend {
+    background-color: #FECCC3;
+    color: black;
+
+}
+
+.container-cards {
+    background-color:#EAECEB;
+    margin: 2px;
+    display: flex;
+    /* flex-direction: row; */
+    
+}
+
+.tasksCard {
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 700px;
+    min-width: 350px;
+}
+
+.deadlineCardContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 500px;
+    margin: 3px;
+}
+
+.friendListContainer {
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row; */
+}
+
+.notebooksCardContainer {
+    background-color: #C6C1BE;
+    min-height: 300px;
+    align-self: left;
+}
+
+.btn-to-notebooks {
+    min-height: 300px;
+    align-self: left;
 }

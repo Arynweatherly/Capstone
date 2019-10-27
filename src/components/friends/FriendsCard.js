@@ -55,8 +55,8 @@ class FriendCard extends Component {
     render() {
         return (
             <div className="friendCardNav">
-            <h4>{this.props.friend.user.name}</h4>
-            <button type="button" className="btn" onClick={() => this.props.deleteFriend(this.props.friend.id)}>Remove Friend</button>
+            <h4 className="friendHeading">{this.props.friend.user.name}</h4>
+            <button type="button" className="deleteFriend" onClick={() => this.props.deleteFriend(this.props.friend.id)}>Remove Friend</button>
             </div>
         )
     }

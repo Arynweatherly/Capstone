@@ -5,6 +5,11 @@ import DeadlineList from '../deadlines/DeadlineList'
 import TaskList from '../tasks/TaskList'
 import { Card } from 'reactstrap'
 import './home.css'
+import { Button } from 'antd';
+import { Link } from "react-router-dom"
+import NotebookButton from '../notebooks/NotebookButton'
+import NotebookButtonList from '../notebooks/NotebookButtonList'
+
 
 class Home extends Component {
   render() {
@@ -16,24 +21,28 @@ class Home extends Component {
      {
        <>
        <Card className="friendsListCard">
-         <FriendsList 
+         <FriendsList className="friendListContainer"
          currentUser={this.props.currentUser}
          {...this.props}
          />
        </Card>
-       <Card>
-         <NotebookList 
-         currentUser={this.props.currentUser}
-         {...this.props}
-         />
+
+
+
+       <Card className="notebooksCardContainer">
+          <div className="notebooksBtn">
+          <Link className="nav-link" to="/notebooks"><button type="button" className="btn-to-notebooks">NOTEBOOKS</button></Link>
+          </div>
        </Card>
-       <Card>
+
+
+       <Card className="deadlineCardContainer">
          <DeadlineList 
          currentUser={this.props.currentUser}
          {...this.props}
          />
        </Card>
-       <Card>
+       <Card className="tasksCard">
          <TaskList 
          currentUser={this.props.currentUser}
          {...this.props}

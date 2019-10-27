@@ -19,6 +19,9 @@ class Capstone extends Component {
 									/>
             </section>
           </div>
+          <section className='landingPage'>
+						<div className='loginWrapper'></div>
+            </section>
       </>
     )
   }

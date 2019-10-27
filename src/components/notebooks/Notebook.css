@@ -32,7 +32,7 @@
   }
 
   .card button {
-    background-color: maroon;
+    background-color: #FECCC3;
     border: none;
     color: white;
     text-align: center;
@@ -47,4 +47,24 @@
 
   .card button:hover {
     background-color: darkblue;
+  }
+
+  .notebookCardContain {
+    max-width: 300px;
+    background-color: #EAECEB;
+    margin:20px
+  }
+  .notebook-card-content {
+    max-width: 300px;
+    margin: 1px;
+    min-height: 200px;
+    border-style: dotted;
+    border-color: #FECCC3;
+  }
+  .notebooksCardContainer {
+    max-width: 500px;
+  }
+
+  .container-card-notebook {
+    border-radius: 5px;
   }
