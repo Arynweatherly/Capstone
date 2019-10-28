@@ -9,8 +9,8 @@ class ReviewCard extends Component {
         return (
             <div className="review-card-container">
                 <div className="review-card-content">
-                <h2>Title: <span className="card-review"><b>{this.props.review.reviewTitle}</b></span></h2>
                 <p>{this.props.review.username}</p>
+                <p>Title:{this.props.review.ratingTitle}</p>
                 <Rating
                     readonly
                     name="rating"
@@ -18,6 +18,7 @@ class ReviewCard extends Component {
                     emptySymbol={<img src="assets/images/star-grey.png" className="icon" />}
                     fullSymbol={<img src="assets/images/star-yellow.png" className="icon" />}
                     />
+                <p>Comments:{this.props.review.review} </p>
                 <button type="button" onClick={() => this.props.deleteReview(this.props.review.id)}>Delete</button>
                 <Link to={`/reviews/${this.props.review.id}`}><button>details</button></Link>
                 </div>

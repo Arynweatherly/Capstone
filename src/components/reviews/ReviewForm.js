@@ -11,6 +11,7 @@ class ReviewForm extends Component {
         ratingTitle: "",
         rating: "",
         review: "",
+        loadingStatus: false,
     }
     handleFieldChange = evt => {
         const stateToChange = {};
@@ -62,19 +63,19 @@ class ReviewForm extends Component {
               id="username"
               onChange={this.handleFieldChange}
             ></input>
+                      <label className="instructor">rating:</label>
+            <input
+              type="text"
+              placeholder="instructor"
+              id="instructor"
+              onChange={this.handleFieldChange}
+            ></input>
 
             <label className="review">review:</label>
             <input
               type="text"
               placeholder="comments:"
               id="review"
-              onChange={this.handleFieldChange}
-            ></input>
-            <label className="instructor">rating:</label>
-            <input
-              type="text"
-              placeholder="instructor"
-              id="instructor"
               onChange={this.handleFieldChange}
             ></input>
           </fieldset>

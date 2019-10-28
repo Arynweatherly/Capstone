@@ -33,6 +33,15 @@ class ReviewList extends Component {
     render() {
         console.log("ReviewList: Render");
         return(
+            <>
+            <section className="section-content">
+                <button type="button"
+                        className="btn"
+                        onClick={() => {this.props.history.push("/reviews/new")}}>
+                        add review
+                </button>
+            </section>
+        
             <div className="review-container-card">
                 {this.state.reviews.map(review => 
                 <ReviewCard 
@@ -42,6 +51,7 @@ class ReviewList extends Component {
                 />
                 )}
             </div>
+            </>
         )
     }
 }

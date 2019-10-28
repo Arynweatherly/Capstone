@@ -79,6 +79,7 @@ class ApplicationViews extends Component {
         <Route path="/notebooks/:notebookId(\d+)/edit" render={props => {
             return <NotebookEditForm {...props} />
         }} />
+        
 
         <Route exact path="/tasks" render={(props) => {
                 return <TaskList {...props} />
@@ -89,6 +90,7 @@ class ApplicationViews extends Component {
         <Route path="/tasks/:taskId(\d+)/edit" render={props => {
             return <TaskEditForm {...props} />
         }} />
+
 
         <Route exact path="/deadlines" render={(props) => {
             return <DeadlineList {...props} />
