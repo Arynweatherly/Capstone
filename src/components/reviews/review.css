@@ -1,0 +1,13 @@
+.review-container-card {
+        display: flex;
+        flex-direction: column;
+        margin: 1em;
+        border-radius: 5px;
+
+        color: rgb(255, 255, 255) !important;
+        border: 7px dotted #FECCC3;
+}
+.review-card-container {
+    background-color: #C6C1BE;
+    padding: 1em;
+}

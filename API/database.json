@@ -51,7 +51,7 @@
       "topics": "tibia, fibula, muscles, lower limb, ligaments",
       "instructor": "Dr. Lewis",
       "content": "The tibia is the much larger bone of the lower leg. its stronger than the fibula as it must bear the weight of the body. The tibia which is the shin-bone, articulates with the thigh bone above, the ankle below and the fibula to the side. the thinner fibula helps to form the ankle joint. The tibia is a long bone and lies along side the fibula on the medial (inner) side and articulates w/ the fibula at its upper and lower ends. the upper end of the tibia is expanded to form the medial and lateral tibial condyles, which articulate with the femoral condyles at the knee joint. the lower end of the tibia is less pronounced than the upper end. it articulates with both the talus and with the lower end of the fibula.          FIBULA: the fibula lays on the lateral side of the tibia. it plays no important part in the knee joint, but it very important support for the ankle. The shaft of the fibula is narrow and bears the grooves and ridges associated w/ its major role as a site of muscle attatchment for the leg.      LIGAMENTS: the procimal (upper) end: just under the knee is the upper joint between the head of the fibula and the underside of the lateral tibial condyle. The joint is surrounded and protected by a fibrous joint capsule, which is strengthened by the anterior and posterior tibiofibular ligaments. The anterior ligaments of the head of the fibula runs from the front of the fibular head across to the front of the lateral tibial condyle. the posterior ligament of the head of the fibula runs in a similar fashion behind the fibular head. other ligaments bind the bones of the lower leg to the femur. the strongest of these are the medial and lateral collateral ligaments of the knee joint, which run vertically down from the femur to the corresponding bone (tibia or fibula) beneath. DISTAL END: the joint b/w the lower ends of the tibia and fibula allows no movement of one bone upon the other. rather, the fibula is bound tightly to the tibia by  fibrous ligaments in order to maintain the stability of the ankle joint. the main ligaments concerned are the ant and post tib-fib ligaments. other ligaments around the ankle bind the tibia and fibula to the bones of the foot.",
-      "notebookId": 5,
+      "notebookId": 4,
       "id": 8
     },
     {
@@ -107,6 +107,44 @@
       "content": "if you want to send parameters into an event handler, you have two options: 1. Make an anonymous arrow function or 2.bind the event handler to this. note that the first argument has to be this. REACT EVENT OBJECT: event handlers have access to the react event that triggered the function. In react, form data is usually handled by the components. When the data is handled by the components, all the data is stored in the component state. you can control changes by adding event handlers in the onChange attribute. Note: you must initialize the state in the constructor method before you can use it. CONDITIONAL RENDERING: if you dont want to display the h1 element until the user has done any input you can add an if statement. you can control the submit action by adding an event handler in the onSubmit attribute. event.preventDefault() is used to prevent the form from actually being submitted. .......MULTIPLE INPUT FIELDS: you can control the values of more than one input field by adding a name attribute to each element. when you initialize the state in the constructor, use the field names. to access the fields in the event handler use the event.target.name and event.target.value syntax. to update the state in the this.setState method, use square brackets [] around the property name...........>TEXTAREA:  in react, the value of a textarea is placed in a value attribute example ...render() { return (   <form> <textarea value={this.state.description} /> <form/> };................ ",
       "notebookId": 7,
       "id": 14
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "userId": 2,
+      "username": "sage",
+      "noteId": 8,
+      "ratingTitle": "Thanks",
+      "review": "misssed this day in class, Solid notes, friend. thanks for posting them",
+      "rating": 4
+    },
+    {
+      "id": 1,
+      "userId": 2,
+      "username": "sage",
+      "noteId": 6,
+      "ratingTitle": "not impressed",
+      "review": "there's barely enough content to call this a lecture note",
+      "rating": 1
+    },
+    {
+      "id": 1,
+      "userId": 2,
+      "username": "sage",
+      "noteId": 3,
+      "ratingTitle": "Thanks",
+      "review": "misssed this day in class, Solid notes, friend. thanks for posting them",
+      "rating": 4
+    },
+    {
+      "id": 1,
+      "userId": 2,
+      "username": "sage",
+      "noteId": 4,
+      "ratingTitle": "Thanks",
+      "review": "misssed this day in class, Solid notes, friend. thanks for posting them",
+      "rating": 4
     }
   ],
   "tasks": [
@@ -323,9 +361,9 @@
   ],
   "notebooks": [
     {
+      "id": 4,
       "subject": "Anatomy",
-      "userId": 3,
-      "id": 4
+      "userId": 3
     },
     {
       "id": 5,
@@ -339,7 +377,7 @@
     },
     {
       "subject": "React",
-      "userId": 4,
+      "userId": 1,
       "id": 7
     },
     {
@@ -352,6 +390,5 @@
       "subject": "MOMOMOmomo",
       "userId": 4
     }
-  ],
-  "reviews": []
+  ]
 }

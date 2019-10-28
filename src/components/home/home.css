@@ -26,6 +26,7 @@
 
 .container-cards {
     background-color:#EAECEB;
+    color: black;
     margin: 2px;
     display: flex;
     /* flex-direction: row; */
@@ -63,4 +64,7 @@
 .btn-to-notebooks {
     min-height: 300px;
     align-self: left;
+}
+.card-deadline {
+    color: black;
 }
