@@ -60,6 +60,7 @@ class ReviewDetails extends Component {
             <p>username: {this.state.username}</p>
             <p>review: {this.state.review}</p>
             <p>rating: {this.state.rating}</p>
+            <Rating />
             <button type ="button" onClick={() => this.deteleReview(this.state.id)}>Delete</button>
             <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Discharge</button>
             {/* <button type="button" onClick={() => {this.props.history.push(``)}} */}

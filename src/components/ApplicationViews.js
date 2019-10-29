@@ -61,7 +61,7 @@ class ApplicationViews extends Component {
           <Route exact path="/notes/:noteId(\d+)/" render={(props) => {
             return <ReviewList noteId={parseInt(props.match.params.noteId)} {...props}/>
           }} />
-          <Route path="/reviews/new/:noteId(\d+)/" render={(props) => {
+          <Route path="/reviews/new" render={(props) => {
           return <ReviewForm {...props} />
           }} />
           <Route exact path="/reviews/:noteId(\d+)" render={(props) => {
