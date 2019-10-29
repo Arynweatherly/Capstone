@@ -18,8 +18,20 @@ class Home extends Component {
      <h2> Pass a Note Profile Page</h2>
      <br />
      <small>some sort of slogan</small>
+     <div className='logoPlaceholder'>
+					<img
+						alt='logo'
+						height='153px'
+						width='145px'
+						src={`/images/userPic.jpg`}
+					></img>
+				</div>
+
+
      {
        <>
+       <Card className="profilePic" />
+
        <Card className="friendsListCard">
          <FriendsList className="friendListContainer"
          currentUser={this.props.currentUser}

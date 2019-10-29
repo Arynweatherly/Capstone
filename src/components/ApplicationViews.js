@@ -23,6 +23,8 @@ import LoginForm from './auth/loginForm'
 import Login from './auth/Login'
 import UserForm from './auth/registerForm'
 import FriendList from './friends/FriendsList'
+import FriendNotebookList from './friendNotebooks/FriendNotebookList'
+
 //only include these once they are built - previous practice exercise
 class ApplicationViews extends Component {
 
@@ -69,6 +71,8 @@ class ApplicationViews extends Component {
         return <ReviewDetails noteId={parseInt(props.match.params.noteId)} {...props}/>
         }} />
 
+
+        {/* <Route exact path='/notebooks/:userId/' render={} */}
 
         <Route exact path="/notebooks" render={(props) => {
                 return <NotebookList {...props} />

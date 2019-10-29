@@ -1,9 +1,9 @@
 .friendsListCard {
-    background-color: #C6C1BE;
+    /* background-color: #C6C1BE; */
     color:black;
     justify-content: flex;
     flex-direction: row;
-    width: 50%;
+    width: 100%;
 }
 .friendCardNav {
     background-color: white;
@@ -14,24 +14,26 @@
     flex-direction: column;
     margin: 5px;
     max-width: 200px
-
+}
+.friends-container-card {
+    max-width: 100%
+}
     
 
-}
 .deleteFriend {
     background-color: #FECCC3;
     color: black;
 
 }
 
-.container-cards {
+/* .container-cards {
     background-color:#EAECEB;
     color: black;
     margin: 2px;
-    display: flex;
+    display: flex; */
     /* flex-direction: row; */
     
-}
+/* } */
 
 .tasksCard {
     display:flex;
@@ -52,6 +54,8 @@
 .friendListContainer {
     display: flex;
     justify-content: space-between;
+    align-self: stretch;
+    
     /* flex-direction: row; */
 }
 
@@ -67,4 +71,9 @@
 }
 .card-deadline {
     color: black;
+}
+
+.profilePic {
+    background: url(https://raw.githubusercontent.com/jkmccray/NSS-Front-End-Capstone-Game-Night/master/src/images/profile_placeholder.png)no-repeat center center fixed;
+    Width: 50%;
 }
