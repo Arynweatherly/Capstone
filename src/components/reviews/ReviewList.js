@@ -25,10 +25,19 @@ class ReviewList extends Component {
         ReviewManager.getMyReviews(this.props.noteId)
         .then((reviews) => {
             this.setState({
-                reviews: reviews
+                reviews: reviews,
             })
         })
     }
+
+    onRate = (rating, e) => {
+        this.setState({
+            lastRating: rating,
+            isRating: false
+        });
+        const { onRate: callback } = this.props;
+        callback && callback({ ...e, rating });
+    };
 
     render() {
         console.log("ReviewList: Render");

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReviewManager from '../../modules/ReviewManager';
 import './review.css'
+import 'react-rater/lib/react-rater.css'
+import Rating from 'react-rating'
 
 class ReviewForm extends Component {
     state = {
@@ -14,10 +16,16 @@ class ReviewForm extends Component {
         loadingStatus: false,
     }
     handleFieldChange = evt => {
-        const stateToChange = {};
-        stateToChange[evt.target.id] = evt.target.value;
-        this.setState(stateToChange);
-    };
+      const stateToChange = {};
+      stateToChange[evt.target.id] = evt.target.value;
+      this.setState(stateToChange);
+  };
+
+  handleRatingChange = event => {
+      const stateToChange = {};
+      stateToChange["rating"] = event;
+      this.setState(stateToChange);
+  }
 
     constructNewReview = evt => {
         evt.preventDefault();
@@ -30,13 +38,13 @@ class ReviewForm extends Component {
                 ratingTitle: this.state.ratingTitle,
                 userId: parseInt(sessionStorage.getItem("credentials")),
                 username: sessionStorage.getItem("username"),
-                rating: this.state.rating,
+                rating: parseInt(this.state.rating),
                 review: this.state.review,
-                noteId: this.state.noteId,
+                noteId: parseInt(this.state.noteId)
 
             };
 
-            // Create the animal and redirect user to animal list
+            // Create the review and redirect user to reviewlist
             ReviewManager.post(review)
             .then(() => this.props.history.push(`/notes/${this.props.match.params.noteId}`));
         }
@@ -63,13 +71,15 @@ class ReviewForm extends Component {
               id="username"
               onChange={this.handleFieldChange}
             ></input>
-                      <label className="instructor">rating:</label>
-            <input
-              type="text"
-              placeholder="instructor"
-              id="instructor"
-              onChange={this.handleFieldChange}
-            ></input>
+            <label className="instructor">rating:</label>
+            {/* <Rating
+            name="rating"
+            id="rating"
+            initialRating={this.state.rating}
+            emptySymbol={<span style={{ color: 'gray' }}><i className="fa fa-star fa-2x"></i></span>}
+            fullSymbol={<span style={{ color: 'black' }}><i className="fa fa-star fa-2x"></i></span>}
+            onClick={this.handleRatingChange} 
+            /> */}
 
             <label className="review">review:</label>
             <input

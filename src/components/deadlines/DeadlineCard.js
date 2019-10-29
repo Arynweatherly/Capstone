@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Deadline.css'
 
 class DeadlineCard extends Component {
   render() {
@@ -9,6 +10,7 @@ class DeadlineCard extends Component {
           <p>{this.props.deadline.title}</p>
           <button type="button" onClick={() => this.props.deleteDeadline(this.props.deadline.id)}>delete</button>
           <button type="button" onClick={() => {this.props.history.push(`/deadlines/${this.props.deadline.id}/edit`)}}>Edit</button>
+          <hr />
         </div>
       </div>
     );
