@@ -37,20 +37,6 @@ class NoteDetail extends Component {
       NoteManager.delete(id)
       .then(() => { this.props.history.push(`/notebooks/${this.state.notebookId}`)})}
 
-        // NoteManager.getAll()
-        // .then((newNotes) => {
-        //   this.setStatee({
-        //     notes: newNotes
-    //       // })
-    //     })
-    //   })
-    // }
-  //   handleDelete = () => {
-  //     //invoke the delete function in AnimalManger and re-direct to the animal list.
-  //     this.setState({loadingStatus: true})
-  //     NoteManager.delete(this.props.notebook.id)
-      // .then(() => this.props.history.push(`/notebooks/${this.state.notebookId}`))
-  // }
 
     render() {
       console.log("this is note detail props", this.props.match.params.notebookId)

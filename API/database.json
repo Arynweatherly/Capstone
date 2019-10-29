@@ -51,7 +51,7 @@
       "topics": "tibia, fibula, muscles, lower limb, ligaments",
       "instructor": "Dr. Lewis",
       "content": "The tibia is the much larger bone of the lower leg. its stronger than the fibula as it must bear the weight of the body. The tibia which is the shin-bone, articulates with the thigh bone above, the ankle below and the fibula to the side. the thinner fibula helps to form the ankle joint. The tibia is a long bone and lies along side the fibula on the medial (inner) side and articulates w/ the fibula at its upper and lower ends. the upper end of the tibia is expanded to form the medial and lateral tibial condyles, which articulate with the femoral condyles at the knee joint. the lower end of the tibia is less pronounced than the upper end. it articulates with both the talus and with the lower end of the fibula.          FIBULA: the fibula lays on the lateral side of the tibia. it plays no important part in the knee joint, but it very important support for the ankle. The shaft of the fibula is narrow and bears the grooves and ridges associated w/ its major role as a site of muscle attatchment for the leg.      LIGAMENTS: the procimal (upper) end: just under the knee is the upper joint between the head of the fibula and the underside of the lateral tibial condyle. The joint is surrounded and protected by a fibrous joint capsule, which is strengthened by the anterior and posterior tibiofibular ligaments. The anterior ligaments of the head of the fibula runs from the front of the fibular head across to the front of the lateral tibial condyle. the posterior ligament of the head of the fibula runs in a similar fashion behind the fibular head. other ligaments bind the bones of the lower leg to the femur. the strongest of these are the medial and lateral collateral ligaments of the knee joint, which run vertically down from the femur to the corresponding bone (tibia or fibula) beneath. DISTAL END: the joint b/w the lower ends of the tibia and fibula allows no movement of one bone upon the other. rather, the fibula is bound tightly to the tibia by  fibrous ligaments in order to maintain the stability of the ankle joint. the main ligaments concerned are the ant and post tib-fib ligaments. other ligaments around the ankle bind the tibia and fibula to the bones of the foot.",
-      "notebookId": 5,
+      "notebookId": 4,
       "id": 8
     },
     {
@@ -69,7 +69,7 @@
       "topics": "css, positioning, ",
       "instructor": "Michael Conrad",
       "content": "if you want control over wherean element lives on our website at all times, absolute positioning is the key to making this happen. If you think of your browser as one big bounding box, absolute positioning allows you to control exactly where in that box an element will stay. Use top, right, bottom and left, accompanied by a pixel value to control where an element stays. Setting the position to absolute can also happen in a div.        CENTERING: 1.text: text is centered using the text-align: center. if you want it to either side use left or right instead of center. 2.Content: a div or any other element can be centered by adding the block property to it, and then using auto margins. the css would look like.... display:block; margin:auto;      HOVER EFFECTS: this is usef for buttons, text links, block sections of your site, icons and more. if you want something to change colors when someone hovers their mouse over it, use the same CSS bu add :hover to it and change the styling. here's an example:  .entry h2{  font-size:36px; color: red; font-weight: 800; } .entry h2:hover{ color: gray; }....... TRANSITIONS:       for hover effects like w/ menus or images in your website, you dont want colors snapping too quickly to the end result. you ideally want to ease the change in gradually, which is where the transition property comes into play. example:    .entry h2:hover{  color: gray; transition: all 0.3s ease;   }   this makes the change happen over .3 seconds, instead of just instantly snapping to red.......BOX SIZING: box-sizing: border-box is a favorite among many web designers, because it solves the problem of padding and layout issues. Basically, when you set a box to a specific width, and add padding to it, the padding adds to the size of the box. However, with box-sizing:border-box;, this is negated, and boxes stay the size they are meant to be. ...........:before      this CSS selector is a selector that allows you to  choose a CSS element and insert content before every element w/ a specific class applied to it. lets say you had a website where you wanted specific text before every H2 tag. you would use this set up. this is extremely handy, especially if you're using an icon font.",
-      "notebookId": 6,
+      "notebookId": 13,
       "id": 10
     },
     {
@@ -78,7 +78,7 @@
       "topics": "classes, arrow functions, variables ",
       "instructor": "Brenda",
       "content": "a class is a type of function, but instead of using the keyword function to initiate it, we use the keyword class and the properties are assigned inside a constructor() method. you can also add your own methods in a class. create a method named present ......... class Car { constructor(name) {this.brand = name; }      present() { return 'I have a ' + this.brand; } }   mycar = new Car('Ford'); mycar.present();      as you can see in the example, you call the method by referring to the object's name followed by parentheses which contain the paramenters.   ............CLASS INHERITANCE: to create a class inheritance, use the extends keyword. a class created w/ a class inheritance inherits all the methods from another class.      .............THIS: the handling of this is also different in arrow functions compared to regular functions. w/ arrow functions there are no binding of this. in regular functions the this keyword represented the object that called the function, which could be the window, doc, button etc. w/ arrow function the this keyword always represents the object that defined the arrow function",
-      "notebookId": 7,
+      "notebookId": 13,
       "id": 11
     },
     {
@@ -91,23 +91,70 @@
       "id": 12
     },
     {
-        "title": "state",
-        "date": "2019-10-05",
-        "topics": "react, state, objects, components ",
-        "instructor": "Brenda",
-        "content": "The state object is where you store property values that belongs to the component. When the state object changes, the component re-renders. The state object is initialized in the constructor. Refer to the state object anywhere in the component by using the this.state.propertyname syntax.  Example class Car extends React.Component {.    Constructor(props) {.      Super(props); this.state = { brand: ‘Ford’, model: ‘mustang’, color: ‘red’, year: 1964 };  render() {   return ( <div> <h1> MY {this.state.brand}</h1> <p> it is a {this.state.color} {this.state.model} from {this.state.year}. </p> </div> ); } }. ………. To change a value in the state object, use the this.setState() method. When a value in the state object changes, the component will re-render, meaning that the output will change according to the new values. Always use the setState() method to change the state object, it will ensure that the component knows its been updated and calls the render() method (and all the other lifecycle methods)",
-        "notebookId": 7,
-        "id": 13
+      "title": "state",
+      "date": "2019-10-05",
+      "topics": "react, state, objects, components ",
+      "instructor": "Brenda",
+      "content": "The state object is where you store property values that belongs to the component. When the state object changes, the component re-renders. The state object is initialized in the constructor. Refer to the state object anywhere in the component by using the this.state.propertyname syntax.  Example class Car extends React.Component {.    Constructor(props) {.      Super(props); this.state = { brand: ‘Ford’, model: ‘mustang’, color: ‘red’, year: 1964 };  render() {   return ( <div> <h1> MY {this.state.brand}</h1> <p> it is a {this.state.color} {this.state.model} from {this.state.year}. </p> </div> ); } }. ………. To change a value in the state object, use the this.setState() method. When a value in the state object changes, the component will re-render, meaning that the output will change according to the new values. Always use the setState() method to change the state object, it will ensure that the component knows its been updated and calls the render() method (and all the other lifecycle methods)",
+      "notebookId": 7,
+      "id": 13
     },
-  {
+    {
       "title": "forms",
       "date": "2019-10-09",
       "topics": "react, forms, state, objects, components ",
       "instructor": "Brenda",
       "content": "if you want to send parameters into an event handler, you have two options: 1. Make an anonymous arrow function or 2.bind the event handler to this. note that the first argument has to be this. REACT EVENT OBJECT: event handlers have access to the react event that triggered the function. In react, form data is usually handled by the components. When the data is handled by the components, all the data is stored in the component state. you can control changes by adding event handlers in the onChange attribute. Note: you must initialize the state in the constructor method before you can use it. CONDITIONAL RENDERING: if you dont want to display the h1 element until the user has done any input you can add an if statement. you can control the submit action by adding an event handler in the onSubmit attribute. event.preventDefault() is used to prevent the form from actually being submitted. .......MULTIPLE INPUT FIELDS: you can control the values of more than one input field by adding a name attribute to each element. when you initialize the state in the constructor, use the field names. to access the fields in the event handler use the event.target.name and event.target.value syntax. to update the state in the this.setState method, use square brackets [] around the property name...........>TEXTAREA:  in react, the value of a textarea is placed in a value attribute example ...render() { return (   <form> <textarea value={this.state.description} /> <form/> };................ ",
-      "notebookId": 7,
+      "notebookId": 13,
       "id": 14
-  }
+    },
+    {
+      "id": 1,
+      "title": "React Notes",
+      "date": "2019-10-17",
+      "topics": "state, props",
+      "instructor": "Brenda Long",
+      "content": "",
+      "notebookId": 7
+    }
+  ],
+  "reviews": [
+    {
+      "id": 2,
+      "userId": 2,
+      "username": "sage",
+      "noteId": 14,
+      "ratingTitle": "Thanks",
+      "review": "solid notes. appreciate ya",
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "username": "sage",
+      "noteId": 4,
+      "ratingTitle": "Thanks",
+      "review": "misssed this day in class, Solid notes, friend. thanks for posting them",
+      "rating": 4
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "username": "sage",
+      "noteId": 8,
+      "ratingTitle": "Thanks",
+      "review": "misssed this day in class, Solid notes, friend. thanks for posting them",
+      "rating": 4
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "username": "sage",
+      "noteId": 4,
+      "ratingTitle": "Thanks",
+      "review": "misssed this day in class, Solid notes, friend. thanks for posting them",
+      "rating": 4
+    }
   ],
   "tasks": [
     {
@@ -132,11 +179,11 @@
       "userId": 4
     },
     {
+      "id": 15,
       "taskName": "Study react",
-      "completed": "on",
+      "completed": true,
       "date": "2019-10-26",
-      "userId": 3,
-      "id": 15
+      "userId": 3
     }
   ],
   "deadlines": [
@@ -169,6 +216,12 @@
       "date": "2019-11-02",
       "userId": 3,
       "id": 7
+    },
+    {
+      "title": "soft demo day- present capstone MVP to class (try to make it look nice)",
+      "date": "2019-11-01",
+      "userId": 3,
+      "id": 8
     }
   ],
   "friends": [
@@ -238,9 +291,54 @@
       "id": 42
     },
     {
+      "userId": 5,
+      "friendInitiate": "3",
+      "id": 45
+    },
+    {
+      "userId": 1,
+      "friendInitiate": "3",
+      "id": 48
+    },
+    {
       "userId": 2,
       "friendInitiate": "3",
-      "id": 43
+      "id": 49
+    },
+    {
+      "userId": 9,
+      "friendInitiate": "10",
+      "id": 50
+    },
+    {
+      "userId": 3,
+      "friendInitiate": "10",
+      "id": 51
+    },
+    {
+      "userId": 1,
+      "friendInitiate": "10",
+      "id": 52
+    },
+    {
+      "userId": 13,
+      "friendInitiate": "10",
+      "id": 53
+    },
+    {
+      "userId": 8,
+      "friendInitiate": "10",
+      "id": 54
+    },
+    {
+      "userId": 6,
+      "friendInitiate": "10",
+      "id": 55
+    },
+    {
+      "userId": 10,
+      "friendInitiate": "3",
+      "id": 56
     }
   ],
   "users": [
@@ -309,18 +407,31 @@
       "name": "nick",
       "password": "nick",
       "id": 11
-    }
-  ],
-  "notebooks": [
-    {
-      "subject": "Anatomy",
-      "userId": 4,
-      "id": 4
     },
     {
+      "username": "keaton",
+      "name": "keaton",
+      "password": "keaton",
+      "id": 12
+    },
+    {
+      "username": "dylan",
+      "name": "dyal",
+      "password": "dyaln",
+      "id": 13
+    }
+  ],
+
+  "notebooks": [
+    {
+      "id": 4,
+      "subject": "Anatomy",
+      "userId": 3
+    },
+    {
+      "id": 5,
       "subject": "physics",
-      "userId": 4,
-      "id": 5
+      "userId": 3
     },
     {
       "subject": "CSS",
@@ -328,9 +439,34 @@
       "id": 6
     },
     {
-      "subject": "React",
-      "userId": 4,
+      "subject": "CSS",
+      "userId": 8,
+      "id": 11
+    },
+    {
+      "subject": "CSS",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "subject": "CSS",
+      "userId": 12,
+      "id": 1
+    },
+    {
+      "subject": "CSS",
+      "userId": 12,
+      "id": 10
+    },
+    {
+      "subject": "React Notes",
+      "userId": 1,
       "id": 7
+    },
+    {
+      "subject": "React2",
+      "userId": 10,
+      "id": 13
     },
     {
       "id": 9,
@@ -342,6 +478,5 @@
       "subject": "MOMOMOmomo",
       "userId": 4
     }
-  ],
-  "reviews": []
+  ]
 }

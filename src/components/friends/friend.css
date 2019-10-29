@@ -1,11 +1,28 @@
 .cardTitle {
-    color: white;
+    color: black;
 }
 
 .friendCardNav{
-    border: outset 5px darkgray;
+    border: outset 5px #EAECEB;
     border-radius: 5%;
     background: maroon;
-    color: white;
+    color: #EAECEB;
+}
+.friendHeading {
+    align-content: center;
+    text-align: center;
 }
 
+.friends-container-card {
+    max-height: 400px;
+    border: 7px dotted #FECCC3;
+    background-color:#EAECEB ;
+    max-width: 800px;
+    align-self: center;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;;
+}
+.view-friend-notes-btn {
+    max-height: 50px;
+}

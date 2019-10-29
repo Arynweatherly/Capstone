@@ -5,6 +5,11 @@ import DeadlineList from '../deadlines/DeadlineList'
 import TaskList from '../tasks/TaskList'
 import { Card } from 'reactstrap'
 import './home.css'
+import { Button } from 'antd';
+import { Link } from "react-router-dom"
+
+
+
 
 class Home extends Component {
   render() {
@@ -13,27 +18,43 @@ class Home extends Component {
      <h2> Pass a Note Profile Page</h2>
      <br />
      <small>some sort of slogan</small>
+     <div className='logoPlaceholder'>
+					<img
+						alt='logo'
+						height='153px'
+						width='145px'
+						src={`/images/userPic.jpg`}
+					></img>
+				</div>
+
+
      {
        <>
+       <Card className="profilePic" />
+
        <Card className="friendsListCard">
-         <FriendsList 
+         <FriendsList className="friendListContainer"
          currentUser={this.props.currentUser}
          {...this.props}
          />
        </Card>
-       <Card>
-         <NotebookList 
-         currentUser={this.props.currentUser}
-         {...this.props}
-         />
+
+
+
+       <Card className="notebooksCardContainer">
+          <div className="notebooksBtn">
+          <Link className="nav-link" to="/notebooks"><button type="button" className="btn-to-notebooks">NOTEBOOKS</button></Link>
+          </div>
        </Card>
-       <Card>
+
+
+       <Card className="deadlineCardContainer">
          <DeadlineList 
          currentUser={this.props.currentUser}
          {...this.props}
          />
        </Card>
-       <Card>
+       <Card className="tasksCard">
          <TaskList 
          currentUser={this.props.currentUser}
          {...this.props}

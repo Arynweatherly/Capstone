@@ -11,12 +11,17 @@ import React, { Component } from 'react';
 import FriendCard from './FriendsCard';
 import FriendsManager from '../../modules/FriendsManager'
 import FriendsSearch from './FriendsSearch'
+import NotebookManager from '../../modules/NotebookManager'
+import NotebookCard from '../notebooks/NotebookCard'
 
 class FriendsList extends Component {
     //define what this component needs to render
     state = {
         friends: [],
-        currentFriend: false
+        currentFriend: false,
+        friendNotebooks: [],
+        friendNotes: [],
+        notebooks: false
     };
 
     deleteFriend = id => {
@@ -28,6 +33,15 @@ class FriendsList extends Component {
             });
         });
     };
+    getFriendsNotebooks = id => {
+        NotebookManager.getMyNotebooks(id).then((data) => {
+            this.setState({
+                friendNotebooks: data,
+                notebooks: true
+            })
+            console.log('friendbooks', id)
+        } )
+    }
 
     addFriend = id => {
         const newFriend = {
@@ -43,6 +57,7 @@ class FriendsList extends Component {
                     });
                 }
             });
+    
 
             if (newFriend.userId === sessionStorage.getItem("credentials")) {
                 alert("sorry, you can't be friends with yourself.")
@@ -80,7 +95,7 @@ class FriendsList extends Component {
             <>
             <FriendsSearch {...this.props} addFriend={this.addFriend} />
 
-            <div className="container-cards">
+            <div className="friends-container-card">
                 <h4>Your Friends</h4>
                 {this.state.friends.map(friend => (
                     <FriendCard
@@ -88,58 +103,24 @@ class FriendsList extends Component {
                         friend={friend}
                         deleteFriend={this.deleteFriend}
                         {...this.props}
+                        getFriendsNotebooks={this.getFriendsNotebooks}
                         />
                 ))}
             </div>
+                {this.state.notebooks &&
+            <div className="container-card-notebook">
+        {this.state.friendNotebooks.map(notebook =>
+          <NotebookCard
+            key={notebook.id}
+            notebook={notebook}
+            deleteNotebook={this.deleteNotebook}
+            {...this.props}
+          />
+        )}
+      </div>
+                }
             </>
         )
     }
 }
 export default FriendsList
-
-// import FriendsManager from "../../modules/FriendsManager";
-// import React, { Component } from "react";
-// import FriendCard from "./FriendsCard";
-// import { CardDeck } from "reactstrap"
-// // import { Link } from "react-router-dom"
-
-// export default class FriendList extends Component {
-//   state = {
-//     friends: [],
-//     friend: ""
-//   };
-//   getData = () => {
-//     console.log(this.props.currentUser);
-//     FriendsManager.getFriends(this.props.currentUser).then(friends =>
-//       this.setState({
-//         friends: friends
-//       })
-//     );
-//   };
-
-//   componentDidMount() {
-//     this.getData();
-//   }
-//   render() {
-//     console.log(this.state.friends);
-//     return (
-//       <>
-//         <div>
-//         <CardDeck className="cardDeck">
-//           {this.state.friends.map(friend => (
-//             // console.log(this.state.friends),
-//             <FriendCard
-//               key={friend.id}
-//               getData={this.getData}
-//               currentUser={this.props.currentUser}
-//               friend={friend}
-//               friends={this.state.friends}
-//               {...this.props}
-//             />
-//           ))}
-//           </CardDeck>
-//         </div>
-//       </>
-//     );
-//   }
-// }

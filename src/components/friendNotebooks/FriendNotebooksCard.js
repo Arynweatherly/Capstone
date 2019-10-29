@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import "./Notebook.css"
+
 
 class NotebookCard extends Component {
   render() {
@@ -14,7 +14,7 @@ class NotebookCard extends Component {
           <h3>class subject: <span className="card-notebookSubject">{this.props.notebook.subject}</span></h3>
         <button type="button" className="notebookButton" onClick={() => this.props.deleteNotebook(this.props.notebook.id)}>Delete</button>
         <button type="button"  className="notebookButton" onClick={() => {this.props.history.push(`/notebooks/${this.props.notebook.id}/edit`)}}>Edit</button>
-        <Link to={`/notebooks/${this.props.notebook.id}`}><button class="button"  className="notebookButton">View Notes</button></Link>
+        <Link to={`/notebooks/${this.props.notebook.userId}`}><button class="button"  className="notebookButton">View Notes</button></Link>
         </div>
       </div>
     );

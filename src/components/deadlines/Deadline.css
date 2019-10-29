@@ -3,13 +3,14 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 5px; /* 5px rounded corners */
-  background: white;
+  /* background: #FDFAF2; */
   margin-bottom: 2em;
   flex: 0 1 24%;
 }
 
 .card-content {
   padding: .5em;
+  color: black;
 }
 
 .card-content h3 {
@@ -29,9 +30,9 @@
 }
 
 .card button {
-  background-color: maroon;
+  background-color: #FECCC3;
   border: none;
-  color: white;
+  color: rgb(163, 159, 159);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -43,5 +44,13 @@
 }
 
 .card button:hover {
-  background-color: maroon;
+  background-color: #FECCC3;
+}
+
+.deadline-card-content {
+  background-color: #FDFAF2;
+}
+
+.card-deadline {
+  background-color: #C6C1BE;
 }

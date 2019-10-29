@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 //import the components we will need
-import NotebookCard from './NotebookCard'
+import FriendNotebookCard from './FriendNotebooksCard'
 import NotebookManager from '../../modules/NotebookManager'
 
-class NotebookList extends Component {
+class FriendNotebookList extends Component {
     //define what this component needs to render
     state = {
         notebooks: [],
@@ -12,10 +12,11 @@ class NotebookList extends Component {
 componentDidMount(){
     console.log("NOTEBOOK LIST: ComponentDidMount", sessionStorage.getItem("credentials"));
     //getAll from AnimalManager and hang on to that data; put it in state
-    NotebookManager.getMyNotebooks(sessionStorage.getItem("credentials"))
+    NotebookManager.getUserSpecificNotebooks(this.props.match.params.userId)
     .then(notebooks => {
         this.setState({
-            notebooks: notebooks
+            notebooks: notebooks,
+
         })
     })
 };
@@ -46,7 +47,7 @@ render(){
 </section>
       <div className="container-card-notebook">
         {this.state.notebooks.map(notebook =>
-          <NotebookCard
+          <FriendNotebookCard
             key={notebook.id}
             notebook={notebook}
             deleteNotebook={this.deleteNotebook}
@@ -59,4 +60,4 @@ render(){
   }
 }
 
-export default NotebookList
+export default FriendNotebookList

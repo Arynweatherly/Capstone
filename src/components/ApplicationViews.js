@@ -12,6 +12,9 @@ import TaskList from './tasks/TaskList'
 import DeadlineList from './deadlines/DeadlineList'
 import DeadlineForm from './deadlines/DeadlineForm'
 import DeadlineEditForm from './deadlines/EditDeadlineForm'
+import ReviewList from './reviews/ReviewList'
+import ReviewDetails from './reviews/ReviewDetails'
+import ReviewForm from './reviews/ReviewForm'
 import NoteList from './notes/NotesList'
 import NoteForm from './notes/NotesForm'
 import NoteDetail from './notes/NoteDetail'
@@ -20,6 +23,8 @@ import LoginForm from './auth/loginForm'
 import Login from './auth/Login'
 import UserForm from './auth/registerForm'
 import FriendList from './friends/FriendsList'
+import FriendNotebookList from './friendNotebooks/FriendNotebookList'
+
 //only include these once they are built - previous practice exercise
 class ApplicationViews extends Component {
 
@@ -54,10 +59,20 @@ class ApplicationViews extends Component {
             return <NoteEditForm {...props} />
         }} />
 
-      {/* <Route path="/notes/:noteId(\d+)" render={(props) => {
-        // Pass the animalId to the AnimalDetailComponent
-        return <NotebookDetail notebookId={parseInt(props.match.params.notebookI)} {...props}/>
-        }} /> */}
+
+          <Route exact path="/notes/:noteId(\d+)/" render={(props) => {
+            return <ReviewList noteId={parseInt(props.match.params.noteId)} {...props}/>
+          }} />
+          <Route path="/reviews/new" render={(props) => {
+          return <ReviewForm {...props} />
+          }} />
+          <Route exact path="/reviews/:noteId(\d+)" render={(props) => {
+        // Pass the reviewId to the ReviewDetailComponent
+        return <ReviewDetails noteId={parseInt(props.match.params.noteId)} {...props}/>
+        }} />
+
+
+        {/* <Route exact path='/notebooks/:userId/' render={} */}
 
         <Route exact path="/notebooks" render={(props) => {
                 return <NotebookList {...props} />
@@ -68,6 +83,7 @@ class ApplicationViews extends Component {
         <Route path="/notebooks/:notebookId(\d+)/edit" render={props => {
             return <NotebookEditForm {...props} />
         }} />
+        
 
         <Route exact path="/tasks" render={(props) => {
                 return <TaskList {...props} />
@@ -78,6 +94,7 @@ class ApplicationViews extends Component {
         <Route path="/tasks/:taskId(\d+)/edit" render={props => {
             return <TaskEditForm {...props} />
         }} />
+
 
         <Route exact path="/deadlines" render={(props) => {
             return <DeadlineList {...props} />
