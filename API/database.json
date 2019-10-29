@@ -107,8 +107,22 @@
       "content": "if you want to send parameters into an event handler, you have two options: 1. Make an anonymous arrow function or 2.bind the event handler to this. note that the first argument has to be this. REACT EVENT OBJECT: event handlers have access to the react event that triggered the function. In react, form data is usually handled by the components. When the data is handled by the components, all the data is stored in the component state. you can control changes by adding event handlers in the onChange attribute. Note: you must initialize the state in the constructor method before you can use it. CONDITIONAL RENDERING: if you dont want to display the h1 element until the user has done any input you can add an if statement. you can control the submit action by adding an event handler in the onSubmit attribute. event.preventDefault() is used to prevent the form from actually being submitted. .......MULTIPLE INPUT FIELDS: you can control the values of more than one input field by adding a name attribute to each element. when you initialize the state in the constructor, use the field names. to access the fields in the event handler use the event.target.name and event.target.value syntax. to update the state in the this.setState method, use square brackets [] around the property name...........>TEXTAREA:  in react, the value of a textarea is placed in a value attribute example ...render() { return (   <form> <textarea value={this.state.description} /> <form/> };................ ",
       "notebookId": 7,
       "id": 14
+    },
+    {
+      "id": 1,
+      "title": "React Notes",
+      "date": "2019-10-17",
+      "topics": "state, props",
+      "instructor": "Brenda Long",
+      "content": "",
+      "notebookId": 7
     }
   ],
+
+
+
+
+
   "reviews": [
     {
       "id": 1,
@@ -120,7 +134,32 @@
       "rating": 4
     },
     {
-      "id": 1,
+      "id": 2,
+      "userId": 2,
+      "username": "sage",
+      "noteId": 14,
+      "ratingTitle": "Thanks",
+      "review": "solid notes. appreciate ya",
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "username": "sage",
+      "noteId": 4,
+      "ratingTitle": "Thanks",
+      "review": "misssed this day in class, Solid notes, friend. thanks for posting them",
+      "rating": 4
+    },   {
+      "id": 4,
+      "userId": 2,
+      "username": "sage",
+      "noteId": 8,
+      "ratingTitle": "Thanks",
+      "review": "misssed this day in class, Solid notes, friend. thanks for posting them",
+      "rating": 4
+    },   {
+      "id": 5,
       "userId": 2,
       "username": "sage",
       "noteId": 4,
@@ -129,6 +168,12 @@
       "rating": 4
     }
   ],
+
+
+
+
+
+
   "tasks": [
     {
       "taskName": "eat foods",
@@ -159,6 +204,10 @@
       "userId": 3
     }
   ],
+
+
+
+
   "deadlines": [
     {
       "title": "ROUND TABLE TALKSS",
@@ -191,6 +240,9 @@
       "id": 7
     }
   ],
+
+
+
   "friends": [
     {
       "userId": 5,
@@ -271,6 +323,11 @@
       "userId": 1,
       "friendInitiate": "3",
       "id": 48
+    },
+    {
+      "userId": 2,
+      "friendInitiate": "3",
+      "id": 49
     }
   ],
   "users": [
@@ -339,6 +396,18 @@
       "name": "nick",
       "password": "nick",
       "id": 11
+    },
+    {
+      "username": "keaton",
+      "name": "keaton",
+      "password": "keaton",
+      "id": 12
+    },
+    {
+      "username": "dylan",
+      "name": "dyal",
+      "password": "dyaln",
+      "id": 13
     }
   ],
   "notebooks": [
@@ -356,6 +425,19 @@
       "subject": "CSS",
       "userId": 4,
       "id": 6
+    },
+    {
+      "subject": "CSS",
+      "userId": 8,
+      "id": 11
+    },  {
+      "subject": "CSS",
+      "userId": 1,
+      "id": 8
+    },  {
+      "subject": "CSS",
+      "userId": 12,
+      "id": 1
     },
     {
       "subject": "React",

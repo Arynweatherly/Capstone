@@ -23,3 +23,6 @@
     justify-content: flex-start;
     flex-direction: row;;
 }
+.view-friend-notes-btn {
+    max-height: 50px;
+}

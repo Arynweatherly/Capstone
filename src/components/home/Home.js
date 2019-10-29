@@ -7,8 +7,8 @@ import { Card } from 'reactstrap'
 import './home.css'
 import { Button } from 'antd';
 import { Link } from "react-router-dom"
-import NotebookButton from '../notebooks/NotebookButton'
-import NotebookButtonList from '../notebooks/NotebookButtonList'
+
+
 
 
 class Home extends Component {

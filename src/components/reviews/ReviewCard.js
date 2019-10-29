@@ -3,6 +3,7 @@ import './review.css'
 import { Link } from "react-router-dom";
 import Rating from 'react-rating'
 import 'react-rater/lib/react-rater.css'
+// import StarRating from 'react-star-rating'
 
 class ReviewCard extends Component {
     render() {
