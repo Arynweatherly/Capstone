@@ -19,7 +19,6 @@ export default {
     .then(result => result.json())
   },
 
-
 post(newReview) {
     return fetch(`${remoteURL}/reviews`, {
         method: "POST",

@@ -1,13 +1,25 @@
 .review-container-card {
-        display: flex;
-        flex-direction: column;
-        margin: 1em;
-        border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    border-radius: 5px;
 
-        color: rgb(255, 255, 255) !important;
-        border: 7px dotted #FECCC3;
+    color: rgb(255, 255, 255) !important;
+    border: 7px dotted #C6C1BE;
 }
 .review-card-container {
-    background-color: #EAECEB;
-    padding: 1em;
+background-color: #FECCC3;
+padding: 1em;
+}
+
+.review-card-content {
+border: 7px solid #FEF9F3;
+background-color: #EAECEB;
+display: flex;
+flex-direction: column;
+
+}
+textarea{
+width:250px;
+height:100px;
 }
