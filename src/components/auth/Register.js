@@ -20,7 +20,7 @@ class Registration extends Component {
 
 	handleRegistration = e => {
 		e.preventDefault();
-		let userName = this.state.regUserName;
+		let username = this.state.regUserName;
 		let password = this.state.regPassword;
 		let name = this.state.regName;
         let passwordConfirm = this.state.regPasswordConfirm;
@@ -32,11 +32,11 @@ class Registration extends Component {
 			// if both password fields are empty
 		} else if (password === '' || passwordConfirm === '') {
 			alert('Please fill the Password Form');
-		} else if (userName === '') {
+		} else if (username === '') {
 			alert('Please enter a valid user name');
 		} else {
 			const newUser = {
-				userName: userName,
+				username: username,
 				password: password,
                 name: name
                 
@@ -62,7 +62,7 @@ class Registration extends Component {
 						<input
 							onChange={this.handleFieldChange}
 							id='regUserName'
-							type='userName'
+							type='username'
 							placeholder='User Name'
 							required=''
 							autoFocus=''

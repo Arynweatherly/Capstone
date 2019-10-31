@@ -7,7 +7,7 @@ import { withRouter } from 'react-router-dom';
 class Login extends Component {
 	// Set initial state
 	state = {
-		userName: '',
+		username: '',
 		password: '',
 		hideReg: true
 	};
@@ -29,9 +29,9 @@ class Login extends Component {
 
 	handleLogin = e => {
 		e.preventDefault();
-		let userName = this.state.userName;
+		let username = this.state.username;
 		let password = this.state.password;
-		AuthManager.getUser(userName).then(response => {
+		AuthManager.getUser(username).then(response => {
       console.log('response' , response)
 			if (response.length === 0) {
 				alert('Please enter a valid User Name.');
@@ -40,7 +40,7 @@ class Login extends Component {
 				// starting the if statement to check for empty fields//
 			} else if (password === '') {
 				alert('Please fill the Password Form');
-			} else if (userName === '') {
+			} else if (username === '') {
 				alert('Please enter a valid email address');
 			} else if (response[0].password === password) {
 				//response[0].id is the ID of the user you logged in with,
@@ -52,7 +52,7 @@ class Login extends Component {
 	};
 
 	render() {
-    console.log(this.state.userName)
+    console.log(this.state.username)
 		return (
 			<>
 				{this.state.hideReg && (
@@ -74,8 +74,8 @@ class Login extends Component {
 								<input
 									placeholder='Username'
 									onChange={this.handleFieldChange}
-									type='userName'
-									id='userName'
+									type='username'
+									id='username'
 									required=''
 									autoFocus=''
 								/>

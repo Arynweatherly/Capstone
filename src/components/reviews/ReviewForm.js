@@ -51,7 +51,8 @@ class ReviewForm extends Component {
     };
 
     render(){
-
+      console.log(this.state.noteId, "noteId from state")
+      console.log(this.props.note)
         return(
             <>
             <form>
