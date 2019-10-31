@@ -22,7 +22,7 @@ componentDidMount(){
 deleteDeadline = id => {
     DeadlineManager.delete(id)
     .then(() => {
-      DeadlineManager.getAll()
+      DeadlineManager.getMyDeadlines(parseInt(sessionStorage.getItem("activeUser")))
       .then((newDeadlines) => {
         this.setState({
             deadlines: newDeadlines

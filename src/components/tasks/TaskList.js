@@ -21,7 +21,7 @@ class TaskList extends Component {
 deleteTask = id => {
     TaskManager.delete(id)
     .then(() => {
-        TaskManager.getAll()
+        TaskManager.getMyTasks(parseInt(sessionStorage.getItem("activeUser")))
         .then((newTasks) => {
             this.setState({
                 tasks: newTasks

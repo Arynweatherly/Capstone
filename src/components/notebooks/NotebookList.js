@@ -22,7 +22,7 @@ componentDidMount(){
 deleteNotebook = id => {
     NotebookManager.delete(id)
     .then(() => {
-      NotebookManager.getAll()
+      NotebookManager.getMyNotebooks(parseInt(sessionStorage.getItem("activeUser")))
       .then((newNotebooks) => {
         this.setState({
             notebooks: newNotebooks

@@ -254,31 +254,13 @@
       "rating": 5
     },
     {
-      "ratingTitle": "yay",
+      "ratingTitle": "mo added this one yo",
       "userId": 3,
-      "username": null,
-      "rating": 5,
-      "review": "yay",
-      "noteId": null,
+      "username": "yo",
+      "rating": 4,
+      "review": "lol",
+      "noteId": 17,
       "id": 14
-    },
-    {
-      "ratingTitle": "ha",
-      "userId": 3,
-      "username": null,
-      "rating": 3,
-      "review": "ha",
-      "noteId": null,
-      "id": 15
-    },
-    {
-      "ratingTitle": "ha",
-      "userId": 3,
-      "username": null,
-      "rating": 3,
-      "review": "hahaha",
-      "noteId": null,
-      "id": 16
     }
   ],
   "tasks": [
@@ -337,6 +319,13 @@
       "date": "2019-11-01",
       "userId": 21,
       "id": 19
+    },
+    {
+      "taskName": "woop woop",
+      "completed": false,
+      "date": "2019-01-01",
+      "userId": 22,
+      "id": 21
     }
   ],
   "deadlines": [
@@ -375,6 +364,12 @@
       "date": "2019-11-01",
       "userId": 3,
       "id": 10
+    },
+    {
+      "title": ".jkgh,fhdg",
+      "date": "2019-10-11",
+      "userId": 22,
+      "id": 12
     }
   ],
   "friends": [
@@ -502,6 +497,11 @@
       "userId": 2,
       "friendInitiate": 21,
       "id": 63
+    },
+    {
+      "userId": 1,
+      "friendInitiate": 22,
+      "id": 64
     }
   ],
   "users": [
@@ -624,6 +624,12 @@
       "password": "stephen",
       "name": "stephen",
       "id": 21
+    },
+    {
+      "username": "gradi",
+      "password": "gradi",
+      "name": "gradi",
+      "id": 22
     }
   ],
   "notebooks": [

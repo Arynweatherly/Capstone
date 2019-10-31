@@ -27,8 +27,12 @@ import FriendNotebookList from './friendNotebooks/FriendNotebookList'
 
 //only include these once they are built - previous practice exercise
 class ApplicationViews extends Component {
+  constructor(props) {
+    super(props)
+  }
+  isAuthenticated = () => localStorage.getItem("credentials") !== null;
+  isRemembered = () => localStorage.getItem("credentials") !== null;
 
-    
 
   render() {
 
@@ -37,7 +41,7 @@ class ApplicationViews extends Component {
     return (
       <React.Fragment>
         <Route exact path="/" render={(props) => {
-          return <Home activeUser={this.props.activeUser}/>
+          return <Home activeUser={this.props.activeUser} {...props}/>
         }} />
 
         <Route path="/notebooks/:notebookId(\d+)/" render={(props) => {
@@ -51,10 +55,8 @@ class ApplicationViews extends Component {
         <Route path="/notes/new/:notebookId(\d+)/" render={(props) => {
             return <NoteForm activeUser={this.props.activeUser} {...props} />
         }} />
-        {/* <Route path="/notes/:noteId(\d+)/edit" render={props => {
-            return <NoteEditForm {...props} />
-        }} /> */}
-        
+
+
          <Route exact path="/notes/:noteId(\d+)/edit" render={props => {
             return <NoteEditForm activeUser={this.props.activeUser} {...props} />
         }} />
@@ -63,9 +65,10 @@ class ApplicationViews extends Component {
           <Route exact path="/notes/:noteId(\d+)/" render={(props) => {
             return <ReviewList noteId={parseInt(props.match.params.noteId)} activeUser={this.props.activeUser} {...props}/>
           }} />
-          <Route path="/reviews/new" render={(props) => {
+          <Route path="/reviews/new/:noteId(\d+)" render={(props) => {
           return <ReviewForm activeUser={this.props.activeUser} {...props} />
           }} />
+
           <Route exact path="/reviews/:noteId(\d+)" render={(props) => {
         // Pass the reviewId to the ReviewDetailComponent
         return <ReviewDetails noteId={parseInt(props.match.params.noteId)} activeUser={this.props.activeUser} {...props}/>
@@ -121,10 +124,6 @@ class ApplicationViews extends Component {
             }
           }}
         />
-
-      
-
-        
       </React.Fragment>
     )
   }
