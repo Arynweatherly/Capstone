@@ -11,7 +11,7 @@ class ReviewList extends Component {
     deleteReview = id => {
         ReviewManager.delete(id)
         .then(() => {
-          ReviewManager.getAll()
+          ReviewManager.getMyReviews(this.props.noteId)
           .then((newReviews) => {
             this.setState({
                 reviews: newReviews
@@ -46,14 +46,14 @@ class ReviewList extends Component {
             <section className="section-content">
                 <button type="button"
                         className="btn"
-                        onClick={() => {this.props.history.push("/reviews/new")}}>
+                        onClick={() => {this.props.history.push(`/reviews/new/${this.props.match.params.noteId}`)}}>
                         add review
                 </button>
             </section>
-        
+
             <div className="review-container-card">
-                {this.state.reviews.map(review => 
-                <ReviewCard 
+                {this.state.reviews.map(review =>
+                <ReviewCard
                 key={review.id}
                 review={review}
                 deleteReview={this.deleteReview}

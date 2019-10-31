@@ -3,11 +3,13 @@ import ReviewManager from '../../modules/ReviewManager';
 import './review.css'
 import 'react-rater/lib/react-rater.css'
 import Rating from 'react-rating'
+import AuthManager from '../../modules/AuthManager'
+import { parse } from '@babel/core';
 
 class ReviewForm extends Component {
     state = {
         id: "",
-        noteId: parseInt(this.props.match.params.noteId),
+        noteId: '',
         userId: "",
         username: "",
         ratingTitle: "",
@@ -21,38 +23,50 @@ class ReviewForm extends Component {
       this.setState(stateToChange);
   };
 
-  handleRatingChange = event => {
-      const stateToChange = {};
-      stateToChange["rating"] = event;
-      this.setState(stateToChange);
-  }
+
+
+componentDidMount() {
+  AuthManager.getUserById(this.props.activeUser).then(user => {
+    this.setState({
+      userId: this.props.activeUser,
+      username: user.username,
+      noteId: this.props.match.params.noteId
+    })
+  })
+
+}
+
+
+
+
 
     constructNewReview = evt => {
         evt.preventDefault();
         if (this.state.ratingTitle === "" ) {
-  
+
             window.alert("Please input an animal name and breed");
         } else {
             this.setState({ loadingStatus: true });
             const review = {
                 ratingTitle: this.state.ratingTitle,
-                userId: parseInt(this.props.activeUser),
-                username: sessionStorage.getItem("username"),
+                userId: parseInt(sessionStorage.getItem("activeUser")),
+                username: this.state.username,
                 rating: parseInt(this.state.rating),
                 review: this.state.review,
-                noteId: parseInt(this.state.noteId)
+                noteId: parseInt(this.props.match.params.noteId)
 
             };
 
             // Create the review and redirect user to reviewlist
+            console.log('new review', review)
             ReviewManager.post(review)
             .then(() => this.props.history.push(`/notes/${this.props.match.params.noteId}`));
         }
     };
 
     render(){
-      console.log(this.state.noteId, "noteId from state")
-      console.log(this.props.note)
+      console.log(this.props, "noteId from match")
+     // console.log(this.props.note)
         return(
             <>
             <form>
