@@ -9,7 +9,7 @@ class TaskEditForm extends Component {
         completed: false,
         date: "",
         loadingStatus: false,
-        userId: parseInt(sessionStorage.getItem("credentials"))
+        userId: parseInt(this.props.activeUser)
       };
 
     handleFieldChange = evt => {

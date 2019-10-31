@@ -13,6 +13,7 @@ import { Link } from "react-router-dom"
 
 class Home extends Component {
   render() {
+    console.log('activeUser on home', this.props.activeUser)
     return (
    <div>
      <h2> Pass a Note Profile Page</h2>
@@ -34,7 +35,8 @@ class Home extends Component {
 
        <Card className="friendsListCard">
          <FriendsList className="friendListContainer"
-         currentUser={this.props.currentUser}
+         currentUser={this.props.currentUser} 
+         activeUser={this.props.activeUser}
          {...this.props}
          />
        </Card>
@@ -51,12 +53,14 @@ class Home extends Component {
        <Card className="deadlineCardContainer">
          <DeadlineList 
          currentUser={this.props.currentUser}
+         activeUser={this.props.activeUser}
          {...this.props}
          />
        </Card>
        <Card className="tasksCard">
          <TaskList 
          currentUser={this.props.currentUser}
+         activeUser={this.props.activeUser}
          {...this.props}
          />
        </Card>

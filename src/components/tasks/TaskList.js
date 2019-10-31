@@ -11,7 +11,7 @@ class TaskList extends Component {
  componentDidMount(){
         console.log("TASK LIST: ComponentDidMount");
         //getAll from AnimalManager and hang on to that data; put it in state
-        TaskManager.getMyTasks(sessionStorage.getItem("credentials"))
+        TaskManager.getMyTasks(this.props.activeUser)
         .then(tasks => {
             this.setState({
                 tasks: tasks

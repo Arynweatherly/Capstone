@@ -5,7 +5,7 @@ import "./NotebookForm.css"
 class NotebookEditForm extends Component {
     //set the initial state
     state = {
-      currentUser: parseInt(sessionStorage.getItem("credentials")),
+      currentUser: parseInt(this.props.activeUser),
       notebookSubject: "",
       loadingStatus: true,
     };

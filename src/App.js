@@ -5,66 +5,71 @@ import React, { Component } from "react";
 import "./App.css";
 // import { all } from 'q';
 import ApplicationViews from "./components/ApplicationViews";
-import NavBar from "./components/nav/Navbar";
+import Navbar from "./components/nav/Navbar"
 import { Route, withRouter, Redirect} from "react-router-dom";
+import Login from "./components/auth/Login"
+
+
 class App extends Component {
   state = {
-    user: "",
-    currentUser: ""
-  };
+		user: sessionStorage.getItem('activeUser') !== null,
+		activeUser: this.getUser()
+	};
 
-  //function that checks if there's a user logged in 
-  isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
-  isRemembered = () => sessionStorage.getItem("credentials") !== null;
+	isAuthenticated = () => sessionStorage.getItem('activeUser') !== null;
 
+	setUser = id => {
+		sessionStorage.setItem('activeUser', id);
+		this.setState({ activeUser: this.getUser(), user: true });
+	};
 
-//set user
-  setUser = authUser => {
-    sessionStorage.setItem("credentials", JSON.stringify(authUser));
-//this sets state
-    this.setState({
-      user: true,
-      currentUser: this.getUser()
+	getUser() {
+		if (sessionStorage.getItem('activeUser')) {
+			return parseInt(sessionStorage.getItem('activeUser'));
+		} else {
+			return '';
+		}
+	}
 
-    });
-  };
-
-  getUser = () => {
-    if(this.isAuthenticated){
-      return parseInt(sessionStorage.getItem("credentials"))
-    } else if(this.isRemembered){
-      return parseInt(localStorage.getItem("credentials"))
-    } else {
-      return <Redirect to="/auth" />
-    }
-  }
-
-  rememberMe = user => {
-    localStorage.setItem(
-      "credentials",
-      JSON.stringify(user))
-      this.setState({
-        user: true,
-        currentUser: this.setUser()
-      });
-  }
-
-  clearUser = () => {
-    sessionStorage.clear();
-    localStorage.clear();
-
+	clearUser = () => {
+		sessionStorage.removeItem('activeUser');
 		this.setState({
 			user: this.isAuthenticated()
 		});
-  };
+	};
+
   render() {
-    return (
-      <>
-        <NavBar user={this.state.user} clearUser={this.clearUser} {...this.props}/>
-        <ApplicationViews currentUser={this.state.currentUser} rememberMe={this.rememberMe} user={this.state.user} setUser={this.setUser} />
-      </>
-    );
-  }
+		// console.log('app.js user', this.state.activeUser);
+		return (
+			<div className='App'>
+				{/* <div className='darkMode'></div> */}
+				{this.state.user ? (
+					<>
+						<Navbar
+							clearUser={this.clearUser}
+							user={this.state.user}
+							{...this.props}
+							activeUser={this.state.activeUser}
+						/>
+						<ApplicationViews
+							user={this.state.user}
+							{...this.props}
+							activeUser={this.state.activeUser}
+						/>
+					</>
+				) : (
+					<Login
+						getUser={this.getUser}
+						setUser={this.setUser}
+						user={this.state.user}
+						{...this.props}
+						activeUser={this.state.activeUser}
+					/>
+				)}
+			</div>
+		);
+	}
 }
+
 
 export default App;

@@ -28,82 +28,81 @@ import FriendNotebookList from './friendNotebooks/FriendNotebookList'
 //only include these once they are built - previous practice exercise
 class ApplicationViews extends Component {
 
-    isAuthenticated = () => localStorage.getItem("credentials") !== null;
-    isRemebered = () => localStorage.getItem("credentials") !== null;
+    
 
   render() {
 
     //seeing if isAuthenticated works
-    console.log(this.props)
+    console.log('activeUser on app', this.props.activeUser)
     return (
       <React.Fragment>
         <Route exact path="/" render={(props) => {
-          return <Home />
+          return <Home activeUser={this.props.activeUser}/>
         }} />
 
         <Route path="/notebooks/:notebookId(\d+)/" render={(props) => {
         // Pass the animalId to the AnimalDetailComponent
-            return <NoteList notebookId={parseInt(props.match.params.notebookId)} {...props}/>
+            return <NoteList notebookId={parseInt(props.match.params.notebookId)} activeUser={this.props.activeUser} {...props}/>
         }} />
          <Route exact path="/notes/:notebookId(\d+)" render={(props) => {
         // Pass the animalId to the AnimalDetailComponent
-        return <NoteDetail notebookId={parseInt(props.match.params.notebookId)} {...props}/>
+        return <NoteDetail notebookId={parseInt(props.match.params.notebookId)}activeUser={this.props.activeUser} {...props}/>
         }} />
         <Route path="/notes/new/:notebookId(\d+)/" render={(props) => {
-            return <NoteForm {...props} />
+            return <NoteForm activeUser={this.props.activeUser} {...props} />
         }} />
         {/* <Route path="/notes/:noteId(\d+)/edit" render={props => {
             return <NoteEditForm {...props} />
         }} /> */}
+        
          <Route exact path="/notes/:noteId(\d+)/edit" render={props => {
-            return <NoteEditForm {...props} />
+            return <NoteEditForm activeUser={this.props.activeUser} {...props} />
         }} />
 
 
           <Route exact path="/notes/:noteId(\d+)/" render={(props) => {
-            return <ReviewList noteId={parseInt(props.match.params.noteId)} {...props}/>
+            return <ReviewList noteId={parseInt(props.match.params.noteId)} activeUser={this.props.activeUser} {...props}/>
           }} />
           <Route path="/reviews/new" render={(props) => {
-          return <ReviewForm {...props} />
+          return <ReviewForm activeUser={this.props.activeUser} {...props} />
           }} />
           <Route exact path="/reviews/:noteId(\d+)" render={(props) => {
         // Pass the reviewId to the ReviewDetailComponent
-        return <ReviewDetails noteId={parseInt(props.match.params.noteId)} {...props}/>
+        return <ReviewDetails noteId={parseInt(props.match.params.noteId)} activeUser={this.props.activeUser} {...props}/>
         }} />
 
 
         {/* <Route exact path='/notebooks/:userId/' render={} */}
 
         <Route exact path="/notebooks" render={(props) => {
-                return <NotebookList {...props} />
+                return <NotebookList activeUser={this.props.activeUser} {...props} />
         }} />
         <Route path="/notebooks/new" render={(props) => {
-            return <NotebookForm {...props} />
+            return <NotebookForm activeUser={this.props.activeUser} {...props} />
         }} />
         <Route path="/notebooks/:notebookId(\d+)/edit" render={props => {
-            return <NotebookEditForm {...props} />
+            return <NotebookEditForm activeUser={this.props.activeUser} {...props} />
         }} />
-        
 
         <Route exact path="/tasks" render={(props) => {
-                return <TaskList {...props} />
+                return <TaskList activeUser={this.props.activeUser} {...props} />
         }} />
         <Route path="/tasks/new" render={(props) => {
-            return <TaskForm {...props} />
+            return <TaskForm activeUser={this.props.activeUser} {...props} />
         }} />
         <Route path="/tasks/:taskId(\d+)/edit" render={props => {
-            return <TaskEditForm {...props} />
+            return <TaskEditForm activeUser={this.props.activeUser} {...props} />
         }} />
 
 
         <Route exact path="/deadlines" render={(props) => {
-            return <DeadlineList {...props} />
+            return <DeadlineList activeUser={this.props.activeUser} {...props} />
         }} />
         <Route path="/deadlines/new" render={(props) => {
-            return <DeadlineForm {...props} />
+            return <DeadlineForm activeUser={this.props.activeUser} {...props} />
         }} />
         <Route path="/deadlines/:deadlineId(\d+)/edit" render={props => {
-    return <DeadlineEditForm {...props} />
+    return <DeadlineEditForm  activeUser={this.props.activeUser} {...props} />
   }}
 
 />
@@ -115,8 +114,8 @@ class ApplicationViews extends Component {
           exact
           path="/friends"
           render={props => {
-            if (this.isAuthenticated || this.isRemebered) {
-              return <FriendList currentUser={this.props.currentUser} {...props} />;
+            if (this.props.user) {
+              return <FriendList currentUser={this.props.currentUser} activeUser={this.props.activeUser} {...props} />;
             } else {
               return <Redirect to="/login" />;
             }
@@ -124,51 +123,8 @@ class ApplicationViews extends Component {
         />
 
       
-<Route
-          exact
-          path="/login"
-          render={props => {
-            if (this.isAuthenticated || this.isRemebered) {
-              return <Login {...props} />;
-            } else {
-              return <Redirect to="/login" />;
-            }
-          }}
-        />
-        <Route
-          exact
-          path="/login/register-form"
-          render={props => {
-            if (this.isAuthenticated || this.isRemebered) {
-              return (
-                <UserForm
-                  rememberMe={this.props.remeberMe}
-                  setUser={this.props.setUser}
-                  {...props}
-                />
-              );
-            } else {
-              return <Redirect to="/login" />;
-            }
-          }}
-        />
-        <Route
-          exact
-          path="/login/login-form"
-          render={props => {
-            if (this.isAuthenticated || this.isRemebered) {
-              return (
-                <LoginForm
-                  rememberMe={this.props.rememberMe}
-                  setUser={this.props.setUser}
-                  {...props}
-                />
-              );
-            } else {
-              return <Redirect to="/login" />;
-            }
-          }}
-        />
+
+        
       </React.Fragment>
     )
   }

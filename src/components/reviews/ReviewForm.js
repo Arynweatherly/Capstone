@@ -36,7 +36,7 @@ class ReviewForm extends Component {
             this.setState({ loadingStatus: true });
             const review = {
                 ratingTitle: this.state.ratingTitle,
-                userId: parseInt(sessionStorage.getItem("credentials")),
+                userId: parseInt(this.props.activeUser),
                 username: sessionStorage.getItem("username"),
                 rating: parseInt(this.state.rating),
                 review: this.state.review,
@@ -51,7 +51,8 @@ class ReviewForm extends Component {
     };
 
     render(){
-
+      console.log(this.state.noteId, "noteId from state")
+      console.log(this.props.note)
         return(
             <>
             <form>
@@ -97,3 +98,4 @@ class ReviewForm extends Component {
 }
 
 export default ReviewForm
+

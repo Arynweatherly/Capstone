@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AuthManager from "../../modules/AuthManager"
+import Header from '../nav/header'
 import { Link, Route, withRouter, Redirect } from "react-router-dom";
 
 export default class LoginForm extends Component {
@@ -52,13 +53,18 @@ export default class LoginForm extends Component {
   }
   render() {
     return (
+      <>
+      <Header />
+      <div className="box container login">
+        <section className="is-centered">
+          <p className="title is-4">Join Pass A Note:</p>
+        </section>
       <form>
-        <div className="box">
-          <fieldset className="bod">
-            <h3 className="loginHeader">Join Pass A Note:</h3>
-            <div className="formgrid">
+        <div className="field">
+          <label className="label"></label>
+          <div className="control">
               <input
-                className="username"
+                className="input"
                 onChange={this.handleFieldChange}
                 type="text"
                 id="username"
@@ -66,30 +72,36 @@ export default class LoginForm extends Component {
                 required=""
                 autoFocus=""
               />
-              <label htmlFor="inputUsername"></label>
-
-              <input
-                className="password"
-                onChange={this.handleFieldChange}
-                type="password"
-                id="password"
-                placeholder="Password"
-                required=""
-              ></input>
-              <div>
-                <label>Remember Me</label>
-                <input type="checkbox" className="remember"></input>
               </div>
-              <div>
-                <label htmlFor="inputPassword"></label>
-                <button type="button" className="signIn" onClick={this.handleLogin}>
-                  Sign In
-                </button>
+              </div>
+              <div className="field">
+              <label className="label"></label>
+              <div className="control">
+                <input
+                  className="input"
+                  onChange={this.handleFieldChange}
+                  type="password"
+                  id="password"
+                  placeholder="Password"
+                  required=""
+                ></input>
               </div>
             </div>
-          </fieldset>
+            <div className="field">
+              <div className="control">
+                <label className="checkbox">
+                  <input className="remember checkbox" type="checkbox"/>
+                   Remember Me
+                </label>
+              </div>
+            </div>
+
+            <button type="button" className="button is-primary" onClick={this.handleLogin}>
+              Sign In
+            </button>
+          </form>
         </div>
-      </form>
-    );
+      </>
+      )
+    }
   }
-}

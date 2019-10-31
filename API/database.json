@@ -52,7 +52,7 @@
     },
     {
       "id": 8,
-      "title": "Tibia and Fibula-Aryn",
+      "title": "Tibia and Fibula-Arynnnn",
       "date": "2019-10-11",
       "topics": "tibia, fibula, muscles, lower limb, ligaments",
       "instructor": "Dr. Lewis",
@@ -178,6 +178,15 @@
       "notebookId": 14,
       "id": 20,
       "rating": 0
+    },
+    {
+      "id": 21,
+      "title": "Stephen's note",
+      "date": "2019-10-25",
+      "topics": "react",
+      "instructor": "brenda",
+      "content": "react is great ",
+      "notebookId": 17
     }
   ],
   "reviews": [
@@ -195,15 +204,6 @@
       "userId": 3,
       "username": "aryn",
       "noteId": 2,
-      "ratingTitle": "Thanks",
-      "review": "misssed this day in class, Solid notes, friend. thanks for posting them",
-      "rating": 4
-    },
-    {
-      "id": 4,
-      "userId": 2,
-      "username": "sage",
-      "noteId": 8,
       "ratingTitle": "Thanks",
       "review": "misssed this day in class, Solid notes, friend. thanks for posting them",
       "rating": 4
@@ -252,6 +252,33 @@
       "ratingTitle": "sick",
       "review": "sick notes man",
       "rating": 5
+    },
+    {
+      "ratingTitle": "yay",
+      "userId": 3,
+      "username": null,
+      "rating": 5,
+      "review": "yay",
+      "noteId": null,
+      "id": 14
+    },
+    {
+      "ratingTitle": "ha",
+      "userId": 3,
+      "username": null,
+      "rating": 3,
+      "review": "ha",
+      "noteId": null,
+      "id": 15
+    },
+    {
+      "ratingTitle": "ha",
+      "userId": 3,
+      "username": null,
+      "rating": 3,
+      "review": "hahaha",
+      "noteId": null,
+      "id": 16
     }
   ],
   "tasks": [
@@ -303,6 +330,13 @@
       "date": "2019-10-31",
       "userId": 1,
       "id": 18
+    },
+    {
+      "taskName": "Study react",
+      "completed": false,
+      "date": "2019-11-01",
+      "userId": 21,
+      "id": 19
     }
   ],
   "deadlines": [
@@ -335,6 +369,12 @@
       "title": "break startss",
       "date": "2019-11-02",
       "userId": 3
+    },
+    {
+      "title": "AHHHHHHH",
+      "date": "2019-11-01",
+      "userId": 3,
+      "id": 10
     }
   ],
   "friends": [
@@ -347,11 +387,6 @@
       "userId": 3,
       "friendInitiate": 2,
       "id": 12
-    },
-    {
-      "userId": 4,
-      "friendInitiate": 3,
-      "id": 26
     },
     {
       "userId": 2,
@@ -404,16 +439,6 @@
       "id": 45
     },
     {
-      "userId": 1,
-      "friendInitiate": 3,
-      "id": 48
-    },
-    {
-      "userId": 2,
-      "friendInitiate": 3,
-      "id": 49
-    },
-    {
       "userId": 9,
       "friendInitiate": 10,
       "id": 50
@@ -427,6 +452,56 @@
       "userId": 6,
       "friendInitiate": 15,
       "id": 52
+    },
+    {
+      "userId": 6,
+      "friendInitiate": 3,
+      "id": 54
+    },
+    {
+      "userId": 2,
+      "friendInitiate": 3,
+      "id": 55
+    },
+    {
+      "userId": 9,
+      "friendInitiate": 3,
+      "id": 56
+    },
+    {
+      "userId": 4,
+      "friendInitiate": 3,
+      "id": 57
+    },
+    {
+      "userId": 8,
+      "friendInitiate": 16,
+      "id": 58
+    },
+    {
+      "userId": 3,
+      "friendInitiate": 16,
+      "id": 59
+    },
+    {
+      "userId": 20,
+      "friendInitiate": 21,
+      "id": 60
+    },
+    {
+      "userId": 19,
+      "friendInitiate": 21,
+      "id": 61
+    },
+    {
+      "userId": 5,
+      "friendInitiate": 21,
+      "id": 62
+    },
+    {
+      "userId": 2,
+      "friendInitiate": 21,
+      "id": 63
     }
   ],
   "users": [
@@ -515,121 +590,40 @@
       "id": 14
     },
     {
-      "username": "mo",
-      "password": "mo",
+      "username": "new",
+      "password": "mew",
       "name": "",
       "id": 15
     },
     {
-      "username": "new",
-      "password": "new",
-      "name": "",
+      "username": "chandler",
+      "password": "chandler",
+      "name": "chandler",
       "id": 16
     },
     {
-      "password": "",
-      "name": "",
-      "id": 17
-    },
-    {
-      "password": "",
-      "name": "",
+      "username": "mo",
+      "password": "mo",
+      "name": "mo",
       "id": 18
     },
     {
-      "password": "aryn",
-      "name": "aryn",
+      "username": "madi",
+      "password": "madi",
+      "name": "madi",
       "id": 19
     },
     {
-      "password": "",
-      "name": "",
+      "username": "brenda",
+      "password": "brenda",
+      "name": "brenda",
       "id": 20
     },
     {
-      "password": "aryn",
-      "name": "",
+      "username": "stephen",
+      "password": "stephen",
+      "name": "stephen",
       "id": 21
-    },
-    {
-      "password": "aryn",
-      "name": "",
-      "id": 22
-    },
-    {
-      "password": "aryn",
-      "name": "",
-      "id": 23
-    },
-    {
-      "password": "aryn",
-      "name": "",
-      "id": 24
-    },
-    {
-      "password": "aryn",
-      "name": "",
-      "id": 25
-    },
-    {
-      "password": "aryn",
-      "name": "",
-      "id": 26
-    },
-    {
-      "password": "aryn",
-      "name": "",
-      "id": 27
-    },
-    {
-      "password": "aryn",
-      "name": "",
-      "id": 28
-    },
-    {
-      "password": "mo",
-      "name": "",
-      "id": 29
-    },
-    {
-      "password": "mo",
-      "name": "",
-      "id": 30
-    },
-    {
-      "password": "",
-      "name": "",
-      "id": 31
-    },
-    {
-      "password": "",
-      "name": "",
-      "id": 32
-    },
-    {
-      "password": "",
-      "name": "",
-      "id": 33
-    },
-    {
-      "password": "",
-      "name": "",
-      "id": 34
-    },
-    {
-      "password": "",
-      "name": "",
-      "id": 35
-    },
-    {
-      "password": "",
-      "name": "",
-      "id": 36
-    },
-    {
-      "password": "",
-      "name": "",
-      "id": 37
     }
   ],
   "notebooks": [
@@ -692,6 +686,11 @@
       "subject": "Heidi's React Notebook",
       "userId": 1,
       "id": 15
+    },
+    {
+      "subject": "Stephen's Notebook",
+      "userId": 21,
+      "id": 17
     }
   ]
 }
