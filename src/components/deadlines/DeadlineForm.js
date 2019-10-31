@@ -41,36 +41,50 @@ class DeadlineForm extends Component {
 
         return(
             <>
-            <form>
-                <fieldset>
-                    <div className="formgrid">
-                        <input
-                        type="text"
-                        required
-                        onChange={this.handleFieldChange}
-                        id="deadlineTitle"
-                        placeholder="description"
-                        />
-                        <label htmlFor="deadlineTitle">Description</label>
-                        <input
-                        type="date"
-                        required
-                        onChange={this.handleFieldChange}
-                        id="date"
-                        placeholder="date"
-                        />
-                        <label htmlFor="breed">Date</label>
-                    </div>
-                    <div className="alignRight">
-                        <button
-                        type="button"
-                        disabled={this.state.loadingStatus}
-                        onClick={this.constructNewDeadline}
-                        >Submit</button>
-                    </div>
-                </fieldset>
-            </form>
-        </>
+            <div className="login card">
+          <header className="card-header">
+            <p className="card-header-title">
+              Add New Deadline
+            </p>
+            <a href="#" className="card-header-icon" aria-label="more options">
+                <span className="icon"></span>
+            </a>
+          </header>
+          <div className="card-content">
+            <div className="content">
+              <div className="field">
+                <label htmlFor="deadlineTitle">Description</label>
+                <div className="control">
+                  <input
+                    className="input"
+                    type="text"
+                    required
+                    onChange={this.handleFieldChange}
+                    id="deadlineTitle"
+                    placeholder="description"
+                  />
+                </div>
+              </div>
+              <div className="field">
+                <label className="label">Date</label>
+                <div className="control">
+                  <input
+                    className="input"
+                    type="date"
+                    required
+                    onChange={this.handleFieldChange}
+                    id="date"
+                    placeholder="date"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer className="card-footer">
+            <a onClick={this.constructNewDeadline} className="card-footer-item">Save</a>
+          </footer>
+        </div>
+      </>
         )
     }
 }

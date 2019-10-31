@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "antd": "^3.24.3",
+    "bulma": "^0.8.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-rater": "^5.1.1",
