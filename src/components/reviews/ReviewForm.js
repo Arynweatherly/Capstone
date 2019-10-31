@@ -36,7 +36,7 @@ class ReviewForm extends Component {
             this.setState({ loadingStatus: true });
             const review = {
                 ratingTitle: this.state.ratingTitle,
-                userId: parseInt(sessionStorage.getItem("credentials")),
+                userId: parseInt(this.props.activeUser),
                 username: sessionStorage.getItem("username"),
                 rating: parseInt(this.state.rating),
                 review: this.state.review,

@@ -24,7 +24,7 @@ class ReviewDetails extends Component {
     .then((review) => {
       this.setState({
         id: review.id,
-        userId: parseInt(sessionStorage.getItem("credentials")),
+        userId: parseInt(this.props.activeUser),
         username: review.username,
         noteId: parseInt(this.props.noteId),
         ratingTitle: review.ratingTitle,
@@ -41,7 +41,7 @@ class ReviewDetails extends Component {
   }
 
   render() {
-    const activeUser = parseInt(sessionStorage.getItem("credentials"))
+    const activeUser = parseInt(this.props.activeUser)
     const checkUser = this.props.review.userId === activeUser
     return(
       <div className="card">

@@ -12,7 +12,7 @@ class DeadlineList extends Component {
 componentDidMount(){
     console.log("ANIMAL LIST: ComponentDidMount");
     //getAll from AnimalManager and hang on to that data; put it in state
-    DeadlineManager.getMyDeadlines(sessionStorage.getItem("credentials"))
+    DeadlineManager.getMyDeadlines(this.props.activeUser)
     .then((deadlines) => {
         this.setState({
             deadlines: deadlines

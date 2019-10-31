@@ -9,6 +9,12 @@ export default class UserForm extends Component {
         name: "",
         users: []
     }
+    handleFieldChange = (evt) => {
+        const stateToChange = {}
+        stateToChange[evt.target.id] = evt.target.value
+        this.setState(stateToChange)
+    }
+
 
     newUser = (e) => {
         e.preventDefault()
@@ -20,46 +26,26 @@ export default class UserForm extends Component {
         AuthManager.post("users", user).then(() => this.handleLogin())
      }
 
-    handleFieldChange = (evt) => {
-        const stateToChange = {}
-        stateToChange[evt.target.id] = evt.target.value
-        this.setState(stateToChange)
-    }
 
-getData = e => {
-    // console.log(this.state.users)
-    AuthManager.getAll("users").then(users => {
-        users.map(user=> {
-            if(user.username !== this.state.username){
-                return false
-            } else {
-                return true
-            }
-        })
-          this.setState({
-            users: users
-          });
-        })
-      };
+// getData = e => {
+//     // console.log(this.state.users)
+//     AuthManager.getAll("users").then(users => {
+//         users.map(user=> {
+//             if(user.username !== this.state.username){
+//                 return false
+//             } else {
+//                 return true
+//             }
+//         })
+//           this.setState({
+//             users: users
+//           });
+//         })
+//       };
     
-      componentDidMount() {
-        this.getData();
-      }
-    handleLogin = () => {
-        this.getData()
-            this.state.users.map(user => {
-                console.log(user)
-                if(user.username !== this.state.username){
-                    // sessionStorage.clear()
-                    let credentials = user.id
-                    this.props.setUser(credentials);
-                    this.props.history.push("/");
-                } else {
-                    window.alert("You already have an account!")
-                    return this.props.history.push("/login/login-form")
-                }
-            })
-        }
+//       componentDidMount() {
+//         this.getData();
+//       }
 
     render() {
         return (

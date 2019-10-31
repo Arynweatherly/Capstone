@@ -20,10 +20,10 @@ class DeadlineForm extends Component {
     constructNewDeadline = evt => {
         evt.preventDefault();
         if (this.state.deadlineTitle === "" || this.state.date === "") {
-            let sessionUserId = parseInt(sessionStorage.getItem("credentials"));
+            let sessionUserId = parseInt(this.props.activeUser);
             window.alert("Please input an animal name and breed");
         } else {
-            let sessionUserId = parseInt(sessionStorage.getItem("credentials"));
+            let sessionUserId = parseInt(this.props.activeUser);
             this.setState({ loadingStatus: true });
             const deadline = {
                 title: this.state.deadlineTitle,

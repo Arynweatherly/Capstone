@@ -10,7 +10,7 @@ class NotesList extends Component {
     }
 
     componentDidMount(){
-        console.log("NOTE LIST: componentDidMount", sessionStorage.getItem("credentials"));
+        console.log("NOTE LIST: componentDidMount", this.props.activeUser);
         console.log("this is the props", this.props)
         //get user specific notes from NotesManager and hang on to that data; put it in a state
         NoteManger.getMyNotes(this.props.notebookId)

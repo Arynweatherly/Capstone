@@ -10,7 +10,7 @@ class FriendNotebookList extends Component {
     }
 
 componentDidMount(){
-    console.log("NOTEBOOK LIST: ComponentDidMount", sessionStorage.getItem("credentials"));
+    console.log("NOTEBOOK LIST: ComponentDidMount", this.props.activeUser);
     //getAll from AnimalManager and hang on to that data; put it in state
     NotebookManager.getUserSpecificNotebooks(this.props.match.params.userId)
     .then(notebooks => {

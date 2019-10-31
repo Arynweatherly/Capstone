@@ -20,10 +20,10 @@ import "./TaskForm.css"
 constructNewTask = evt => {
     evt.preventDefault();
     if (this.state.taskName === "" ) {
-      let sessionUserId = parseInt(sessionStorage.getItem("credentials"));
+      let sessionUserId = parseInt(this.props.activeUser);
         window.alert("Please input an animal name and breed");
     } else {
-      let sessionUserId = parseInt(sessionStorage.getItem("credentials"));
+      let sessionUserId = parseInt(this.props.activeUser);
         this.setState({ loadingStatus: true });
         const task = {
             taskName: this.state.taskName,
