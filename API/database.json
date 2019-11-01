@@ -265,7 +265,7 @@
     {
       "ratingTitle": "mo added this",
       "userId": 3,
-      "username": "mo",
+      "username": "momo",
       "rating": 4,
       "review": "great notes",
       "noteId": 11,
@@ -499,6 +499,16 @@
       "userId": 4,
       "friendInitiate": 3,
       "id": 65
+    },
+    {
+      "userId": 1,
+      "friendInitiate": 3,
+      "id": 66
+    },
+    {
+      "userId": 18,
+      "friendInitiate": 3,
+      "id": 67
     }
   ],
   "users": [
@@ -599,8 +609,8 @@
       "id": 16
     },
     {
-      "username": "mo",
-      "password": "mo",
+      "username": "momo",
+      "password": "momo",
       "name": "mo",
       "id": 18
     },
