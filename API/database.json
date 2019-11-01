@@ -261,6 +261,24 @@
       "review": "lol",
       "noteId": 17,
       "id": 14
+    },
+    {
+      "ratingTitle": "mo added this",
+      "userId": 3,
+      "username": "mo",
+      "rating": 4,
+      "review": "great notes",
+      "noteId": 11,
+      "id": 15
+    },
+    {
+      "ratingTitle": "wow",
+      "userId": 3,
+      "username": "aryn",
+      "rating": 1,
+      "review": "THESE NOTES SUCK. GO HOME",
+      "noteId": 11,
+      "id": 16
     }
   ],
   "tasks": [
@@ -287,17 +305,10 @@
     },
     {
       "id": 15,
-      "taskName": "Study reacttt",
+      "taskName": "Study react!",
       "completed": "on",
       "date": "2019-10-31",
       "userId": 3
-    },
-    {
-      "taskName": "Study react2",
-      "completed": false,
-      "date": "2019-10-31",
-      "userId": 3,
-      "id": 16
     },
     {
       "taskName": "Study react2",
@@ -354,22 +365,28 @@
       "id": 8
     },
     {
-      "id": 9,
-      "title": "break startss",
-      "date": "2019-11-02",
-      "userId": 3
-    },
-    {
-      "title": "AHHHHHHH",
-      "date": "2019-11-01",
-      "userId": 3,
-      "id": 10
-    },
-    {
       "title": ".jkgh,fhdg",
       "date": "2019-10-11",
       "userId": 22,
       "id": 12
+    },
+    {
+      "title": "break starts",
+      "date": "2019-11-02",
+      "userId": 3,
+      "id": 13
+    },
+    {
+      "title": "class starts again",
+      "date": "2019-11-11",
+      "userId": 3,
+      "id": 14
+    },
+    {
+      "title": "DEMO DAY",
+      "date": "2019-11-12",
+      "userId": 3,
+      "id": 15
     }
   ],
   "friends": [
@@ -429,11 +446,6 @@
       "id": 42
     },
     {
-      "userId": 5,
-      "friendInitiate": 3,
-      "id": 45
-    },
-    {
       "userId": 9,
       "friendInitiate": 10,
       "id": 50
@@ -447,26 +459,6 @@
       "userId": 6,
       "friendInitiate": 15,
       "id": 52
-    },
-    {
-      "userId": 6,
-      "friendInitiate": 3,
-      "id": 54
-    },
-    {
-      "userId": 2,
-      "friendInitiate": 3,
-      "id": 55
-    },
-    {
-      "userId": 9,
-      "friendInitiate": 3,
-      "id": 56
-    },
-    {
-      "userId": 4,
-      "friendInitiate": 3,
-      "id": 57
     },
     {
       "userId": 8,
@@ -502,6 +494,11 @@
       "userId": 1,
       "friendInitiate": 22,
       "id": 64
+    },
+    {
+      "userId": 4,
+      "friendInitiate": 3,
+      "id": 65
     }
   ],
   "users": [

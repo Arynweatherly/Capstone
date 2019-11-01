@@ -5,7 +5,7 @@
 .friendCardNav{
     border: outset 5px #EAECEB;
     border-radius: 5%;
-    background: maroon;
+    background-color:#C6C1BE;
     color: #EAECEB;
 }
 .friendHeading {
@@ -19,6 +19,7 @@
     background-color:#EAECEB ;
     max-width: 800px;
     align-self: center;
+    padding: 5px;
     display: flex;
     justify-content: flex-start;
     flex-direction: row;;

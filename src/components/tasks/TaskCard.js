@@ -13,7 +13,7 @@ markComplete = () => {
       <div className="tasks-card">
         <div className="card-content">
           <h3>Task: <span className="card-petname">{this.props.task.taskName}</span></h3>
-          <p>Date: {this.props.task.date}</p>
+          <p>Date:<u> {this.props.task.date}</u></p>
           <p>
           {" "}
           Completed

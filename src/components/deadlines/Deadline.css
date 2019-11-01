@@ -48,9 +48,31 @@
 }
 
 .deadline-card-content {
-  background-color: #FDFAF2;
+  background-color: #EAECEB;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 3%;
+  margin-bottom:3%;
+  border-style: solid;
+  border-color: #FECCC3;
 }
 
-.card-deadline {
-  background-color: #C6C1BE;
+.card-deadlines {
+  background-color: #FECCC3;
+  border-radius: 5%;
+}
+.container-card-deadline {
+  margin-right: 10%;
+  margin-left: 10%;
+  border-style: dotted;
+  border-color: #C6C1BE;
+  
+}
+
+.deadline-button {
+
+}
+
+.deadlineHeader {
+  background-color: #FECCC3
 }

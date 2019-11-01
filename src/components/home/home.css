@@ -73,3 +73,14 @@
     color: black;
 }
 
+
+img {
+    max-height: 20%;
+    max-width: 15%;
+    margin-left: 43%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color: #C6C1BE;
+}
