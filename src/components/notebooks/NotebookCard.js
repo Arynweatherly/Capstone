@@ -8,18 +8,28 @@ class NotebookCard extends Component {
   render() {
       console.log(this.props)
     return (
-      <div className="notebookCardContain">
-        <div className="notebook-card-content">
-          <picture>
-            {/* <img src={require('./dog.svg')} alt="My Dog" /> */}
-          </picture>
-          <h3>class subject: <span className="card-notebookSubject">{this.props.notebook.subject}</span></h3>
-        <button type="button" className="notebookButton" onClick={() => this.props.deleteNotebook(this.props.notebook.id)}>Delete</button>
-        <button type="button"  className="notebookButton" onClick={() => {this.props.history.push(`/notebooks/${this.props.notebook.id}/edit`)}}>Edit</button>
-        <Link to={`/notebooks/${this.props.notebook.id}`}><button class="button"  className="notebookButton">View Notes</button></Link>
-        </div>
-      </div>
-    );
+
+      <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+    <h3>class subject: <span className="card-notebookSubject">{this.props.notebook.subject}</span></h3>
+    </p>
+
+  </header>
+  <div class="card-content">
+
+  </div>
+  <footer class="card-footer">
+    <a href="#" class="card-footer-item" onClick={() => this.props.deleteNotebook(this.props.notebook.id)}>Delete</a>
+    <a href="#" class="card-footer-item" onClick={() => {this.props.history.push(`/notebooks/${this.props.notebook.id}/edit`)}}>Edit</a>
+    <a href="#" class="card-footer-item" onClick={() => this.props.history.push(`/notebooks/${this.props.notebook.id}`)}>View Notes </a>
+    {/* <Link to={`/notebooks/${this.props.notebook.id}`}>View Notes</Link> */}
+  </footer>
+</div>
+
+
+  
+    )
   }
 }
 

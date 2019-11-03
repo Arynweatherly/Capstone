@@ -5,15 +5,14 @@ import "./Note.css";
 class NoteCard extends Component {
 render () {
   return (
-  <div className="card">
-        <div className="card-content">
-          <h3>title: <span className="card-note">{this.props.note.title}</span></h3>
-          <p>date: {this.props.note.date}</p>
-          {/* <button type="button" onClick={() => this.props.deleteNotes(this.props.note.id)}>delete</button>
-          <button type="button" onClick={() => {this.props.history.push(`/notes/${this.props.note.id}/edit`)}}>Edit</button> */}
-          <Link to={`/notes/${this.props.note.id}`}><button>View Note</button></Link>
-        </div>
-      </div>
+    <a class="panel-block is-active" onClick={() => {this.props.history.push(`/notes/${this.props.note.id}`)}}>
+
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+
+    </span>
+    {this.props.note.title}
+  </a>
     );
   }
 }
