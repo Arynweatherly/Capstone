@@ -28,7 +28,7 @@ class NotebookCard extends Component {
 </div>
 
 
-  
+
     )
   }
 }

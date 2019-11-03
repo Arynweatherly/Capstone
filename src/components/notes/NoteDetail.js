@@ -4,7 +4,10 @@ import './Note.css'
 import NoteModal from './NoteModal'
 
 class NoteDetail extends Component {
-
+constructor(props) {
+  super(props)
+  this.toggleEdit= this.toggleEdit.bind(this)
+}
     state = {
         title: "",
         date: "",
@@ -43,7 +46,8 @@ class NoteDetail extends Component {
       .then(() => { this.props.history.push(`/notebooks/${this.state.notebookId}`)})}
 
 toggleEdit (){
-  this.state.editMode = false;
+  console.log("toggling editMode")
+  this.setState({editMode: false})
 }
     render() {
       console.log("this is note detail props", this.props.match.params.notebookId)
@@ -72,7 +76,7 @@ toggleEdit (){
     <a href="#" class="card-footer-item" onClick={() => this.setState({editMode : true})}>Edit</a>
   </footer>
 </div>
-<NoteModal editMode={this.state.editMode} noteId={this.state.id} toggleEdit= {this.toggleEdit}/>
+<NoteModal editMode={this.state.editMode} noteId={this.state.id} toggleEdit={this.toggleEdit}/>
 
 </>
       );
