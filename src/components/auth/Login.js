@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AuthManager from '../../modules/AuthManager';
 import Register from '../auth/Register';
 import { withRouter } from 'react-router-dom';
+import Header from '../nav/header'
 // import { Spring } from 'react-spring/renderprops';
 
 class Login extends Component {
@@ -46,7 +47,7 @@ class Login extends Component {
 				//response[0].id is the ID of the user you logged in with,
 				//in case of "Steve" it would be "1"
 				this.props.setUser(response[0].id);
-				this.props.history.push(`/mytrips`);
+				this.props.history.push(`/`);
 			}
 		});
 	};
@@ -55,71 +56,70 @@ class Login extends Component {
     console.log(this.state.username)
 		return (
 			<>
-				{this.state.hideReg && (
-					<>
-						{/* <Spring
-							from={{ opacity: 0 }}
-							to={{ opacity: 1 }}
-							//config={{ duration: 500 }}
-						>
-							{props => (
-								<div style={props}> */}
+			{this.state.hideReg && (
+			<>
+			<Header />
+			<div className="box container login">
+				<section className="is-centered">
+					<p className="title is-4">Join Pass A Note</p>
+				</section>
+				<form
+				onSubmit={this.handleLogin}
+				id='loginForm'
+				className='login-form'>
 
-						<form
-							onSubmit={this.handleLogin}
-							id='loginForm'
-							className='login-form'
-						>
-							<div className='formField'>
-								<input
-									placeholder='Username'
-									onChange={this.handleFieldChange}
-									type='username'
-									id='username'
-									required=''
-									autoFocus=''
-								/>
-							</div>
-							<div className='formField'>
-								<input
-									prefix={
-										<icon type='lock' style={{ color: 'rgba(0,0,0,.25)' }} />
-									}
-									type='password'
-									placeholder='Password'
-									onChange={this.handleFieldChange}
-									id='password'
-									required=''
-								/>
-							</div>
-							<div className='formField'>
-								{/* <Checkbox>Remember me</Checkbox> */}
-								<button type='submit' className='login-form-button'>
-									Log in
-								</button>
-								<p className='regLink' onClick={this.showLogin} href=''>
+				<div className="field">
+					<label className="label"></label>
+					<div className="control">
+					<input
+                  className="input"
+                  onChange={this.handleFieldChange}
+                  type="text"
+                  id="username"
+                  placeholder="Username"
+                  required=""
+                  autoFocus=""
+                />
+              </div>
+            </div>
+			<div className="field">
+              <label className="label"></label>
+              <div className="control">
+                <input
+				prefix={
+					<icon type='lock' style={{ color: 'rgba(0,0,0,.25)' }} />
+				}
+                  className="input"
+                  onChange={this.handleFieldChange}
+                  type="password"
+                  id="password"
+                  placeholder="Password"
+                  required=""
+                ></input>
+              </div>
+            </div>
+            <div className="field">
+              <div className="control">
+                <label className="checkbox">
+                  <input className="remember checkbox" type="checkbox"/>
+                   Remember Me
+                </label>
+              </div>
+            </div>
+			<button type="button" className="button is-primary" onClick={this.handleLogin}>Sign In
+			</button>
+				<p className='regLink' onClick={this.showLogin} href=''>
 									Or register now!
 								</p>
-							</div>
-						</form>
-						{/* </div>
-							)}
-						</Spring> */}
-					</>
-				)}
-
+			
+			</form>
+			</div>
+			</>
+			)}
 				{!this.state.hideReg && (
-					// <Spring
-					// 	from={{ opacity: 0 }}
-					// 	to={{ opacity: 1 }}
-					// 	//config={{ duration: 500 }}
-					// >
-					// 	{props => (
-					// 		<div style={props}>
+			
 					<Register {...this.props} hideReg={this.hideReg} />
-					// 		</div>
-					// 	)}
-					// </Spring>
+				
 				)}
 			</>
 		);

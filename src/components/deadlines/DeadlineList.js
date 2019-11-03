@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 //import the components we will need
 import DeadlineCard from './DeadlineCard'
 import DeadlineManager from '../../modules/DeadlineManager'
+import './Deadline.css'
 
 class DeadlineList extends Component {
     //define what this component needs to render
@@ -43,7 +44,8 @@ deleteDeadline = id => {
     Add Date
   </button>
 </section>
-      <div className="container-cards">
+      <div className="container-card-deadline">
+        <h2 className="deadlineHeader">Important dates and deadlines</h2>
         {this.state.deadlines.map(deadline =>
           <DeadlineCard
             key={deadline.id}

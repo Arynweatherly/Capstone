@@ -1,6 +1,7 @@
 import React, { Component} from "react"
 import AuthManager from "../../modules/AuthManager"
 import './login.css';
+import Header from '../nav/header'
 
 export default class UserForm extends Component {
     state = {
@@ -27,51 +28,58 @@ export default class UserForm extends Component {
      }
 
 
-// getData = e => {
-//     // console.log(this.state.users)
-//     AuthManager.getAll("users").then(users => {
-//         users.map(user=> {
-//             if(user.username !== this.state.username){
-//                 return false
-//             } else {
-//                 return true
-//             }
-//         })
-//           this.setState({
-//             users: users
-//           });
-//         })
-//       };
-    
-//       componentDidMount() {
-//         this.getData();
-//       }
 
     render() {
         return (
-
-            <form>
-                <div className="box">
-                    <fieldset className="bod">
-                    <h3 className="loginHeader">Join Pass A Note:</h3>
-                    <div className="formgrid">
-                        <input className="username" onChange={this.handleFieldChange} type="text"
-                            id="username"
-                            placeholder="Username"
-                            required="" autoFocus="" />
-                        <label htmlFor="inputUsername"></label>
-
-                        <input className="password" onChange={this.handleFieldChange} type="password"
-                            id="password"
-                            placeholder="Password"
-                            required="" />
-                        <label htmlFor="inputPassword"></label>
-                        <button type="button" className="signIn" onClick={this.newUser}>
-                            Sign Up
-                        </button>
-                    </div>
-            </fieldset>
+<>
+<Header />
+<div className="box container login">
+          <section className="is-centered">
+            <p className="title is-4">Join Pass A Note:</p>
+          </section>
+          <form>
+            <div className="field">
+              <label className="label"></label>
+              <div className="control">
+                <input
+                  className="input"
+                  onChange={this.handleFieldChange}
+                  type="text"
+                  id="username"
+                  placeholder="Username"
+                  required=""
+                  autoFocus=""
+                />
+                 </div>
             </div>
-            </form>
+            <div className="field">
+              <label className="label"></label>
+              <div className="control">
+                <input
+                  className="input"
+                  onChange={this.handleFieldChange}
+                  type="password"
+                  id="password"
+                  placeholder="Password"
+                  required=""
+                ></input>
+              </div>
+            </div>
+            <div className="field">
+              <div className="control">
+                <label className="checkbox">
+                  <input className="remember checkbox" type="checkbox"/>
+                   Remember Me
+                </label>
+              </div>
+            </div>
 
-)}}
+            <button type="button" className="button is-primary" onClick={this.newUser}>
+              Sign In
+            </button>
+          </form>
+        </div>
+      </>
+      )
+    }
+  }

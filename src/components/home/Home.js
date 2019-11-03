@@ -13,25 +13,39 @@ import { Link } from "react-router-dom"
 
 class Home extends Component {
   render() {
-    console.log('activeUser on home', this.props.activeUser)
     return (
-   <div>
-     <h2> Pass a Note Profile Page</h2>
-     <br />
-     <small>some sort of slogan</small>
-     <div className='logoPlaceholder'>
-					<img
-						alt='logo'
-						height='153px'
-						width='145px'
-						src={`/images/userPic.jpg`}
-					></img>
-				</div>
+      <div className="home container">
+        <section>
+          <article className="media">
+            <figure className="media-left">
+              <p className="image">
+                <img src={`/images/profile.jpeg`}/>
+              </p>
+            </figure>
+            <div className="media-content">
+              <div className="content">
+                <p className="title is-5"> Pass a Note Profile Page</p>
+                <p className="subtitle is-5">Logged in user is {this.props.activeUser.username}</p>
+                <p>Bio text here...</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+     {/* <div className='logoPlaceholder'>
+          <img
+            alt='logo'
+            height='20px'
+            width='20px'
+            src={`/images/userPic.png`}
+          ></img>
+        </div> */}
 
 
      {
-       <>
-       <Card className="profilePic" />
+          <section>
+            <div className="tile is-ancestor">
+              <div className="tile is-parent">
 
        <Card className="friendsListCard">
          <FriendsList className="friendListContainer"
@@ -44,12 +58,16 @@ class Home extends Component {
 
 
        <Card className="notebooksCardContainer">
-          <div className="notebooksBtn">
+         <NotebookList className="notebookListHome"
+         currentUser={this.props.currentUser}
+         activeUser={this.props.activeUser}
+         {...this.props}
+         />
+          {/* <div className="notebooksBtn">
           <Link className="nav-link" to="/notebooks"><button type="button" className="btn-to-notebooks">NOTEBOOKS</button></Link>
-          </div>
+          </div> */}
        </Card>
-
-
+ 
        <Card className="deadlineCardContainer">
          <DeadlineList 
          currentUser={this.props.currentUser}
@@ -64,7 +82,9 @@ class Home extends Component {
          {...this.props}
          />
        </Card>
-       </>
+      </div>
+      </div>
+      </section>
      }
    </div>
     )

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./Notebook.css"
 
 class NotebookCard extends Component {
+
+  
   render() {
       console.log(this.props)
     return (

@@ -7,8 +7,8 @@ class DeadlineCard extends Component {
         <div className="deadline-card-content">
           <h3>date: <span className="card-deadline">{this.props.deadline.date}</span></h3>
           <p>{this.props.deadline.title}</p>
-          <button type="button" onClick={() => this.props.deleteDeadline(this.props.deadline.id)}>delete</button>
-          <button type="button" onClick={() => {this.props.history.push(`/deadlines/${this.props.deadline.id}/edit`)}}>Edit</button>
+          <button type="deadline-button" onClick={() => this.props.deleteDeadline(this.props.deadline.id)}>delete</button>
+          <button type="deadline-button" onClick={() => {this.props.history.push(`/deadlines/${this.props.deadline.id}/edit`)}}>Edit</button>
         </div>
       </div>
     );
