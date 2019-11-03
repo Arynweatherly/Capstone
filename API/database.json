@@ -279,6 +279,24 @@
       "review": "THESE NOTES SUCK. GO HOME",
       "noteId": 11,
       "id": 16
+    },
+    {
+      "ratingTitle": "wow",
+      "userId": 3,
+      "username": "aryn",
+      "rating": 1,
+      "review": "these are terrible, were you even here this day?",
+      "noteId": 11,
+      "id": 17
+    },
+    {
+      "ratingTitle": "wowwwww",
+      "userId": 3,
+      "username": "aryn",
+      "rating": 1,
+      "review": "were you even in class today? jesus christ",
+      "noteId": 2,
+      "id": 18
     }
   ],
   "tasks": [
@@ -337,6 +355,13 @@
       "date": "2019-01-01",
       "userId": 22,
       "id": 21
+    },
+    {
+      "taskName": "finish the demo quickly",
+      "completed": false,
+      "date": "2019-11-01",
+      "userId": 3,
+      "id": 22
     }
   ],
   "deadlines": [
@@ -381,12 +406,6 @@
       "date": "2019-11-11",
       "userId": 3,
       "id": 14
-    },
-    {
-      "title": "DEMO DAY",
-      "date": "2019-11-12",
-      "userId": 3,
-      "id": 15
     }
   ],
   "friends": [
@@ -506,7 +525,7 @@
       "id": 66
     },
     {
-      "userId": 18,
+      "userId": 2,
       "friendInitiate": 3,
       "id": 67
     }

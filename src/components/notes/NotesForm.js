@@ -83,15 +83,15 @@ class NoteForm extends Component {
             ></input>
 
             <label className="content">content:</label>
-            <input
-              type="text"
+            <textarea
+              type="textarea"
               placeholder="content"
               id="content"
               onChange={this.handleFieldChange}
-            ></input>
+            ></textarea>
           </fieldset>
           <button type="button"   disabled={this.state.loadingStatus} onClick={this.constructNewNote}>
-            Save Task
+            Save Note
           </button>
             </form>
         </>
