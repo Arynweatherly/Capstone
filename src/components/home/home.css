@@ -1,11 +1,11 @@
-.friendsListCard {
+/* .friendsListCard { */
     /* background-color: #C6C1BE; */
-    color:black;
+    /* color:black;
     justify-content: flex;
     flex-direction: row;
     width: 100%;
-}
-.friendCardNav {
+} */
+/* .friendCardNav {
     background-color: white;
     color: black;
     display: flex;
@@ -22,7 +22,7 @@
     background-color: #FECCC3;
     color: black;
 
-}
+} */
 
 /* .container-cards {
     background-color:#EAECEB;
@@ -33,7 +33,7 @@
     
 /* } */
 
-.tasksCard {
+/* .tasksCard {
     display:flex;
     justify-content: space-between;
     flex-direction: column;
@@ -46,11 +46,11 @@
     display: flex;
     justify-content: space-between;
     align-self: stretch;
-    
+     */
     /* flex-direction: row; */
-}
+/* } */
 
-.notebooksCardContainer {
+/* .notebooksCardContainer {
     background-color: #C6C1BE;
     min-height: 300px;
     align-self: center;
@@ -93,4 +93,4 @@ img {
 }
 .container-card-deadline {
     min-width:50%
-}
+} */

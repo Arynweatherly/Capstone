@@ -1,4 +1,4 @@
-body,
+/* body,
 button,
 input,
 select,
@@ -26,7 +26,7 @@ strong {
 
 address {
   margin: 0 0 1.5em;
-}
+} */
 
 img {
   display: block;
@@ -34,7 +34,7 @@ img {
   width: 100%;
   height: auto;
 }
-
+/* 
 .section-content {
   padding: 1.4em;
 }
@@ -43,4 +43,15 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+} */
+
+.panel-block {
+  background-color: #EAECEB;
+}
+.panel {
+  border-style: solid;
+  border-color: #FECCC3;
+}
+.panel-heading {
+  background-color: #FECCC3 !important;
 }

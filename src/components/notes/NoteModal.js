@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import NoteManager from '../../modules/NotebookManager'
-
+import {withRouter} from 'react-router-dom'
 class NoteModal extends Component {
+  constructor(props){
+    super(props)
+  }
   state = {
     noteTitle: "",
     date: "",
@@ -10,7 +13,7 @@ class NoteModal extends Component {
     content: "",
     notebookId: "",
     loadingStatus: true,
-    id: ""
+    id: this.props.note.id
   };
   handleFieldChange = evt => {
     const stateToChange = {}
@@ -22,34 +25,20 @@ class NoteModal extends Component {
     evt.preventDefault()
     this.setState({ loadingStatus: true });
     const editedNote = {
-      id: this.props.noteId,
-      title: this.state.noteTitle,
+      id: this.props.note.id,
+      title: this.props.note.title,
       date: this.state.date,
       topics: this.state.topics,
       instructor: this.state.instructor,
       content: this.state.content,
       notebookId: this.state.notebookId,
     };
-
+    console.log(editedNote)
     NoteManager.update(editedNote)
-    .then(() => this.props.history.push(`/notes/${this.state.id}`))
+    .then(() => this.props.toggleEdit())
+    .then(() => this.props.history.push(`/notes/${this.props.note.id}`))
   }
 
-  componentDidMount() {
-    NoteManager.get(this.props.noteId)
-    .then(note => {
-        this.setState({
-          noteTitle: note.title,
-          date: note.date,
-          topics: note.topics,
-          instructor: note.instructor,
-          content: note.content,
-          notebookId: note.notebookId,
-          loadingStatus: false,
-          id: note.id
-        });
-    });
-  }
   render() {
         return (
 
@@ -57,7 +46,7 @@ class NoteModal extends Component {
   <div class="modal-background"></div>
   <div class="modal-card">
     <header class="modal-card-head">
-      <p class="modal-card-title">Edit Notes</p>
+      <p class="modal-card-title">Edit Notes {this.props.note.title}</p>
       <button class="delete" aria-label="close" onClick={() => this.props.toggleEdit}></button>
     </header>
     <section class="modal-card-body">
@@ -70,7 +59,7 @@ class NoteModal extends Component {
                 className="form-control"
                 onChange={this.handleFieldChange}
                 id="noteTitle"
-                value={this.state.noteTitle}
+                defaultValue={this.props.note.title}
               />
               <label htmlFor="noteTitle">Title</label>
 
@@ -80,7 +69,7 @@ class NoteModal extends Component {
                 className="form-control"
                 onChange={this.handleFieldChange}
                 id="date"
-                value={this.state.date}
+                defaultValue={this.props.note.date}
               />
               <label htmlFor="date">Date</label>
 
@@ -90,7 +79,7 @@ class NoteModal extends Component {
                 className="form-control"
                 onChange={this.handleFieldChange}
                 id="topics"
-                value={this.state.topics}
+                defaultValue={this.props.note.topics}
               />
               <label htmlFor="topics">Topics</label>
 
@@ -100,7 +89,7 @@ class NoteModal extends Component {
                 className="form-control"
                 onChange={this.handleFieldChange}
                 id="instructor"
-                value={this.state.instructor}
+                defaultValue={this.props.note.instructor}
               />
               <label htmlFor="instructor">Instructor</label>
 
@@ -110,19 +99,16 @@ class NoteModal extends Component {
                 className="form-control"
                 onChange={this.handleFieldChange}
                 id="content"
-                value={this.state.content}
+                defaultValue={this.props.note.content}
               ></textarea>
               <label htmlFor="content"></label>
-
-
             </div>
-    
           </fieldset>
         </form>
     </section>
     <footer class="modal-card-foot">
       <button class="button is-success" onClick={this.updateExistingNote}>Save changes</button>
-      <button class="button">Cancel</button>
+      <button class="button" onClick={() => this.props.toggleEdit}>Cancel</button>
     </footer>
   </div>
 </div>
@@ -130,4 +116,4 @@ class NoteModal extends Component {
         )
 }
 }
-export default NoteModal
+export default withRouter(NoteModal)

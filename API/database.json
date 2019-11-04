@@ -187,6 +187,87 @@
       "instructor": "brenda",
       "content": "react is great ",
       "notebookId": 17
+    },
+    {
+      "title": "Abdomen",
+      "date": "2018-10-24",
+      "topics": "abdominal cavity, pelvic cavity, peritoneum, organs of the abdomen",
+      "instructor": "Mrs. Hobby",
+      "content": "Abdominopelvic cavity extends from the diaphragm to the bony pelvis. It consists of 2 parts: the abdominal cavity which is the larger superior cavity and the pelvic cavity. The ABDOMINAL CAVITY contains the following……. Stomach, small intestines, large intestines, liver, gallbladder, spleen, pancreas and kidneys. Pelvic cavity contains the Rectum, Sigmoid, Urinary bladder and all of the Reproductive organs. The Peritoneum is part of the abdominopelvic cavity and is a double walled membranous sac that encloses the cavity. It has an inner layer known as the visceral peritoneum and an outer layer known as the parietal peritoneum. The retroperitoneum is the space behind peritoneum. Kidneys and pancreas lie in this space.\n",
+      "notebookId": 4,
+      "id": 22
+    },
+    {
+      "title": "Upper Limb",
+      "date": "2018-09-17",
+      "topics": "hand, wrist, arm",
+      "instructor": "Mrs. Hobby ",
+      "content": "The anatomy of the hand and fingers consists of 14 phalanges per hand, 5 metacarpals in each hand and 8 carpals in each wrist. Phalanges compose the digits and are numbered 1-5 laterally to medially. There are 3 phalanges in digits 2-5. Two in the first digit aka the thumb and they are named by location. METACARPALS: they compose the palm of the hand. Theyre identified by numbers, laterally to medially. The heads of metacarpals are distal and they articulate with phalanges. Bases are proximal; articulate with carpals. CARPALS: \tTwo rows of four carpals – proximal and distal. The proximal row, lateral to medial consist of: scaphoid, lunate, triquetrum, pisiform. The distal row, lateral to medial consists of: trapezium, trapezoid, capitate, hamate. JOINTS OF THE HAND…….. (1) Interphalangeal (IP) joints Articulations between phalanges. Identified by location and digit number. Classified as synovial, diarthrotic, or freely movable joint, hinge type…. (2)Metacarpophalangeal (MCP) joints: Articulations between the heads of the metacarpals and the proximal phalanges. Identified by number: first, second, third. Classified as synovial, diarthrotic, ellipsoidal type……..(3)\t–\tCarpometacarpal (CMC) joints. Articulations between the bases of the metacarpals and the carpal bones. First CMC joint classified as synovial, diarthrotic, saddle type. Second to fourth CMC joints are gliding types. \t–\tIntercarpal joints. Articulations between the carpal bones. Classified as synovial, diarthrotic, gliding type. ………(4)Radiocarpal joint. Articulation between the carpals and the distal radius. Classified as synovial, diarthrotic, ellipsoidal type\n",
+      "notebookId": 4,
+      "id": 23
+    },
+    {
+      "title": "Shoulder girdle",
+      "date": "2018-10-23",
+      "topics": "shoulder joint, shoulder girdle, clavicle",
+      "instructor": "Mrs. Hopper",
+      "content": "the SHOULDER GIRDLE consists of the (1) clavicle (2) scapula. It articulates with: Head of humerus (shoulder joint), Manubrium of sternum (sternoclavicular [SC] joint), Each other (acromioclavicular [AC] joint). It FUNCTIONS to connect the upper limb to the trunk of the body. The SHOULDER on the other hand is the articulation of the upper limb with the girdle. Humerus is not considered to be part of the shoulder girdle. Because the upper portion articulates with the shoulder girdle, proximal humeral anatomy is considered in evaluation of radiographs of the shoulder joint. Shoulder joint is considered a diarthrodial classification by function. Synovial classification by structure. It is considered a ball and socket type, capable of all motions.\n……..THE CLAVICLE: Classified as a long bone. Lies just above the first rib. Acromial extremity (lateral end) articulates with acromion on scapula (AC joint). Sternal extremity (medial end) articulates with manubrium of sternum (SC joint). Double curve to body. The curve is much more pronounced in males than females…… THE SCAPULA…..Classified as a flat bone. Forms the posterior portion of the shoulder girdle. Triangular in shape. The scapula has two surfaces: (1) Costal/anterior , (2). Dorsal/posterior. The scapula has three borders: (1) Lateral (2) Medial (3) Superior. And it has three angles (1) Superior (2) Inferior (3) Lateral ",
+      "notebookId": 4,
+      "id": 24
+    },
+    {
+      "title": "React componentDidMount()",
+      "date": "2019-10-15",
+      "topics": "componentDidMount(), state, setState, render()",
+      "instructor": "Brenda",
+      "content": "ComponentDidMount()\nA component's state is an object that can be modified over time in response to user actions, network responses, and anything. State determines how a component renders and behaves. render() is a built in method of React. Another built in method is componentDidMount(). Once a component is loaded and after render is called, componentDidMount() is invoked.componentDidMount() is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here. If you need to load data from a remote endpoint, this is a good place to instantiate the network request. You may call setState()  immediately in componentDidMount(). It will trigger an extra rendering, but it will happen before the browser updates the screen. This guarantees that even though the render() will be called twice in this case, the user won’t see the intermediate state. Use this pattern with caution because it often causes performance issues. In most cases, you should be able to assign the initial state in the constructor() instead. It can, however, be necessary for cases like modals and tooltips when you need to measure a DOM node before rendering something that depends on its size or position.\n\n",
+      "notebookId": 18,
+      "id": 25
+    },
+    {
+      "title": "State",
+      "date": "2019-10-15",
+      "topics": "state, setState",
+      "instructor": "Brenda",
+      "content": "-setState() enqueues changes to the component state and tells React that this component and its children need to be re-rendered with the updated state. This is the primary method you use to update the user interface in response to event handlers and server responses.\n\nThink of setState() as a request rather than an immediate command to update the component. For better perceived performance, React may delay it, and then update several components in a single pass. React does not guarantee that the state changes are applied immediately.\n\nsetState() does not always immediately update the component. It may batch or defer the update until later. This makes reading this.state right after calling setState() a potential pitfall. Instead, use componentDidUpdate or a setState callback (setState(updater, callback)), either of which are guaranteed to fire after the update has been applied. If you need to set the state based on the previous state, read about the updater argument below.\n\nsetState() will always lead to a re-render unless shouldComponentUpdate() returns false. If mutable objects are being used and conditional rendering logic cannot be implemented in shouldComponentUpdate(), calling setState() only when the new state differs from the previous state will avoid unnecessary re-renders.\n\nThe first argument is an updater function with the signature:\n(state, props) => stateChange\n\nstate is a reference to the component state at the time the change is being applied. It should not be directly mutated. Instead, changes should be represented by building a new object based on the input from state and props. For instance, suppose we wanted to increment a value in state by props.step:\n\nthis.setState((state, props) => {\n  return {counter: state.counter + props.step};\n});\n\nBoth state and props received by the updater function are guaranteed to be up-to-date. The output of the updater is shallowly merged with state.\nThe second parameter to setState() is an optional callback function that will be executed once setState is completed and the component is re-rendered. Generally we recommend using componentDidUpdate() for such logic instead.\nYou may optionally pass an object as the first argument to setState() instead of a function:\n",
+      "notebookId": 18,
+      "id": 26
+    },
+    {
+      "title": "intro to radiology review",
+      "date": "2018-10-15",
+      "topics": "autonomy, morals, allergic reactions",
+      "instructor": "Professor Duncan",
+      "content": "=> Touch someone for: (1) palpation (2) emphasis (3) emotional support. …… => RTR stands for registered technologist (radiography)…….. => How do we know if an NG tube is correctly placed? (1) may verify it with fluoroscopy. (2)auscultation (listen to stomach w/ stethoscope= swooshing sound) (3)Draw back mastic content w/ syringe  (4) take radiograph…… => what do chest tubes remove? ….(1)air (2)fluid (3)blood ……… => describe the diaphragm: Major muscle of ventilation. As you breathe in (inhale) the floor of the diaperagm is pushed down & lungs expand. When you breathe out, releasing air from your lungs causes the diaphragm to move up……. DEFINE AUTONOMY:  Person’s self reliance, independentce, liberty, rights, privacy, indigodual choice, freedom of the will and self contained ability to decide. Refers to the principle which bases action on respect for the indexendence of o/ persons/ the patient decides what is done to his or her own person……. <<<WHATS THE DIFFERENCE B/W HEMATOMA AND EDEMA>>>>> —Hematoma: Localized collection of blood in the tissue . —Edema: Presence of abnormally large amount of fluid In the tissues of the body. <<KNOW THE Difference btwn analgesics and anesthetics>>> (1) Analgesic: Drug that relieves pain without causing loss of consciousness. (2)Anesthetics: Drug that produces loss of feeling or sensation by depressing neuronal function, producing loss of ability to perceive pain and/or o/ sensations. ………BE REALLY CLEAR ON SYMPTOMS OF ANAPHALACTIC SHOCK… (1)Mild reactions are similar to other allergic runs. (2)Pt develop localized itching and urticaria (hives) and may experience nausea and vomiting . (3)The most serious reactions might include laryngeal deems, shock and cardiac arrest ……Anaphylaxisa :Condition of shock caused by hypersensitivity to drug or other substance that results in life threatening respireatory dishes and vascular collapse Type of vasogenic shock resulting from an increase in contrast media \n",
+      "notebookId": 19,
+      "id": 27
+    },
+    {
+      "title": "ethics, morals, values",
+      "date": "2018-10-08",
+      "topics": "ethics, morals, values",
+      "instructor": "Mrs. Duncan",
+      "content": "True textbook definitions of law, morals, ethics and principles and something else.       ……..Laws: Regulations established by the government and applicable to ppl w/ a certain political subdivision. Morals: Generally accepted customs of right living and conduct and an individual’s practice in relation to these customs.In making ethical decisions we rely heavily on moral rules. Generally accepted customs, principles or habits of right living and conduct in society and the individual’s practice in relation to these. Moral Principle; General, unitersal guides to action that are derived from so called basic moral truths that should be respected unless a morally compelling reason exists not to do so ……..Ethics:Systematicc study of rightness and wrongness of human conduct and character as known by natural reasons . Professional ethics: are the rules of conduct or standards by which a particular group regulates the actions and sets standards for its own members ….Code of Ethics: Articulated statement of role morality as seen by the members of a profession. Ethical theories …Bodies of systematically related moral principles used to resolve ethical dilemmas …Principle based Ethics Use of moral principles as a basis of defending a chosen path of action in resolving an ethical dilemma …Principlism: Belief system based on a set of moral principles that are embedded in a common morality …VALUES: ideals and customs of a society toward which the members of a group have an affective regard; a value may be a quality desirable as an end in itsel\n",
+      "notebookId": 19,
+      "id": 28
+    },
+    {
+      "title": "10 principles of Radiology",
+      "date": "2018-10-16",
+      "topics": "10 prinicples of radiology",
+      "instructor": "Mrs. Duncan",
+      "content": "(1)Rad tech act in professional manner, respond to pt. needs, support collegeues and associates in providing high quality pt. Care…………(2)Rad tech act to advance principal object. Of profession to provide services to humanity w/ full repsct for dignity of mankind…………(3)..Deliers pt. Care & service unrestricted by concerns of personal attributes or nature of disease or illness and w/o discrimination ………(4) Prictices tech found upon theorytic knowledge and concepts, use equip. & accessory consistent w/ purpose they were designed for and employees apronriate techniques and procedures …………(5)..Assess situations; exercise care, discretion and judgement; assumes responsibility for professional decisions and acts in best interest of pt…………(6) Acts as agent thru observation &commun. To obtain pertinent info for doc. To aid in diagnosis & treatment of pt. And recognize that interp. & diagnosis are outside our scope of practice……….(7)..Use equip and accessories, employ tech and procedures, perform services in accordance w/ accepted standard of practice and demonstrate expertise in min. Radiateon exposure to pt., self, and o/ HC members……….(8)Practice ethical conduct appropriate to profession and protect pt. Right to quality care……..(9)Respect confidences entrusted in course of professional practice, respects pt.’s right to provecy and reveals confidential info only as required by law or to protect welfare of individual or the community.. (10)……Strive to improve knowledge and skills by prarticipating in continued ED & professional activities, sharing knowledge w/ colleagues, and investigating new aspents of professional practice\n",
+      "notebookId": 19,
+      "id": 29
+    },
+    {
+      "title": "CONTRAST",
+      "date": "2018-11-05",
+      "topics": "contrast, IV",
+      "instructor": "Mrs. Duncan",
+      "content": "HOW TO GIVE A PERSON CONTRAST . Know 2 blood tests checking pt. Every time if there are kidney concerns . The BUN test can reveal whether the urea nitrogen levels are higher than normal, suggesting that the kidneys or liver may not be working properly . High osmolality contrast media can cause the arteries of the kidneys to expand as a result of the osmotic effect. Arterial expansion results in the release of vasoconstrictors. These substances cause constriction of the renal arteries. Therefore injection of the media contrast results indication and the constriction of the renal arteries. The end result is diminished blood supply to the arteries . Increased blood urea nitrodgen (BUN) and creatinine (waste product of metabolism) levels indicate that pt. May have renal disease and are good indicators for possible contrast medium induced renal effects. Creatinine Nitrogenen containing waste product of metabolism excreted by the kidney’s filtration system High blood plasma levels indicate poor filtration of the kidney ……Osmolality Measurement of the number of particles (molecules or ions or cations that can crowd out water molecules in a measure mass (kg) of water .  BUN tests are necessary bc contrast is absorbed by the kidneys and we need to make sure kidneys are capable of filtering the thick contrast out of the body. High creatine levels can lead to renal failure . If a pt. Has symptoms of renal disease, the use of a low Oslolality (nonionic) contrast media is an alternative .Expensive alternative…… 2 to 3 times more expensive ",
+      "notebookId": 19,
+      "id": 30
     }
   ],
   "reviews": [
@@ -729,6 +810,16 @@
       "subject": "Stephen's Notebook",
       "userId": 21,
       "id": 17
+    },
+    {
+      "subject": "Aryn's React Notebook",
+      "userId": 3,
+      "id": 18
+    },
+    {
+      "subject": "Intro to Radiology",
+      "userId": 3,
+      "id": 19
     }
   ]
 }
