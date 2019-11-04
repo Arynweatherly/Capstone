@@ -280,15 +280,6 @@
       "rating": 4
     },
     {
-      "id": 10,
-      "userId": 12,
-      "username": "keaton",
-      "noteId": 13,
-      "ratingTitle": "sick",
-      "review": "sick notes man",
-      "rating": 4
-    },
-    {
       "id": 6,
       "userId": 7,
       "username": "leigh",
@@ -599,11 +590,6 @@
       "userId": 2,
       "friendInitiate": 3,
       "id": 67
-    },
-    {
-      "userId": 10,
-      "friendInitiate": 3,
-      "id": 68
     }
   ],
   "users": [
@@ -762,9 +748,9 @@
       "id": 7
     },
     {
-      "subject": "Phil's React",
-      "userId": 6,
-      "id": 11
+      "id": 9,
+      "subject": "Principles of Resistance Training",
+      "userId": 3
     },
     {
       "subject": "Taylor's CSS",
@@ -772,24 +758,19 @@
       "id": 10
     },
     {
+      "subject": "Phil's React",
+      "userId": 6,
+      "id": 11
+    },
+    {
       "subject": "Heidi's CSS Notebook",
       "userId": 1,
       "id": 13
     },
     {
-      "id": 9,
-      "subject": "Principles of Resistance Training",
-      "userId": 3
-    },
-    {
-      "id": 10,
-      "subject": "Sage's React Notebook",
-      "userId": 2
-    },
-    {
+      "id": 14,
       "subject": "Quin's CSS Notebook",
-      "userId": 8,
-      "id": 14
+      "userId": 8
     },
     {
       "subject": "Heidi's React Notebook",

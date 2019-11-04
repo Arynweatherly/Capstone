@@ -38,32 +38,34 @@ class NoteModal extends Component {
       id: this.props.note.id,
       rating: this.props.note.rating
     }
-    console.log(editedNote)
+    console.log("edited note",editedNote)
 
     NoteManager.update(editedNote)
       .then(this.props.updateNote(editedNote))
       .then(() => this.props.history.push(`/notes/${this.props.note.id}`))
   }
 
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    // all states are undefined or empty
-    console.log(this.state)
-  }
 
   componentDidMount() {
-    // this is returning an empty array
-    console.log(this.props.note)
+    NoteManager.get(this.props.match.params.id)
+    .then(note => {
+      this.setState({
+      title: this.state.title,
+      date: this.state.date,
+      topics: this.state.topics,
+      instructor: this.state.instructor,
+      content: this.state.content,
+      notebookId: this.state.notebookId,
+      id: this.props.note.id,
+      rating: this.props.note.ratingv
+      loading 
+      })
+    }
 
-    this.setState({
-      note: this.props.note,
-      title: this.props.note.title,
-      date: this.props.note.date,
-      topics: this.props.note.topics,
-      instructor: this.props.note.instructor,
-      content: this.props.note.content,
-      notebookId: this.props.note.notebookId,
-      rating: this.props.note.rating
-    })
+// grab the note id with match params
+//fetch the note that you want
+//populate state with the notes details
+//set default value of fileds using state 
   }
 
   render() {

@@ -30,6 +30,7 @@ post(newNote) {
 },
 
 update(editedNote) {
+  console.log("running")
   return fetch(`${remoteURL}/notes/${editedNote.id}`, {
     method: "PUT",
     headers: {
