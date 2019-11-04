@@ -67,3 +67,18 @@
   .container-card-notebook {
     border-radius: 5px;
   } */
+
+
+  /* .card-notebook {
+  min-height: 400px;
+   background: url(http://www.clker.com/cliparts/o/K/6/C/7/U/spiral-notebook.svg.hi.png);
+   background-size: cover;
+  } */
+
+  .card-footer-item {
+    background-color: #FECCC3;
+  }
+  .card-notebook {
+    border-style: solid;
+    border-color: #C6C1BE;
+  }

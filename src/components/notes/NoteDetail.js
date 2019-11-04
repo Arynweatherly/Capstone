@@ -6,18 +6,11 @@ class NoteDetail extends Component {
   constructor(props) {
     super(props)
     this.toggleEdit = this.toggleEdit.bind(this)
+    this.updateNote = this.updateNote.bind(this)
   }
 
   state = {
     note: [],
-    title: "",
-    date: "",
-    notebookId: "",
-    topics: "",
-    instructor: "",
-    content: "",
-    loadingStatus: true,
-    id: "",
     editMode: false
   }
 
@@ -25,23 +18,20 @@ class NoteDetail extends Component {
     NoteManager.get(this.props.match.params.notebookId)
       .then((note) => {
         this.setState({
-          note: note,
-          title: note.title,
-          date: note.date,
-          topics: note.topics,
-          instructor: note.instructor,
-          content: note.content,
-          notebookId: note.notebookId,
-          loadingStatus: false,
-          id: note.id
-        });
-      });
+          note: note
+        })
+      })
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    // This returns a proper note
+    console.log(this.state.note)
   }
 
   deleteNote = id => {
     NoteManager.delete(id)
       .then(() => {
-        this.props.history.push(`/notebooks/${this.state.notebookId}`)
+        this.props.history.push(`/notebooks/${this.state.note.notebookId}`)
       })
   }
 
@@ -49,26 +39,32 @@ class NoteDetail extends Component {
     this.setState({editMode: false})
   }
 
+  updateNote(editedNote) {
+    this.setState({note: editedNote})
+  }
+
   render() {
     return (
       <>
-        <div class="card">
-          <header class="card-header">
+        <div className="card">
+          <header className="card-header">
             <p className="card-header-title">{this.state.note.title} (added on {this.state.note.date})</p>
           </header>
-          <div class="card-content">
-            <div class="content">
+          <div className="card-content">
+            <div className="content">
               <p>Topics: <span className="tag">{this.state.note.topics}</span></p>
               <p>Instructor: {this.state.note.instructor}</p>
               <p>Content: {this.state.note.content}</p>
             </div>
           </div>
-          <footer class="card-footer">
-            <a href="#" class="button is-danger card-footer-item" onClick={() => this.deleteNote(this.state.note.id)}>Delete</a>
-            <a href="#" class="button is-success card-footer-item" onClick={() => this.setState({editMode: true})}>Edit</a>
+          <footer className="card-footer">
+            <a href="#" className="button is-danger card-footer-item" onClick={() => this.deleteNote(this.state.note.id)}>Delete</a>
+            <a href="#" className="button is-success card-footer-item" onClick={() => this.setState({editMode: true})}>Edit</a>
           </footer>
         </div>
-        <NoteModal editMode={this.state.editMode} note={this.state.note} toggleEdit={this.toggleEdit}/>
+        {this.state.note &&
+        <NoteModal editMode={this.state.editMode} note={this.state.note} toggleEdit={this.toggleEdit} updateNote={this.updateNote}/>
+        }
       </>
     )
   }

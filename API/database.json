@@ -100,16 +100,6 @@
       "rating": 0
     },
     {
-      "title": "state-nate",
-      "date": "2019-10-05",
-      "topics": "react, state, objects, components ",
-      "instructor": "Brenda",
-      "content": "The state object is where you store property values that belongs to the component. When the state object changes, the component re-renders. The state object is initialized in the constructor. Refer to the state object anywhere in the component by using the this.state.propertyname syntax.  Example class Car extends React.Component {.    Constructor(props) {.      Super(props); this.state = { brand: ‘Ford’, model: ‘mustang’, color: ‘red’, year: 1964 };  render() {   return ( <div> <h1> MY {this.state.brand}</h1> <p> it is a {this.state.color} {this.state.model} from {this.state.year}. </p> </div> ); } }. ………. To change a value in the state object, use the this.setState() method. When a value in the state object changes, the component will re-render, meaning that the output will change according to the new values. Always use the setState() method to change the state object, it will ensure that the component knows its been updated and calls the render() method (and all the other lifecycle methods)",
-      "notebookId": 8,
-      "id": 13,
-      "rating": 0
-    },
-    {
       "title": "Forms-heidi",
       "date": "2019-10-09",
       "topics": "react, forms, state, objects, components ",
@@ -609,6 +599,11 @@
       "userId": 2,
       "friendInitiate": 3,
       "id": 67
+    },
+    {
+      "userId": 10,
+      "friendInitiate": 3,
+      "id": 68
     }
   ],
   "users": [
@@ -765,11 +760,6 @@
       "subject": "Taylor's React Notes",
       "userId": 4,
       "id": 7
-    },
-    {
-      "subject": "Nate's React",
-      "userId": 1,
-      "id": 8
     },
     {
       "subject": "Phil's React",
