@@ -1,11 +1,11 @@
-.friendsListCard {
+/* .friendsListCard { */
     /* background-color: #C6C1BE; */
-    color:black;
+    /* color:black;
     justify-content: flex;
     flex-direction: row;
     width: 100%;
-}
-.friendCardNav {
+} */
+/* .friendCardNav {
     background-color: white;
     color: black;
     display: flex;
@@ -18,13 +18,11 @@
 .friends-container-card {
     max-width: 100%
 }
-    
-
 .deleteFriend {
     background-color: #FECCC3;
     color: black;
 
-}
+} */
 
 /* .container-cards {
     background-color:#EAECEB;
@@ -35,7 +33,7 @@
     
 /* } */
 
-.tasksCard {
+/* .tasksCard {
     display:flex;
     justify-content: space-between;
     flex-direction: column;
@@ -43,26 +41,20 @@
     min-width: 350px;
 }
 
-.deadlineCardContainer {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    max-width: 500px;
-    margin: 3px;
-}
 
 .friendListContainer {
     display: flex;
     justify-content: space-between;
     align-self: stretch;
-    
+     */
     /* flex-direction: row; */
-}
+/* } */
 
-.notebooksCardContainer {
+/* .notebooksCardContainer {
     background-color: #C6C1BE;
     min-height: 300px;
-    align-self: left;
+    align-self: center;
+    min-width: 40%;
 }
 
 .btn-to-notebooks {
@@ -84,3 +76,21 @@ img {
     border-style: solid;
     border-color: #C6C1BE;
 }
+
+.notebooks-deadline-card
+{
+    display: flex;
+    justify-content: column;
+    margin-left: 10%;
+    margin-right:10%
+}
+
+.deadlineCardContainer {
+    display: flex;
+    max-width: 50%;
+    margin: 0%
+
+}
+.container-card-deadline {
+    min-width:50%
+} */

@@ -1,63 +1,73 @@
-import React, { Component } from 'react';
-import NoteManager from '../../modules/NoteManager';
-import './Note.css'
+import React, {Component} from 'react'
+import NoteManager from '../../modules/NoteManager'
+import NoteModal from './NoteModal'
 
 class NoteDetail extends Component {
+  constructor(props) {
+    super(props)
+    this.toggleEdit = this.toggleEdit.bind(this)
+    this.updateNote = this.updateNote.bind(this)
+  }
 
-    state = {
-        title: "",
-        date: "",
-        notebookId: "",
-        topics: "",
-        instructor: "",
-        content: "",
-        notebookId: "",
-        loadingStatus: true,
-        id: ""
-    }
+  state = {
+    note: [],
+    editMode: false
+  }
 
-    componentDidMount(){
-        console.log("NoteDetail: ComponentDidMount");
-        //get(id) from AnimalManager and hang on to that data; put it into state
-        NoteManager.get(this.props.notebookId)
-        .then((note) => {
-            this.setState({
-                title: note.title,
-                date: note.date,
-                topics: note.topics,
-                instructor: note.instructor,
-                content: note.content,
-                notebookId: note.notebookId,
-                loadingStatus: false,
-                id: note.id
-            });
-        });
-    }
-    deleteNote = id => {
-      NoteManager.delete(id)
-      .then(() => { this.props.history.push(`/notebooks/${this.state.notebookId}`)})}
+  componentDidMount() {
+    NoteManager.get(this.props.match.params.notebookId)
+      .then((note) => {
+        this.setState({
+          note: note
+        })
+      })
+  }
 
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    // This returns a proper note
+    console.log(this.state.note)
+  }
 
-    render() {
-      console.log("this is note detail props", this.props.match.params.notebookId)
-      return (
+  deleteNote = id => {
+    NoteManager.delete(id)
+      .then(() => {
+        this.props.history.push(`/notebooks/${this.state.note.notebookId}`)
+      })
+  }
+
+  toggleEdit() {
+    this.setState({editMode: false})
+  }
+
+  updateNote(editedNote) {
+    this.setState({note: editedNote})
+  }
+
+  render() {
+    return (
+      <>
         <div className="card">
+          <header className="card-header">
+            <p className="card-header-title">{this.state.note.title} (added on {this.state.note.date})</p>
+          </header>
           <div className="card-content">
-            {/* <picture>
-              <img src={require('./dog.svg')} alt="My Dog" />
-            </picture> */}
-            <h3>Title: <span style={{ color: 'darkslategrey' }}>{this.state.title}</span></h3>
-            <p>date: {this.state.date}</p>
-            <p>Topics: {this.state.topics}</p>
-            <p>instructor: {this.state.instructor}</p>
-            <p>content: {this.state.content}</p>
-            <button type="button" onClick={() => this.deleteNote(this.state.id)}>Delete</button>
-            {/* <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>delete</button> */}
-            <button type="button" onClick={() => {this.props.history.push(`/notes/${this.state.id}/edit`)}}>Edit</button>
+            <div className="content">
+              <p>Topics: <span className="tag">{this.state.note.topics}</span></p>
+              <p>Instructor: {this.state.note.instructor}</p>
+              <p>Content: {this.state.note.content}</p>
+            </div>
           </div>
+          <footer className="card-footer">
+            <a href="#" className="button is-danger card-footer-item" onClick={() => this.deleteNote(this.state.note.id)}>Delete</a>
+            <a href="#" className="button is-success card-footer-item" onClick={() => this.setState({editMode: true})}>Edit</a>
+          </footer>
         </div>
-      );
-    }
+        {this.state.note &&
+        <NoteModal editMode={this.state.editMode} note={this.state.note} toggleEdit={this.toggleEdit} updateNote={this.updateNote}/>
+        }
+      </>
+    )
+  }
 }
 
 export default NoteDetail;

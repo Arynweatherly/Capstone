@@ -100,15 +100,15 @@ class NoteEditForm extends Component {
               />
               <label htmlFor="instructor">Instructor</label>
 
-              <input
-                type="text"
+              <textarea
+                type="textarea"
                 required
                 className="form-control"
                 onChange={this.handleFieldChange}
                 id="content"
                 value={this.state.content}
-              />
-              <label htmlFor="content">Content</label>
+              ></textarea>
+              <label htmlFor="content"></label>
 
 
             </div>

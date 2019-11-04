@@ -36,14 +36,20 @@ class NotesList extends Component {
         console.log("NotesList: Render");
 
         return(
-            <>
-            <section className="section-content">
-                <button type= "button"
-                className="btn"
-                onClick={() => {this.props.history.push(`/notes/new/${this.props.match.params.notebookId}`)}}> Add Notes</button>
-            </section>
-            <div className="container-cards">
-                {this.state.notes.map(note =>
+
+<nav class="panel">
+  <p class="panel-heading">
+    Notes by subject:
+  </p>
+  <div class="panel-block">
+    <p class="control has-icons-left">
+      <span class="icon is-left">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </span>
+    </p>
+  </div>
+
+  {this.state.notes.map(note =>
                     <NoteCard
                     key={note.id}
                     note={note}
@@ -51,8 +57,14 @@ class NotesList extends Component {
                     {...this.props}
                     />
                     )}
-            </div>
-            </>
+  <div class="panel-block">
+  <button type= "button"
+                className="button is-link is-outlined is-fullwidth"
+                onClick={() => {this.props.history.push(`/notes/new/${this.props.match.params.notebookId}`)}}> Add Notes</button>
+  </div>
+</nav>
+
+
         )
     }
 }
