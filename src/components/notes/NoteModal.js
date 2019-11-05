@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react'
-import NoteManager from '../../modules/NotebookManager'
+import NoteManager from '../../modules/NoteManager'
 import Field from "../forms/field";
 import {withRouter} from 'react-router-dom'
 
@@ -37,12 +37,14 @@ constructor(props) {
       id: this.state.id,
       rating: this.state.rating
     }
+    console.log(editedNote)
       this.props.updateNote(editedNote)
   }
 
   componentDidMount() {
     NoteManager.get(this.props.note.id)
       .then((note) => {
+        console.log("note response", note)
         this.setState({
           note: note,
           id: note.id,
