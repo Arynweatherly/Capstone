@@ -1,31 +1,45 @@
 import React, {Component} from 'react'
 import NoteManager from '../../modules/NoteManager'
 import NoteModal from './NoteModal'
+import './Note.css'
 
 class NoteDetail extends Component {
   constructor(props) {
     super(props)
     this.toggleEdit = this.toggleEdit.bind(this)
     this.updateNote = this.updateNote.bind(this)
-  }
 
-  state = {
-    note: [],
-    editMode: false
+    this.state = {
+      note: {},
+      id: "",
+      title: "",
+      date: "",
+      topics: "",
+      instructor: "",
+      content: "",
+      notebookId: "",
+      rating: "",
+      editMode: false,
+      isLoaded: false
+    }
   }
 
   componentDidMount() {
     NoteManager.get(this.props.match.params.notebookId)
       .then((note) => {
         this.setState({
-          note: note
+          note: note,
+          id: note.id,
+          title: note.title,
+          date: note.date,
+          topics: note.topics,
+          instructor: note.instructor,
+          content: note.content,
+          notebookId: note.notebookId,
+          rating: note.rating,
+          isLoaded: true
         })
       })
-  }
-
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    // This returns a proper note
-    console.log(this.state.note)
   }
 
   deleteNote = id => {
@@ -40,13 +54,17 @@ class NoteDetail extends Component {
   }
 
   updateNote(editedNote) {
-    this.setState({note: editedNote})
+    NoteManager.update(editedNote)
+    this.setState({
+      note: editedNote,
+      editMode: false
+    })
   }
 
   render() {
     return (
       <>
-        <div className="card">
+        <div className="note card">
           <header className="card-header">
             <p className="card-header-title">{this.state.note.title} (added on {this.state.note.date})</p>
           </header>
@@ -62,8 +80,13 @@ class NoteDetail extends Component {
             <a href="#" className="button is-success card-footer-item" onClick={() => this.setState({editMode: true})}>Edit</a>
           </footer>
         </div>
-        {this.state.note &&
-        <NoteModal editMode={this.state.editMode} note={this.state.note} toggleEdit={this.toggleEdit} updateNote={this.updateNote}/>
+        {this.state.isLoaded &&
+        <NoteModal editMode={this.state.editMode}
+                   toggleEdit={this.toggleEdit}
+                   updateNote={this.updateNote}
+                   note={this.state.note}
+                   noteId={this.state.id}
+        />
         }
       </>
     )
