@@ -18,6 +18,9 @@ delete(id) {
     })
     .then(result => result.json())
   },
+getEditedNote() {
+  return fetch(`$`)
+},
 
 post(newNote) {
     return fetch(`${remoteURL}/notes`, {

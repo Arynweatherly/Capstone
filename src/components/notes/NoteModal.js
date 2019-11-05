@@ -1,24 +1,24 @@
+
 import React, {Component} from 'react'
-import NoteManager from '../../modules/NotebookManager'
+import NoteManager from '../../modules/NoteManager'
 import Field from "../forms/field";
 import {withRouter} from 'react-router-dom'
 
 class NoteModal extends Component {
-  constructor(props) {
-    super(props)
-  }
-
-  state = {
-    note: [],
-    noteTitle: "",
+constructor(props) {
+  super(props)
+  this.state = {
+    note: {},
+    id: "",
+    title: "",
     date: "",
     topics: "",
     instructor: "",
     content: "",
     notebookId: "",
-    id: "",
     rating: ""
   }
+}
 
   handleFieldChange = evt => {
     const stateToChange = {}
@@ -27,7 +27,6 @@ class NoteModal extends Component {
   }
 
   updateExistingNote = evt => {
-    evt.preventDefault()
     const editedNote = {
       title: this.state.title,
       date: this.state.date,
@@ -35,38 +34,34 @@ class NoteModal extends Component {
       instructor: this.state.instructor,
       content: this.state.content,
       notebookId: this.state.notebookId,
-      id: this.props.note.id,
-      rating: this.props.note.rating
+      id: this.state.id,
+      rating: this.state.rating
     }
-    console.log("edited note",editedNote)
-
-    NoteManager.update(editedNote)
-      .then(this.props.updateNote(editedNote))
-      .then(() => this.props.history.push(`/notes/${this.props.note.id}`))
+    console.log(editedNote)
+      this.props.updateNote(editedNote)
   }
-
 
   componentDidMount() {
-    NoteManager.get(this.props.match.params.id)
-    .then(note => {
-      this.setState({
-      title: this.state.title,
-      date: this.state.date,
-      topics: this.state.topics,
-      instructor: this.state.instructor,
-      content: this.state.content,
-      notebookId: this.state.notebookId,
-      id: this.props.note.id,
-      rating: this.props.note.ratingv
-      loading 
+    NoteManager.get(this.props.note.id)
+      .then((note) => {
+        console.log("note response", note)
+        this.setState({
+          note: note,
+          id: note.id,
+          title: note.title,
+          date: note.date,
+          topics: note.topics,
+          instructor: note.instructor,
+          content: note.content,
+          notebookId: note.notebookId,
+          rating: note.rating
+        })
       })
-    }
-
-// grab the note id with match params
+  }
+  // grab the note id with match params
 //fetch the note that you want
 //populate state with the notes details
-//set default value of fileds using state 
-  }
+//set default value of fileds using state
 
   render() {
     return (
@@ -74,7 +69,7 @@ class NoteModal extends Component {
         <div className="modal-background"></div>
         <div className="modal-card">
           <header className="modal-card-head">
-            <p className="modal-card-title">Edit Notes for {this.props.note.title}</p>
+            <p className="modal-card-title">Edit Notes for {this.state.title}</p>
             <button className="delete" aria-label="close" onClick={() => this.props.toggleEdit()}></button>
           </header>
           <section className="modal-card-body">
@@ -84,7 +79,7 @@ class NoteModal extends Component {
                 required
                 className="input"
                 onChange={this.handleFieldChange}
-                id="noteTitle"
+                id="title"
                 defaultValue={this.props.note.title}
               />
             </Field>
