@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import NoteManager from '../../modules/NoteManager';
 import './Note.css'
+import Dropzone from 'react-dropzone';
+import request from 'superagent';
 
 class NoteForm extends Component {
     state = {
@@ -89,6 +91,25 @@ class NoteForm extends Component {
               id="content"
               onChange={this.handleFieldChange}
             ></textarea>
+           <Dropzone
+              onDrop={this.onImageDrop.bind(this)}
+              accept="image/*"
+              //allows more than one image to uploaded at a time
+              multiple={true}>
+              {({getRootProps, getInputProps}) => {
+                return (
+                    <div
+                      {...getRootProps()}
+                    >
+                      <input {...getInputProps()} />
+                      {
+                        <p>Try dropping some files here, or click to select files to upload.</p>
+                      }
+                </div>
+               )
+              }}
+          </Dropzone>
+  }
           </fieldset>
           <button type="button"   disabled={this.state.loadingStatus} onClick={this.constructNewNote}>
             Save Note

@@ -601,6 +601,21 @@
       "userId": 2,
       "friendInitiate": 3,
       "id": 67
+    },
+    {
+      "userId": 6,
+      "friendInitiate": 3,
+      "id": 68
+    },
+    {
+      "userId": 18,
+      "friendInitiate": 3,
+      "id": 69
+    },
+    {
+      "userId": 10,
+      "friendInitiate": 3,
+      "id": 70
     }
   ],
   "users": [
@@ -608,132 +623,154 @@
       "id": 1,
       "username": "heidi",
       "name": "heidi",
-      "password": "heidi"
+      "password": "heidi",
+      "url": "heidi.jpeg"
     },
     {
       "username": "sage",
       "name": "sage",
       "password": "sage",
+      "url": "sage.jpeg",
       "id": 2
     },
     {
       "username": "aryn",
       "password": "aryn",
       "name": "aryn",
+      "url": "aryn.jpeg",
       "id": 3
     },
     {
       "username": "taylor",
       "name": "taylor",
       "password": "taylor",
+      "url": "taylor.jpg",
       "id": 4
     },
     {
       "username": "nate",
       "name": "nate",
       "password": "nate",
+      "url": "nate.jpeg",
       "id": 5
     },
     {
       "username": "phil",
       "name": "phil",
       "password": "phil",
+      "url": "phil2.png",
       "id": 6
     },
     {
       "username": "leigh",
       "name": "leigh",
       "password": "leigh",
+      "url": "leigh.jpeg",
       "id": 7
     },
     {
       "username": "quin",
       "name": "quin",
       "password": "quin",
+      "url": "quin.jpeg",
       "id": 8
     },
     {
       "username": "mark",
       "name": "mark",
       "password": "mark",
+      "url": "mark.jpeg",
       "id": 9
     },
     {
       "username": "lauren",
       "name": "lauren",
       "password": "lauren",
+      "url": "lauren.jpeg",
       "id": 10
     },
     {
       "username": "nick",
       "name": "nick",
       "password": "nick",
+      "url": "nick.jpeg",
       "id": 11
     },
     {
       "username": "keaton",
       "name": "keaton",
       "password": "keaton",
+      "url": "keaton.jpg",
       "id": 12
     },
     {
       "username": "dylan",
       "name": "dyaln",
       "password": "dyaln",
+      "url": "dylan.jpeg",
       "id": 13
     },
     {
       "username": "summer",
       "password": "summer",
       "name": "summer",
+      "url": "summer.jpeg",
       "id": 14
     },
     {
-      "username": "new",
-      "password": "mew",
-      "name": "",
+      "username": "seth",
+      "password": "seth",
+      "name": "seth",
+      "url": "seth.jpg",
       "id": 15
     },
     {
       "username": "chandler",
       "password": "chandler",
       "name": "chandler",
+      "url": "chandler.jpeg",
       "id": 16
     },
     {
       "username": "momo",
       "password": "momo",
       "name": "mo",
+      "url": "mo.jpg",
       "id": 18
     },
     {
       "username": "madi",
       "password": "madi",
       "name": "madi",
+      "url": "madi.jpg",
       "id": 19
     },
     {
       "username": "brenda",
       "password": "brenda",
       "name": "brenda",
+      "url": "brenda.png",
       "id": 20
     },
     {
       "username": "stephen",
       "password": "stephen",
       "name": "stephen",
+      "url": "stephen.jpeg",
       "id": 21
     },
     {
       "username": "gradi",
       "password": "gradi",
       "name": "gradi",
+      "url": "gradi.jpeg",
       "id": 22
     },
     {
       "username": "david",
       "password": "david",
       "name": "david",
+      "url": "david.png",
       "id": 23
     }
   ],

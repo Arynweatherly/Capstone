@@ -20,7 +20,8 @@ class FriendCard extends Component {
   <div class="media-left">
 
     <figure class="image is-64x64">
-      <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image" />
+    <img src={require(`../../images/${this.props.friend.user.url}`)} alt="Animal" />
+
     </figure>
   </div>
 
@@ -35,8 +36,6 @@ class FriendCard extends Component {
 <footer class="card-footer">
 <button type="button" className="deleteFriend" onClick={() => this.props.deleteFriend(this.props.friend.id)}>Remove Friend</button>
 <button type="button" className="viewNotebooks" onClick={() => this.props.getFriendsNotebooks(this.props.friend.userId)}>View Notebooks</button>
-    {/* <a href="#" className="deleteFriend" onClick={() => this.props.deleteFriend(this.props.friend.id)}>unfollow</a> <br />
-    <a href="#" className="viewNotebooks" onClick={() => this.props.getFriendsNotebooks(this.props.friend.userId)}>View Notebooks</a> */}
     {/* <Link to={`/notebooks/${this.props.notebook.id}`}>View Notes</Link> */}
   </footer>
 </div>
