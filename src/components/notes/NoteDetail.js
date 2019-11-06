@@ -17,6 +17,8 @@ class NoteDetail extends Component {
       topics: "",
       instructor: "",
       content: "",
+      uploadedFile: "",
+      imageURL: "",
       notebookId: "",
       rating: "",
       editMode: false,
@@ -33,6 +35,8 @@ class NoteDetail extends Component {
           title: note.title,
           date: note.date,
           topics: note.topics,
+          imageURL: note.imageURL,
+          uploadedFile: note.uploadedFile,
           instructor: note.instructor,
           content: note.content,
           notebookId: note.notebookId,
@@ -74,6 +78,13 @@ class NoteDetail extends Component {
               <p>Instructor: {this.state.note.instructor}</p>
               <p>Content: {this.state.note.content}</p>
             </div>
+          </div>
+          <div>
+            {this.state.note.imageURL !== "" ? 
+            <div className="cloudinary-Container">
+              <img alt="cloudinaryImg" src={this.state.note.imageURL} className="cloudinaryImg" />
+              </div>
+              : null}
           </div>
           <footer className="card-footer">
             <a href="#" className="button is-danger card-footer-item" onClick={() => this.deleteNote(this.state.note.id)}>Delete</a>

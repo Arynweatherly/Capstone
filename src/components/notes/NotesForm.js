@@ -4,16 +4,48 @@ import './Note.css'
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 
+const uploadPreset = 'notesapp';
+const uploadURL = 'https://api.cloudinary.com/v1_1/dicoaixm8/image/upload';
+
 class NoteForm extends Component {
     state = {
         noteTitle: "",
         date: "",
         topics: "",
         instructor: "",
+        imageURL: "",
+        uploadedFile: null,
         content: "",
         notebookId: parseInt(this.props.match.params.notebookId),
         loadingStatus: false,
     };
+
+
+    onImageDrop(files) {
+      this.setState({
+          uploadedFile: files[0]
+      });
+
+      this.handleImageUpload(files[0]);
+  }
+
+  handleImageUpload(file) {
+      let upload = request.post(uploadURL)
+          .field('upload_preset', uploadPreset)
+          .field('file', file);
+
+      upload.end((err, response) => {
+          if (err) {
+              console.error(err);
+          }
+
+          if (response.body.secure_url !== '') {
+              this.setState({
+                  imageURL: response.body.secure_url
+              });
+          }
+      });
+  }
 
     handleFieldChange = evt => {
         const stateToChange = {};
@@ -34,6 +66,8 @@ class NoteForm extends Component {
                 title: this.state.noteTitle,
                 date: this.state.date,
                 topics: this.state.topics,
+                imageURL: this.state.imageURL,
+                uploadedFile: this.state.uploadedFile,
                 instructor: this.state.instructor,
                 content: this.state.content,
                 notebookId: this.state.notebookId,
@@ -94,7 +128,6 @@ class NoteForm extends Component {
            <Dropzone
               onDrop={this.onImageDrop.bind(this)}
               accept="image/*"
-              //allows more than one image to uploaded at a time
               multiple={true}>
               {({getRootProps, getInputProps}) => {
                 return (
@@ -109,7 +142,13 @@ class NoteForm extends Component {
                )
               }}
           </Dropzone>
-  }
+          <div>
+              {this.state.imageURL === '' ? null :
+          <div>
+            <p>{this.state.uploadedFile.name}</p>
+          <img alt="previewImg" className="preview-img" src={this.state.imageURL} />
+          </div>}
+         </div>
           </fieldset>
           <button type="button"   disabled={this.state.loadingStatus} onClick={this.constructNewNote}>
             Save Note

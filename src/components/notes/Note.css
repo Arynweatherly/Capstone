@@ -108,3 +108,13 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
 }
+
+.cloudinaryContainer{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 195px;
+    max-width: 300px;
+    max-height: 200px;
+    overflow: hidden;
+
+}
