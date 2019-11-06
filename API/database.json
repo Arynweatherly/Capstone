@@ -335,6 +335,245 @@
       "imageURL": "",
       "uploadedFile": "",
       "rating": 0
+    },
+    {
+      "title": "Github Commands",
+      "date": "2019-09-10",
+      "topics": "github, command line",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573006871/capstone/ti89icxowci1jhp7hobp.png",
+      "uploadedFile": {
+        "path": "github.png"
+      },
+      "instructor": "Brenda",
+      "content": "",
+      "notebookId": 20,
+      "id": 32
+    },
+    {
+      "title": "Github Workflow",
+      "date": "2019-09-10",
+      "topics": "github",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573006923/capstone/jwmtgpqc3l01xn1ezpnf.jpg",
+      "uploadedFile": {
+        "path": "IMG_0605.jpeg"
+      },
+      "instructor": "Brenda",
+      "content": "",
+      "notebookId": 20,
+      "id": 33
+    },
+    {
+      "title": "Welcome to nashville Wireframe",
+      "date": "2019-09-04",
+      "topics": "javascript, group projects",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573006994/capstone/t2sxup7orhnf25leolp3.png",
+      "uploadedFile": {
+        "path": "welcome_nash_wireframe2.png"
+      },
+      "instructor": "Brenda",
+      "content": "",
+      "notebookId": 20,
+      "id": 34
+    },
+    {
+      "title": "Login Dependencies",
+      "date": "2019-10-15",
+      "topics": "react",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573007081/capstone/oe4wo5eayumwx0sq1b6v.png",
+      "uploadedFile": {
+        "path": "login dependencies.png"
+      },
+      "instructor": "Brenda",
+      "content": "",
+      "notebookId": 21,
+      "id": 35
+    },
+    {
+      "title": "Nutshell 2 dependencies drawing",
+      "date": "2019-10-16",
+      "topics": "group project, react, nutshell",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573007159/capstone/ksdsdrl2aae5vblvz2av.jpg",
+      "uploadedFile": {
+        "path": "nutshell-tree.JPG"
+      },
+      "instructor": "Brenda",
+      "content": "",
+      "notebookId": 21,
+      "id": 36
+    },
+    {
+      "title": "History",
+      "date": "2019-10-02",
+      "topics": "history, state, props, objects",
+      "imageURL": "",
+      "uploadedFile": null,
+      "instructor": "Brenda",
+      "content": "The term \"history\" and \"history object\" in this documentation refers to the history package, which is one of only 2 major dependencies of React Router (besides React itself), and which provides several different implementations for managing session history in JavaScript in various environments.\nThe following terms are also used. •\t\"browser history\" - A DOM-specific implementation, useful in web browsers that support the HTML5 history API. —> ”hash history\" - A DOM-specific implementation for legacy web browsers. --> “memory history\" - An in-memory history implementation, useful in testing and non-DOM environments like React Native\nhistory objects typically have the following properties and methods: —> length - (number) The number of entries in the history stack —> action - (string) The current action (PUSH, REPLACE, or POP) —> location - (object) The current location. May have the following properties: ==> pathname - (string) The path of the URL. ===> search - (string) The URL query string ===> hash - (string) The URL hash fragment ===> state - (object) location-specific state that was provided to e.g. push(path, state) when this location was pushed onto the stack. Only available in browser and memory history. ~~~~~~> push(path, [state]) - (function) Pushes a new entry onto the history stack. ~~~~> replace(path, [state]) - (function) Replaces the current entry on the history stack ~~~~> go(n) - (function) Moves the pointer in the history stack by n entries ~~~~> goBack() - (function) Equivalent to go(-1) ~~~~> goForward() - (function) Equivalent to go(1) ~~~~> block(prompt) - (function) Prevents navigation (see the history docs). The history object is mutable. Therefore it is recommended to access the location from the render props of <Route>, not from history.location. This ensures your assumptions about React are correct in lifecycle hooks.",
+      "notebookId": 21,
+      "id": 37
+    },
+    {
+      "title": "State notes (picture)",
+      "date": "2019-10-16",
+      "topics": "state, setState",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573007924/capstone/wh5gekmdowi0vv7vjtar.png",
+      "uploadedFile": {
+        "path": "Screen Shot 2019-11-05 at 8.37.46 PM.png"
+      },
+      "instructor": "Brenda",
+      "content": "",
+      "notebookId": 21,
+      "id": 38
+    },
+    {
+      "title": "Login dependency chart",
+      "date": "2019-10-23",
+      "topics": "dependency chart",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573008150/capstone/j1citvdy1wm5hp2h8gxq.png",
+      "uploadedFile": {
+        "path": "login dependencies.png"
+      },
+      "instructor": "Brenda",
+      "content": "",
+      "notebookId": 22,
+      "id": 39
+    },
+    {
+      "title": "state picture notes",
+      "date": "2019-10-18",
+      "topics": "state, setState",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573008188/capstone/v4ovcrkmldm76zkabi3z.png",
+      "uploadedFile": {
+        "path": "Screen Shot 2019-11-05 at 8.37.46 PM.png"
+      },
+      "instructor": "Brenda",
+      "content": "",
+      "notebookId": 22,
+      "id": 40
+    },
+    {
+      "title": "nutshell 2 dependency tree",
+      "date": "2019-10-17",
+      "topics": "dependency, picture",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573008238/capstone/insqw87yt2zylo4pggjh.jpg",
+      "uploadedFile": {
+        "path": "nutshell-tree.JPG"
+      },
+      "instructor": "Brenda",
+      "content": "",
+      "notebookId": 22,
+      "id": 41
+    },
+    {
+      "title": "History",
+      "date": "2019-10-25",
+      "topics": "history, state, react",
+      "imageURL": "",
+      "uploadedFile": null,
+      "instructor": "Brenda",
+      "content": "The term \"history\" and \"history object\" in this documentation refers to the history package, which is one of only 2 major dependencies of React Router (besides React itself), and which provides several different implementations for managing session history in JavaScript in various environments.\nThe following terms are also used. •\t\"browser history\" - A DOM-specific implementation, useful in web browsers that support the HTML5 history API. —> ”hash history\" - A DOM-specific implementation for legacy web browsers. --> “memory history\" - An in-memory history implementation, useful in testing and non-DOM environments like React Native\nhistory objects typically have the following properties and methods: —> length - (number) The number of entries in the history stack —> action - (string) The current action (PUSH, REPLACE, or POP) —> location - (object) The current location. May have the following properties: ==> pathname - (string) The path of the URL. ===> search - (string) The URL query string ===> hash - (string) The URL hash fragment ===> state - (object) location-specific state that was provided to e.g. push(path, state) when this location was pushed onto the stack. Only available in browser and memory history. ~~~~~~> push(path, [state]) - (function) Pushes a new entry onto the history stack. ~~~~> replace(path, [state]) - (function) Replaces the current entry on the history stack ~~~~> go(n) - (function) Moves the pointer in the history stack by n entries ~~~~> goBack() - (function) Equivalent to go(-1) ~~~~> goForward() - (function) Equivalent to go(1) ~~~~> block(prompt) - (function) Prevents navigation (see the history docs). The history object is mutable. Therefore it is recommended to access the location from the render props of <Route>, not from history.location. This ensures your assumptions about React are correct in lifecycle hooks.",
+      "notebookId": 22,
+      "id": 42
+    },
+    {
+      "title": "Event Listeners",
+      "date": "2019-10-23",
+      "topics": "eventListeners",
+      "imageURL": "",
+      "uploadedFile": null,
+      "instructor": "Brenda",
+      "content": "Will be the word on plus the type of event youre listening for.\nThe event listener’s value should be a function . Cannot write an if statement and inject it into JSXALL ABOUT ReactDOM.render(). ReactDOM.render() controls the contents of the container node you pass in. Any existing DOM elements inside are replaced when first called. Later calls use React’s DOM diffing algorithm for efficient updates.ReactDOM.render() does not modify the container node (only modifies the children of the container). It may be possible to insert a component to an existing DOM node without overwriting the existing children. ReactDOM.render() currently returns a reference to the root ReactComponent instance. However, using this return value is legacy and should be avoided because future versions of React may render components asynchronously in some cases. If you need a reference to the root ReactComponent instance, the preferred solution is to attach a callback ref to the root element. Using ReactDOM.render() to hydrate a server-rendered container is deprecated and will be removed in React 17. Use hydrate() instead.\n",
+      "notebookId": 22,
+      "id": 43
+    },
+    {
+      "title": "setState Documentation",
+      "date": "2019-10-21",
+      "topics": "setState, state, react",
+      "imageURL": "",
+      "uploadedFile": null,
+      "instructor": "",
+      "content": "-setState() enqueues changes to the component state and tells React that this component and its children need to be re-rendered with the updated state. This is the primary method you use to update the user interface in response to event handlers and server responses. Think of setState() as a request rather than an immediate command to update the component. For better perceived performance, React may delay it, and then update several components in a single pass. React does not guarantee that the state changes are applied immediately. setState() does not always immediately update the component. It may batch or defer the update until later. This makes reading this.state right after calling setState() a potential pitfall. Instead, use componentDidUpdate or a setState callback (setState(updater, callback)), either of which are guaranteed to fire after the update has been applied. If you need to set the state based on the previous state, read about the updater argument below. setState() will always lead to a re-render unless shouldComponentUpdate() returns false. If mutable objects are being used and conditional rendering logic cannot be implemented in shouldComponentUpdate(), calling setState() only when the new state differs from the previous state will avoid unnecessary re-renders. The first argument is an updater function with the signature:\n(state, props) => stateChange state is a reference to the component state at the time the change is being applied. It should not be directly mutated. Instead, changes should be represented by building a new object based on the input from state and props. For instance, suppose we wanted to increment a value in state by props.step:\nthis.setState((state, props) => {\n  return {counter: state.counter + props.step};\n}); Both state and props received by the updater function are guaranteed to be up-to-date. The output of the updater is shallowly merged with state.\nThe second parameter to setState() is an optional callback function that will be executed once setState is completed and the component is re-rendered. Generally we recommend using componentDidUpdate() for such logic instead.\nYou may optionally pass an object as the first argument to setState() instead of a function",
+      "notebookId": 22,
+      "id": 44
+    },
+    {
+      "title": "khgjkhj",
+      "date": "2019-11-14",
+      "topics": "ljih",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573055205/capstone/ykoe7so89jrf3eckyovl.png",
+      "uploadedFile": {
+        "path": "erd.png"
+      },
+      "instructor": "",
+      "content": "",
+      "notebookId": 22,
+      "id": 45
+    },
+    {
+      "title": "sphenoid and ethmoid pictures",
+      "date": "2019-09-25",
+      "topics": "sphenoid bone, ethmoid bone",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573056022/capstone/znvd8w7sdy2asjpdiwd8.png",
+      "uploadedFile": {
+        "path": "Screen Shot 2019-11-05 at 8.13.04 PM.png"
+      },
+      "instructor": "Mrs. Hobby",
+      "content": "",
+      "notebookId": 4,
+      "id": 46
+    },
+    {
+      "title": "login dependencies",
+      "date": "2019-10-15",
+      "topics": "react, dependency chart",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573056664/capstone/ku5m5ejtvu2yigai5qjd.png",
+      "uploadedFile": {
+        "path": "login dependencies.png"
+      },
+      "instructor": "Brenda",
+      "content": "",
+      "notebookId": 18,
+      "id": 47
+    },
+    {
+      "title": "nutshell 2 dependency tree",
+      "date": "2019-10-24",
+      "topics": "group project, react",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573056701/capstone/suxeer9qkc3luomf2yjl.jpg",
+      "uploadedFile": {
+        "path": "nutshell-tree.JPG"
+      },
+      "instructor": "Brenda",
+      "content": "",
+      "notebookId": 18,
+      "id": 48
+    },
+    {
+      "title": "brachial plexus",
+      "date": "2018-06-12",
+      "topics": "brachial plexus, anatomy, nervous system",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573056835/capstone/bucxu57zhnjnrrwvue0n.png",
+      "uploadedFile": {
+        "path": "Screen Shot 2019-11-05 at 8.04.51 PM.png"
+      },
+      "instructor": "Dr. Lewis",
+      "content": "",
+      "notebookId": 4,
+      "id": 49
+    },
+    {
+      "title": "Skull anatomy (labeled picture)",
+      "date": "2018-07-12",
+      "topics": "skull, anatomy",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573058234/capstone/zhn88qehjwh2mpcxntt4.png",
+      "uploadedFile": {
+        "path": "Screen Shot 2019-11-05 at 7.40.04 PM.png"
+      },
+      "instructor": "dr. Lewis",
+      "content": "",
+      "notebookId": 4,
+      "id": 50
     }
   ],
   "reviews": [
@@ -682,6 +921,51 @@
       "userId": 10,
       "friendInitiate": 3,
       "id": 70
+    },
+    {
+      "userId": 21,
+      "friendInitiate": 2,
+      "id": 71
+    },
+    {
+      "userId": 5,
+      "friendInitiate": 2,
+      "id": 72
+    },
+    {
+      "userId": 7,
+      "friendInitiate": 2,
+      "id": 73
+    },
+    {
+      "userId": 5,
+      "friendInitiate": 7,
+      "id": 74
+    },
+    {
+      "userId": 3,
+      "friendInitiate": 7,
+      "id": 75
+    },
+    {
+      "userId": 4,
+      "friendInitiate": 7,
+      "id": 76
+    },
+    {
+      "userId": 12,
+      "friendInitiate": 7,
+      "id": 77
+    },
+    {
+      "userId": 14,
+      "friendInitiate": 3,
+      "id": 78
+    },
+    {
+      "userId": 7,
+      "friendInitiate": 3,
+      "id": 79
     }
   ],
   "users": [
@@ -905,6 +1189,21 @@
       "subject": "Intro to Radiology",
       "userId": 3,
       "id": 19
+    },
+    {
+      "subject": "NSS notes and documents",
+      "userId": 2,
+      "id": 20
+    },
+    {
+      "subject": "React",
+      "userId": 2,
+      "id": 21
+    },
+    {
+      "subject": "React",
+      "userId": 7,
+      "id": 22
     }
   ]
 }

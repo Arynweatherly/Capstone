@@ -19,6 +19,7 @@ class Home extends Component {
           <article className="media">
             <figure className="media-left">
               <p className="image">
+                
               {/* <img src={require(`../../images/${this.props.currentUser.user.url}`)} alt="Animal" />
                 <img src={`/images/profile.jpeg`}/> */}
               </p>
