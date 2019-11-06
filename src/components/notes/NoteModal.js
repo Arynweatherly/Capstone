@@ -4,6 +4,11 @@ import NoteManager from '../../modules/NoteManager'
 import Field from "../forms/field";
 import {withRouter} from 'react-router-dom'
 
+
+const uploadPreset = 'notesapp';
+const uploadURL = 'https://api.cloudinary.com/v1_1/dicoaixm8/image/upload';
+
+
 class NoteModal extends Component {
 constructor(props) {
   super(props)

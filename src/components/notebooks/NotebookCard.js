@@ -18,7 +18,7 @@ class NotebookCard extends Component {
   </header> */}
 
   <div class="card-content">
-  <h3>class subject: <span className="card-notebookSubject">{this.props.notebook.subject}</span></h3>
+  <h3> <span className="card-notebookSubject">{this.props.notebook.subject}</span></h3>
   </div>
   
   <footer class="card-footer">
