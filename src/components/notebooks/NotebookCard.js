@@ -9,35 +9,28 @@ class NotebookCard extends Component {
       console.log(this.props)
     return (
 
-      <div className="card-notebook">
-  {/* <header class="card-header">
-    <p class="card-header-title">
-    <h3>class subject: <span className="card-notebookSubject">{this.props.notebook.subject}</span></h3>
-    </p>
-
-  </header> */}
-
-  <div class="card-content">
+      <div className="tile is-ancestor">
+<div className= "tile is-vertical is-parent">
+  <div className="tile is-child box">
   <h3> <span className="card-notebookSubject">{this.props.notebook.subject}</span></h3>
-  </div>
   
-  <footer class="card-footer">
-    <a href="#" className="card-footer-item" onClick={() => this.props.deleteNotebook(this.props.notebook.id)}>Delete</a>
-    <a href="#" className="card-footer-item" onClick={() => {this.props.history.push(`/notebooks/${this.props.notebook.id}/edit`)}}>Edit</a>
-    <a href="#" className="card-footer-item" onClick={() => this.props.history.push(`/notebooks/${this.props.notebook.id}`)}>View Notes </a>
+  <footer class="card-footer is-centered">
+
+    <div className="buttons">
+    <div class="field is-grouped">
+  <p class="control">
+  <button type="button is-left" className="deleteNotebook" onClick={() => this.props.deleteNotebook(this.props.notebook.id)}>Delete</button>
+  <button type="button is-centered" className="editNotebooks" onClick={() => {this.props.history.push(`/notebooks/${this.props.notebook.id}/edit`)}}>Edit</button>
+  <button type="button is-right" className="viewNotebooks" onClick={() => this.props.history.push(`/notebooks/${this.props.notebook.id}`)}>View Notes </button>
     {/* <Link to={`/notebooks/${this.props.notebook.id}`}>View Notes</Link> */}
+    </p>
+    </div>
+  
+    </div>
   </footer>
 </div>
-
-// <div class="tile is-parent">
-//         <article class="tile is-child notification is-info">
-//           <p class="title">Middle tile</p>
-//           <p class="subtitle">With an image</p>
-//           <figure class="image is-4by3">
-//             <img src="https://bulma.io/images/placeholders/640x480.png">
-//           </figure>
-//         </article>
-//       </div>
+</div>
+</div>
 
     )
   }

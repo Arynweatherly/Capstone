@@ -45,7 +45,7 @@ render(){
       Add Notebook
   </button>
 </section>
-      <div className="container-card-notebook">
+      <div className="tile is-child box">
         {this.state.notebooks.map(notebook =>
           <NotebookCard
             key={notebook.id}

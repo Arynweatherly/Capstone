@@ -118,3 +118,21 @@ justify-content: space-between;
     overflow: hidden;
 
 }
+.noteImg {
+  height: auto;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  margin-left: 37%;
+  background-color: white;
+  border-radius: 10%;
+}
+
+.title.is-4 {
+  background-color: #F7C9B6;
+}
+
+.box.container.note {
+  background-color: #DAE7DD;
+}
