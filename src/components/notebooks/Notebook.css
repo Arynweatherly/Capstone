@@ -82,3 +82,14 @@
     border-style: solid;
     border-color: #C6C1BE;
   }
+
+  .card-footer {
+    display: block;
+    justify-content: space-evenly;
+    align-content: center;
+  }
+
+  .tile.is-child.box {
+    justify-content: space-evenly;
+
+  }
