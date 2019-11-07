@@ -5,3 +5,25 @@
     -o-background-size: cover;
     background-size: cover;
 } */
+
+.loginImg {
+    height: auto;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    margin-left: 37%;
+    background-color: white;
+    border-radius: 10%;
+}
+
+
+
+.box.container.login {
+    background-color: #DAE7DD
+    ;
+}
+
+header {
+    background-color: #DACAC4;
+}

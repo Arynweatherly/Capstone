@@ -84,47 +84,87 @@ class NoteForm extends Component {
 
         return(
             <>
+            <div className="box container note">
+            <section className="is-left">
+					<p className="title is-4">Add A New Note</p>
+				{/* <img src={`../../images/signIn.svg`}/> */}
+			<img className= "noteImg" src={`/images/addnote.png`}/>
+				</section>
             <form>
-            <fieldset>
-            <label className="noteTitle">Title::</label>
-            <input
+
+            <div className="field">
+            <label className="label"></label>
+            <div className="control">
+              <input
+              className="input"
               type="text"
               placeholder="Title"
               id="noteTitle"
+              required=""
+                  autoFocus=""
               onChange={this.handleFieldChange}
-            ></input>
-
-            <label className="dateName">Date:</label>
-            <input
+              />
+            </div>
+            </div>
+        
+            <div className="field is-right">
+              <label className="label"></label>
+              <div className="control">
+                <input
+                className="input"
               type="date"
               required
               id="date"
               onChange={this.handleFieldChange}
               value={this.state.date}
-            ></input>
+              autoFocus= ""
+            />
+              </div>
+              </div>
 
-            <label className="topics">Topics:</label>
+              <div className="field is-right">
+              <label className="label"></label>
+              <div className="control">
             <input
+            className="input"
               type="text"
               placeholder="topics"
               id="topics"
+              required=""
+              autoFocus=""
               onChange={this.handleFieldChange}
             ></input>
+            </div>
+            </div>
+
+            <div className="field is-right">
+              <label className="label"></label>
+              <div className="control">
             <label className="instructor">instructor:</label>
             <input
+            className="input"
               type="text"
               placeholder="instructor"
               id="instructor"
+              required=""
+              autoFocus=""
               onChange={this.handleFieldChange}
             ></input>
-
+            </div>
+            </div>
+            <div className="field is-right">
+              <label className="label"></label>
+              <div className="control">
             <label className="content">content:</label>
             <textarea
+            className="textarea"
               type="textarea"
               placeholder="content"
               id="content"
               onChange={this.handleFieldChange}
             ></textarea>
+            </div>
+            </div>
            <Dropzone
               onDrop={this.onImageDrop.bind(this)}
               accept="image/*"
@@ -149,11 +189,11 @@ class NoteForm extends Component {
           <img alt="previewImg" className="preview-img" src={this.state.imageURL} />
           </div>}
          </div>
-          </fieldset>
           <button type="button"   disabled={this.state.loadingStatus} onClick={this.constructNewNote}>
             Save Note
           </button>
             </form>
+            </div>
         </>
         )
     }
