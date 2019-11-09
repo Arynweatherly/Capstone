@@ -42,39 +42,65 @@ constructNewTask = evt => {
 
   render() {
     return (
-      <div>
-        <form>
-          <fieldset>
-            <label className="taskName">Task::</label>
-            <input
-              type="text"
+      <>
+      <div className="box container task">
+            <section className="is-left">
+					<p className="title is-4 task">Add Task</p>
+				{/* <img src={`../../images/signIn.svg`}/> */}
+			<img className= "noteImg" src={`/images/Group 4.png`}/>
+				</section>
+            <form>
+ 
+            <div className="field">
+            <label className="label"></label>
+            <div className="control">
+              <input
+               className="input"
+               type="text"
               placeholder="Enter Task Here"
               id="taskName"
+              required=""
+              autoFocus=""
               onChange={this.handleFieldChange}
-            ></input>
+            />
 
-            <label className="dateName">Completion Date:</label>
-            <input
+</div>
+            </div>
+        
+            <div className="field is-right">
+              <label className="label"></label>
+              <div className="control">
+                <input
+                className="input"
               type="date"
               required
               id="date"
               onChange={this.handleFieldChange}
               value={this.state.date}
-            ></input>
+              autoFocus= ""
+              />
 
-            <label className="taskStatus">Status:</label>
+            </div>
+              </div>
+
+              <div className="field is-right">
+              <label className="label"></label>
+              <div className="control">
             <input
               type="checkbox"
               id="completed"
               onChange={this.handleFieldChange}
-            ></input>
+              ></input>
+              </div>
+              </div>
 
-          </fieldset>
+        
           <button type="button"    disabled={this.state.loadingStatus} onClick={this.constructNewTask}>
             Save Task
           </button>
         </form>
       </div>
+      </>
     );
   }
 }

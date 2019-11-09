@@ -45,7 +45,6 @@ deleteDeadline = id => {
   </button>
 </section>
       <div className="container-card-deadline">
-        <h2 className="deadlineHeader">Important dates and deadlines</h2>
         {this.state.deadlines.map(deadline =>
           <DeadlineCard
             key={deadline.id}

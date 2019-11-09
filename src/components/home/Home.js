@@ -14,79 +14,85 @@ import { Link } from "react-router-dom"
 class Home extends Component {
   render() {
     return (
-      <div className="home container">
-        <section>
-          <article className="media">
-            <figure className="media-left">
-              <p className="image">
-            <img src={`../../images/aryn.jpeg`}/> 
-              </p>
-            </figure>
-            <div className="media-content">
-              <div className="content">
-                <p className="title is-5"> Pass a Note Profile Page</p>
-                <p className="subtitle is-5">Logged in user is {this.props.activeUser.username}</p>
-                <p>Bio text here...</p>
-              </div>
-            </div>
-          </article>
-        </section>
+    <>
+    {/* <div class="columns">
+  <div class="column is-12 title">Pass a Note Profile Page</div>
+  <p className="subtitle is-5">Logged in user is {this.props.activeUser.username}</p>
+</div> */}
 
-     {/* <div className='logoPlaceholder'>
-          <img
-            alt='logo'
-            height='20px'
-            width='20px'
-            src={`/images/userPic.png`}
-          ></img>
-        </div> */}
+<div class="columns">
+  <div class="column is-3">
+  <img src={`images/aryn.jpeg`}/> 
+  </div>
+  <div class="column"></div>
+  <div class="column "></div>
+</div>
 
 
-     {
-          <section>
-            <div className="tile is-ancestor">
-              <div className="tile is-parent">
-
-       <Card className="friendsListCard">
+<div class="tile is-ancestor">
+  <div class="tile is-parent is-4 friends">
+    <article class="tile is-child box pic">
+      <div class="content">
+      <img src={`images/friends1@2x.png`}/> 
+      <p class="title">Friends List</p>
+      <Card className="friendsListCard">
          <FriendsList className="friendListContainer"
          currentUser={this.props.currentUser} 
          activeUser={this.props.activeUser}
          {...this.props}
          />
        </Card>
-
-
-
-       <Card className="notebooksCardContainer">
-         <NotebookList className="notebookListHome"
-         currentUser={this.props.currentUser}
-         activeUser={this.props.activeUser}
-         {...this.props}
-         />
-          {/* <div className="notebooksBtn">
-          <Link className="nav-link" to="/notebooks"><button type="button" className="btn-to-notebooks">NOTEBOOKS</button></Link>
-          </div> */}
-       </Card>
- 
-       <Card className="deadlineCardContainer">
-         <DeadlineList 
-         currentUser={this.props.currentUser}
-         activeUser={this.props.activeUser}
-         {...this.props}
-         />
-       </Card>
-       <Card className="tasksCard">
-         <TaskList 
-         currentUser={this.props.currentUser}
-         activeUser={this.props.activeUser}
-         {...this.props}
-         />
-       </Card>
       </div>
+    </article>
+  </div>
+
+  <div class="tile is-vertical is-parent">
+    <div class="tile is-child box notebooks">
+      <p class="title">Notebooks</p>
+      <p class="home-notebooks"> 
+    <NotebookList  
+   currentUser={this.props.currentUser}
+   activeUser={this.props.activeUser}
+   {...this.props}
+   /></p>
+   <div className="noteImgContainer">
+        <img className= "imgHomeNotebook" src={`images/note1.png`}/> 
+  </div>
+    </div>
+    <div class="tile is-child box deadlines">
+    <p class="title">Deadlines</p>
+      <div class="columns">
+      <div class="column">
+    <p class="bd-notification is-info"></p>
+    <div class="columns is-mobile">
+      <div class="column">
+      <p><DeadlineList
+currentUser={this.props.currentUser}
+activeUser={this.props.activeUser}
+{...this.props}
+/></p>
       </div>
-      </section>
-     }
-   </div>
+      <p />
+      <div className="deadlineImgContainer">
+        <img className= "deadlineImgHome" src={`images/schedule2.png`}/>
+  </div>
+    </div>
+  </div>
+  </div>
+    </div>
+    <div class="tile is-child box tasks">
+      <p class="title">Tasks</p>
+      <p><TaskList
+currentUser={this.props.currentUser}
+activeUser={this.props.activeUser}
+{...this.props}
+/></p>
+    </div>
+
+  </div>
+
+</div>
+    </>
     )
   }
 }

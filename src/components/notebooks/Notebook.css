@@ -89,7 +89,17 @@
     align-content: center;
   }
 
-  .tile.is-child.box {
+  .tile.box {
     justify-content: space-evenly;
 
+  }
+
+  .card-container {
+    width: 200px!important;
+  }
+
+  .tile.is-ancestor {
+   margin-left: 0% !important;
+   margin-right: 0% !important;
+    margin-top: -0.75rem !important;
   }

@@ -46,3 +46,23 @@
 .card button:hover {
   background-color: maroon;
 }
+
+.box.container.task {
+  background-color: #F7C9B6;
+box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 9px rgba(10, 10, 10, 0.02);
+}
+.title.is-4.task {
+  background-color: #DAE7DD;
+}
+
+.tile.is-child.box.task {
+  min-width: min-content !important;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.tile.is-vertical.is-parent.task {
+  min-width: min-content !important;
+  margin-left: 20% !important;
+  margin-right: 20% !important;
+}

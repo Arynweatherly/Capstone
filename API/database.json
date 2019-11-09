@@ -574,6 +574,19 @@
       "content": "",
       "notebookId": 4,
       "id": 50
+    },
+    {
+      "title": "secretary bird",
+      "date": "2019-11-07",
+      "topics": "",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573172274/capstone/d9g04nhfqjroe8v8gl2n.jpg",
+      "uploadedFile": {
+        "path": "download.jpg"
+      },
+      "instructor": "",
+      "content": "",
+      "notebookId": 4,
+      "id": 51
     }
   ],
   "reviews": [

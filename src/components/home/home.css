@@ -94,3 +94,92 @@ img {
 .container-card-deadline {
     min-width:50%
 } */
+
+.column.friends {
+    display: flex;
+    flex-direction: row;
+}
+
+.friend.home {
+    display: flex;
+    flex-direction: row;
+}
+
+.content-friends {
+    display:flex;
+    flex-direction: row;;
+}
+.tile.is-child.box.friend {
+    display:flex;
+    flex-direction: row;
+}
+
+.notebooksCardContainer-home {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.tile.is-child.box.notebooks {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+}
+
+/* .home-notebooks {
+    display: flex;
+   align-items: inherit;
+   justify-content: center;
+   /* You can set flex-wrap and
+      flex-direction individually */
+  
+   /* tweak where items line
+      up on the row
+      valid values are: flex-start,
+      flex-end, space-between,
+      space-around, stretch */
+
+ 
+
+.home-notebooks {
+    display: flex;
+    justify-content: center;
+    /* You can set flex-wrap and
+       flex-direction individually */
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.noteImgContainer {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.imgHomeNotebook {
+    max-width: 400px;
+}
+
+.tile.is-child.box.pic {
+    border-style: solid;
+    border-color: #DAE7DD;
+}
+
+.tile.is-child.box.notebooks {
+    border-style: solid;
+    border-color: #F7C9B6;
+}
+
+.tile.is-child.box.deadlines {
+    border-style: solid;
+    border-color: #DBC39A;
+}
+
+.tile.is-child.box.tasks {
+    border-style: solid;
+    border-color: #DACAC4;
+}
+
+.deadlineImgContainer {
+    max-height: 350px;
+    max-width: 350px;
+}
