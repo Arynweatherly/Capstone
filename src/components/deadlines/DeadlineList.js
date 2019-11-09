@@ -37,13 +37,6 @@ deleteDeadline = id => {
 
     return(
         <>
-        <section className="section-content">
-            <button type="button"
-                className="btn"
-                onClick={() => {this.props.history.push("/deadlines/new")}}>
-    Add Date
-  </button>
-</section>
       <div className="container-card-deadline">
         {this.state.deadlines.map(deadline =>
           <DeadlineCard
@@ -54,6 +47,13 @@ deleteDeadline = id => {
           />
         )}
       </div>
+      <section className="section-content">
+            <button type="button"
+                className="btn"
+                onClick={() => {this.props.history.push("/deadlines/new")}}>
+    Add Date
+  </button>
+</section>
       </>
     )
   }

@@ -16,9 +16,10 @@ small {
     display: flex;
     padding: 0;
     margin-bottom: 0;
+    width: 100%
   }
   
-  nav .container li {
+  nav {
     flex: 1;
     padding: 10px;
     text-align: center;
@@ -35,4 +36,14 @@ small {
   
   nav .container a:hover {
     color: maroon;
+  }
+
+  .ProfilePic {
+    max-height: 50px;
+    max-width: 50px;
+    border-radius: 100px;
+  }
+
+  .navbarHead {
+    margin-bottom: 3% ;
   }

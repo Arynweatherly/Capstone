@@ -112,6 +112,7 @@ img {
 .tile.is-child.box.friend {
     display:flex;
     flex-direction: row;
+
 }
 
 .notebooksCardContainer-home {
@@ -162,11 +163,13 @@ img {
 .tile.is-child.box.pic {
     border-style: solid;
     border-color: #DAE7DD;
+    margin-top: 10%;
 }
 
 .tile.is-child.box.notebooks {
     border-style: solid;
     border-color: #F7C9B6;
+    margin-top:10%;
 }
 
 .tile.is-child.box.deadlines {

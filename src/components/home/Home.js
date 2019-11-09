@@ -20,13 +20,7 @@ class Home extends Component {
   <p className="subtitle is-5">Logged in user is {this.props.activeUser.username}</p>
 </div> */}
 
-<div class="columns">
-  <div class="column is-3">
-  <img src={`images/aryn.jpeg`}/> 
-  </div>
-  <div class="column"></div>
-  <div class="column "></div>
-</div>
+
 
 
 <div class="tile is-ancestor">
@@ -60,6 +54,7 @@ class Home extends Component {
   </div>
     </div>
     <div class="tile is-child box deadlines">
+      
     <p class="title">Deadlines</p>
       <div class="columns">
       <div class="column">
@@ -73,8 +68,10 @@ activeUser={this.props.activeUser}
 /></p>
       </div>
       <p />
+      <div class="column">
       <div className="deadlineImgContainer">
         <img className= "deadlineImgHome" src={`images/schedule2.png`}/>
+  </div>
   </div>
     </div>
   </div>

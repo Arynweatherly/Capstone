@@ -12,12 +12,15 @@ class NavBar extends Component {
   render(){
 
     return (
-      <header>
+      <header className ="navbarHead">
+
+
         <h1 className="site-title">Pass A Note<br />
           <small>The easiest way to share notes online</small>
         </h1>
         <nav>
           <ul className="container">
+          <img class="ProfilePic" src={`images/aryn.jpeg`}/> 
             <li><Link className="nav-link" to="/">Home</Link></li>
             <li><Link className="nav-link" to="/notebooks">Notebooks</Link></li>
             <li><Link className="nav-link" to="/login">Login</Link></li>
