@@ -103,3 +103,8 @@
    margin-right: 0% !important;
     margin-top: -0.75rem !important;
   }
+
+  .buttonsNotebookContainer {
+    display: flex;
+    justify-content: space-evenly;
+  }

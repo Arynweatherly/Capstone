@@ -1135,7 +1135,7 @@
   "notebooks": [
     {
       "id": 4,
-      "subject": "Aryn's Anatomy",
+      "subject": "Aryn's Anatomy Notebook",
       "userId": 3
     },
     {
@@ -1155,7 +1155,7 @@
     },
     {
       "id": 9,
-      "subject": "Principles of Resistance Training",
+      "subject": "Resistance Training Notebook",
       "userId": 3
     },
     {
@@ -1194,9 +1194,9 @@
       "id": 18
     },
     {
-      "subject": "Intro to Radiology",
-      "userId": 3,
-      "id": 19
+      "id": 19,
+      "subject": "Radiology Notebook",
+      "userId": 3
     },
     {
       "subject": "NSS notes and documents",
@@ -1212,6 +1212,16 @@
       "subject": "React",
       "userId": 7,
       "id": 22
+    },
+    {
+      "subject": "Aryn's Javascript Notebook",
+      "userId": 3,
+      "id": 23
+    },
+    {
+      "subject": "Positioning Notebook",
+      "userId": 3,
+      "id": 24
     }
   ]
 }

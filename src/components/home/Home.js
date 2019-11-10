@@ -53,6 +53,7 @@ class Home extends Component {
         <img className= "imgHomeNotebook" src={`images/note1.png`}/> 
   </div>
     </div>
+
     <div class="tile is-child box deadlines">
       
     <p class="title">Deadlines</p>
@@ -77,17 +78,29 @@ activeUser={this.props.activeUser}
   </div>
   </div>
     </div>
+
     <div class="tile is-child box tasks">
-      <p class="title">Tasks</p>
+    <p class="title">Tasks</p>
+    
+    <div class="columns">
+    <div class="column">
+      <div className="taskImgContainer">
+        <img className= "taskImg" src={`images/tasklist2.png`}/>
+  </div>
+  </div>
+
+      <div class="column">
       <p><TaskList
 currentUser={this.props.currentUser}
 activeUser={this.props.activeUser}
 {...this.props}
 /></p>
+      </div>
+      <p />
     </div>
 
   </div>
-
+</div>
 </div>
     </>
     )
