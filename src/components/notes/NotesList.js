@@ -37,7 +37,7 @@ class NotesList extends Component {
 
         return(
 
-<nav class="panel">
+<nav class="panel notesList">
   <p class="panel-heading">
     Notes by subject:
   </p>

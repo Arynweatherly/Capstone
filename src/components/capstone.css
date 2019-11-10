@@ -44,15 +44,4 @@ img {
   padding: 1.4em;
 }
 
-.container-cards {
-	display: flex;
-	flex-direction: column;
-	margin: 1em;
-	padding: 1em;
-	border-radius: 5px;
-	color: rgb(255, 255, 255) !important;
-	border: 7px dotted #FECCC3;
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; */
-}
+

@@ -41,8 +41,10 @@ render(){
       onClick={() => {this.props.history.push("/tasks/new")}}>
       Add Task
     </button>
+ 
     </section>
-        <div className="container-cards">
+    
+        <div className="container-card-tasks">
             {this.state.tasks.map(task => 
             <TaskCard
             key={task.id}

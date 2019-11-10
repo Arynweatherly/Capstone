@@ -38,14 +38,16 @@ render(){
     return(
         <>
         
-        <section className="section-content">
+        <section className="section-content-add">
             <button type="notebookbutton"
                 className="btn"
                 onClick={() => {this.props.history.push("/notebooks/new")}}>
       Add Notebook
   </button>
 </section>
-      <div className="tile is-child box">
+<hr />
+<div className='home-notebooks'>
+    
         {this.state.notebooks.map(notebook =>
           <NotebookCard
             key={notebook.id}
@@ -53,8 +55,9 @@ render(){
             deleteNotebook={this.deleteNotebook}
             {...this.props}
           />
+          
         )}
-      </div>
+        </div>
       </>
     )
   }

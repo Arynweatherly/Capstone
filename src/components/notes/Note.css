@@ -136,3 +136,8 @@ justify-content: space-between;
 .box.container.note {
   background-color: #DAE7DD;
 }
+
+.panel.notesList {
+  margin-left: 20%;
+  margin-right: 20%;
+}
