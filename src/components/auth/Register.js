@@ -7,7 +7,6 @@ class Registration extends Component {
 		regUserName: '',
 		regPassword: '',
 		regName: '',
-		regImage: '',
         regPasswordConfirm: '',
         email: ''
 	};
@@ -24,7 +23,6 @@ class Registration extends Component {
 		let username = this.state.regUserName;
 		let password = this.state.regPassword;
 		let name = this.state.regName;
-		let image = this.state.regImage
         let passwordConfirm = this.state.regPasswordConfirm;
         let email = this.state.email
 		// starting the if statement

@@ -48,7 +48,7 @@ class ReviewCard extends Component {
                             onRating={this.state.rating}
                         />
                     </h3>
-                <p>Comments:{this.props.review.review} </p>
+                <p>{this.props.review.review} </p>
                 <br />
                 <button type="button" onClick={() => this.props.deleteReview(this.props.review.id)}>Delete</button>
                 {/* <Link to={`/reviews/${this.props.review.id}`}><button>details</button></Link> */}

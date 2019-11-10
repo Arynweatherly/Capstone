@@ -12,7 +12,7 @@
     display: flex;
     justify-content: center;
     justify-self: center;
-    margin-left: 37%;
+    margin-left: 27%;
     background-color: white;
     border-radius: 10%;
 }
@@ -26,4 +26,8 @@
 
 header {
     background-color: #DACAC4;
+}
+.box.container.login {
+    max-width: 700px;
+    margin-top: 5em;
 }
