@@ -641,15 +641,6 @@
       "id": 14
     },
     {
-      "ratingTitle": "mo added this",
-      "userId": 3,
-      "username": "momo",
-      "rating": 4,
-      "review": "great notes",
-      "noteId": 11,
-      "id": 15
-    },
-    {
       "ratingTitle": "wow",
       "userId": 3,
       "username": "aryn",
@@ -659,15 +650,6 @@
       "id": 16
     },
     {
-      "ratingTitle": "wow",
-      "userId": 3,
-      "username": "aryn",
-      "rating": 1,
-      "review": "these are terrible, were you even here this day?",
-      "noteId": 11,
-      "id": 17
-    },
-    {
       "ratingTitle": "wowwwww",
       "userId": 3,
       "username": "aryn",
@@ -675,15 +657,6 @@
       "review": "were you even in class today? jesus christ",
       "noteId": 2,
       "id": 18
-    },
-    {
-      "ratingTitle": "wow",
-      "userId": 3,
-      "username": "aryn",
-      "rating": 0,
-      "review": "wow this was terrible",
-      "noteId": 11,
-      "id": 19
     }
   ],
   "tasks": [
