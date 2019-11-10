@@ -85,7 +85,7 @@ activeUser={this.props.activeUser}
     <div class="columns">
     <div class="column">
       <div className="taskImgContainer">
-        <img className= "taskImg" src={`images/tasklist2.png`}/>
+        <img className= "taskImg" src={`images/TaskDude2.png`}/>
   </div>
   </div>
 
