@@ -15,9 +15,9 @@ class NotebookCard extends Component {
   <h3> <span className="card-notebookSubject">{this.props.notebook.subject}</span></h3>
   < hr/>
   <footer className="buttonsNotebookContainer">
-  <button type="button" className="deleteNotebook" onClick={() => this.props.deleteNotebook(this.props.notebook.id)}>Delete</button>
-  <button type="button" className="editNotebooks" onClick={() => {this.props.history.push(`/notebooks/${this.props.notebook.id}/edit`)}}>Edit</button>
-  <button type="button" className="viewNotebooks" onClick={() => this.props.history.push(`/notebooks/${this.props.notebook.id}`)}>View Notes </button>
+  <button type="button" className="buttonNotebook" onClick={() => this.props.deleteNotebook(this.props.notebook.id)}>Delete</button>
+  <button type="button" className="buttonNotebook" onClick={() => {this.props.history.push(`/notebooks/${this.props.notebook.id}/edit`)}}>Edit</button>
+  <button type="button" className="buttonNotebook" onClick={() => this.props.history.push(`/notebooks/${this.props.notebook.id}`)}>View Notes </button>
   </footer>
   {/* <footer class="card-footer is-centered"> */}
 {/* 
