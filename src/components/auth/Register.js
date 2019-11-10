@@ -52,7 +52,7 @@ class Registration extends Component {
 
 	render() {
 		return (
-			<>
+			<>ç
 				<form
 					onSubmit={this.handleRegistration}
 					id='loginForm'
