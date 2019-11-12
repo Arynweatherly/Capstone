@@ -12,7 +12,7 @@ class NotebookCard extends Component {
             {/* <img src={require('./dog.svg')} alt="My Dog" /> */}
           </picture>
           <h3>class subject: <span className="card-notebookSubject">{this.props.notebook.subject}</span></h3>
-        <button type="button" className="notebookButton" onClick={() => this.props.deleteNotebook(this.props.notebook.id)}>Delete</button>
+        {/* <button type="button" className="notebookButton" onClick={() => this.props.deleteNotebook(this.props.notebook.id)}>Delete</button> */}
         <button type="button"  className="notebookButton" onClick={() => {this.props.history.push(`/notebooks/${this.props.notebook.id}/edit`)}}>Edit</button>
         <Link to={`/notebooks/${this.props.notebook.userId}`}><button class="button"  className="notebookButton">View Notes</button></Link>
         </div>

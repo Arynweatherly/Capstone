@@ -30,17 +30,14 @@
 }
 
 .card button {
-  background-color: #FECCC3;
-  border: none;
-  color: #DBC39A;
   text-align: center;
-  text-decoration: none;
+  /* text-decoration: none;
   display: inline-block;
   font-size: 14px;
-  padding: .5em;
+
   border-radius: 2px;
   margin: .1em;
-  width: 100%;
+  width: 100%; */
 }
 
 .card button:hover {
