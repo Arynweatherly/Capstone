@@ -54,6 +54,7 @@ class NotebookForm extends Component {
                         placeholder="notebook subject"
                         required=""
                         autofocus=""
+                        id="notebookSubject"
                         onChange={this.handleFieldChange}
                         />
                     </div>

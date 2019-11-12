@@ -722,13 +722,6 @@
       "date": "2019-11-01",
       "userId": 3,
       "id": 22
-    },
-    {
-      "taskName": "hahaha",
-      "completed": false,
-      "date": "2019-11-14",
-      "userId": 3,
-      "id": 23
     }
   ],
   "deadlines": [
@@ -1187,6 +1180,11 @@
       "subject": "Aryn's Javascript Notebook",
       "userId": 3,
       "id": 23
+    },
+    {
+      "subject": "physiology",
+      "userId": 3,
+      "id": 25
     }
   ]
 }
