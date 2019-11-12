@@ -68,10 +68,17 @@ Relational data
 Session Storage
 
 How to Launch Pass A Note:
-Clone the repository from Github
-Open your terminal and type the command "npm install" to install React
-In the main project directory, create a new directory called "API"
-In the API directory, create a file called "database.json"
-Copy the sample data below into database.json
-Run json-server in port 5002 with database.json
-In the terminal, type the command "npm start". You are now ready to use Pass A Note!
+
+1. Clone the repository from Github
+
+2. Open your terminal and type the command "npm install" to install React
+
+3. In the main project directory, create a new directory called "API"
+
+4. In the API directory, create a file called "database.json"
+
+5. Copy the sample data below into database.json
+
+6. Run json-server in port 5002 with database.json
+
+7. In the terminal, type the command "npm start". You are now ready to use Pass A Note!
