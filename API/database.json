@@ -415,22 +415,18 @@
       "id": 41
     },
     {
-      "title": "History",
+      "title": "History (10/25/19)",
       "date": "2019-10-25",
       "topics": "history, state, react",
-      "imageURL": "",
-      "uploadedFile": null,
       "instructor": "Brenda",
       "content": "The term \"history\" and \"history object\" in this documentation refers to the history package, which is one of only 2 major dependencies of React Router (besides React itself), and which provides several different implementations for managing session history in JavaScript in various environments.\nThe following terms are also used. •\t\"browser history\" - A DOM-specific implementation, useful in web browsers that support the HTML5 history API. —> ”hash history\" - A DOM-specific implementation for legacy web browsers. --> “memory history\" - An in-memory history implementation, useful in testing and non-DOM environments like React Native\nhistory objects typically have the following properties and methods: —> length - (number) The number of entries in the history stack —> action - (string) The current action (PUSH, REPLACE, or POP) —> location - (object) The current location. May have the following properties: ==> pathname - (string) The path of the URL. ===> search - (string) The URL query string ===> hash - (string) The URL hash fragment ===> state - (object) location-specific state that was provided to e.g. push(path, state) when this location was pushed onto the stack. Only available in browser and memory history. ~~~~~~> push(path, [state]) - (function) Pushes a new entry onto the history stack. ~~~~> replace(path, [state]) - (function) Replaces the current entry on the history stack ~~~~> go(n) - (function) Moves the pointer in the history stack by n entries ~~~~> goBack() - (function) Equivalent to go(-1) ~~~~> goForward() - (function) Equivalent to go(1) ~~~~> block(prompt) - (function) Prevents navigation (see the history docs). The history object is mutable. Therefore it is recommended to access the location from the render props of <Route>, not from history.location. This ensures your assumptions about React are correct in lifecycle hooks.",
       "notebookId": 22,
       "id": 42
     },
     {
-      "title": "Event Listeners",
+      "title": "Event Listeners (10/23/19)",
       "date": "2019-10-23",
       "topics": "eventListeners",
-      "imageURL": "",
-      "uploadedFile": null,
       "instructor": "Brenda",
       "content": "Will be the word on plus the type of event youre listening for.\nThe event listener’s value should be a function . Cannot write an if statement and inject it into JSXALL ABOUT ReactDOM.render(). ReactDOM.render() controls the contents of the container node you pass in. Any existing DOM elements inside are replaced when first called. Later calls use React’s DOM diffing algorithm for efficient updates.ReactDOM.render() does not modify the container node (only modifies the children of the container). It may be possible to insert a component to an existing DOM node without overwriting the existing children. ReactDOM.render() currently returns a reference to the root ReactComponent instance. However, using this return value is legacy and should be avoided because future versions of React may render components asynchronously in some cases. If you need a reference to the root ReactComponent instance, the preferred solution is to attach a callback ref to the root element. Using ReactDOM.render() to hydrate a server-rendered container is deprecated and will be removed in React 17. Use hydrate() instead.\n",
       "notebookId": 22,
@@ -668,6 +664,13 @@
       "completed": false,
       "date": "2019-11-10",
       "userId": 3
+    },
+    {
+      "taskName": "complete this demo",
+      "completed": false,
+      "date": "2019-11-13",
+      "userId": 3,
+      "id": 23
     }
   ],
   "deadlines": [
@@ -696,14 +699,14 @@
       "id": 12
     },
     {
-      "title": "break starts",
-      "date": "2019-11-02",
+      "title": "back to school",
+      "date": "2019-11-11",
       "userId": 3,
       "id": 13
     },
     {
       "title": "DEMO DAY",
-      "date": "2019-11-12",
+      "date": "2019-11-13",
       "userId": 3,
       "id": 14
     }
@@ -868,6 +871,11 @@
       "userId": 12,
       "friendInitiate": 7,
       "id": 77
+    },
+    {
+      "userId": 7,
+      "friendInitiate": 3,
+      "id": 78
     }
   ],
   "users": [

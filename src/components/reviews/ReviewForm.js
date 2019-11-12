@@ -69,43 +69,77 @@ componentDidMount() {
      // console.log(this.props.note)
         return(
             <>
+             <div className="box container review">
+             <section className="is-left">
+             <p className="title is-4">Add Review:</p>
+             </section>
             <form>
-            <fieldset>
-            <label className="ratingTitle">Title::</label>
+        
+            <div className="field">
+            <label className="label"></label>
+            <div className="control">
             <input
+            className="input"
               type="text"
               placeholder="Title"
               id="ratingTitle"
+              required=""
+              autoFocus=""
               onChange={this.handleFieldChange}
             ></input>
-
-            <label className="name">Name:</label>
+            </div>
+            </div>
+          
+            <div className="field is-right">
+            <label className="label"></label>
+            <div className="control">
             <input
+            className="input"
               type="text"
+              required=""
+              autoFocus=""
               placeholder="name"
               id="username"
               onChange={this.handleFieldChange}
             ></input>
+            </div>
+            </div>
+    
             <br />
-            <label className="instructor">rate on a scale from 1-5 (1- terrible, 5-great):</label>
-            <input 
+            <div className="field is-right">
+            <label className="label">rate from 1-5 (1- bad, 5-great):</label>
+            <div className="control">
+            <input
+            className="input"
             type="text"
+            required=""
+            autoFocus=""
             placeholder="rating"
             id="rating"
             onChange={this.handleFieldChange} />
-         
-            <label className="review">review:</label>
+            </div>
+            </div>
+
+            <div className="field is-right">
+            <label className="label"></label>
+            <div className="control">
             <textarea
+            className="textarea"
               type="text"
               placeholder="comments:"
+              required=""
+              autoFocus=""
               id="review"
               onChange={this.handleFieldChange}
             ></textarea>
-          </fieldset>
+            </div>
+            </div>
+        
           <button type="button"   disabled={this.state.loadingStatus} onClick={this.constructNewReview}>
             add
           </button>
             </form>
+            </div>
         </>
         )
     }

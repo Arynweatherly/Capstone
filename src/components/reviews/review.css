@@ -27,3 +27,9 @@ height:100px;
     border-style:solid;
     border-color: #DAE7DD;
 }
+
+.box.container.review{
+    background-color: #DBC39A;
+    margin-right: 20%;
+    margin-left: 20%
+}
