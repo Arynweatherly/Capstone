@@ -39,27 +39,34 @@ class NotebookForm extends Component {
 
         return(
             <>
-            <form>
-                <fieldset>
-                    <div className="formgrid">
-                    <label htmlFor="notebookSubject">Subject:</label>
+            <div className="box container notebook">
+                <section className="is-left">
+                    <p className="title is-4">Add Notebook</p>
+                    <img className= "notebookImg" src={`/images/newNotebook.png`}/>
+                </section>
+                <form>
+                    <div className="field">
+                    <label className="label"></label>
+                    <div className="control">
                         <input
+                        className="input"
                         type="text"
-                        required
+                        placeholder="notebook subject"
+                        required=""
+                        autofocus=""
                         onChange={this.handleFieldChange}
-                        id="notebookSubject"
-                        placeholder="Notebook Subject"
                         />
                     </div>
-                    <div className="alignRight">
+                    </div>
+
                         <button
                         type="button"
                         disabled={this.state.loadingStatus}
                         onClick={this.constructNewNotebook}
                         >Submit</button>
+                        </form>
                     </div>
-                </fieldset>
-            </form>
+
         </>
         )
     }

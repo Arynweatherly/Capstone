@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AuthManager from '../../modules/AuthManager';
-
+import Header from  '../nav/header'
 class Registration extends Component {
 	// Set initial state
 	state = {
@@ -52,7 +52,9 @@ class Registration extends Component {
 
 	render() {
 		return (
-			<>ç
+			<>
+			<Header />
+
 				<form
 					onSubmit={this.handleRegistration}
 					id='loginForm'
