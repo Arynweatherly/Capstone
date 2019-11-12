@@ -20,7 +20,7 @@ class FriendCard extends Component {
   <div class="media-left">
 
     <figure class="image is-64x64">
-    <img className="friendProfilePic" src={require(`../../images/${this.props.friend.user.url}`)} alt="Animal" />
+    <img className="friendProfilePic" src={require(`../../images/${this.props.friend.user.url}`)}  />
 
     </figure>
   </div>

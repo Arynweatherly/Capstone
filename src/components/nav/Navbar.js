@@ -20,7 +20,7 @@ class NavBar extends Component {
         </h1>
         <nav>
           <ul className="container">
-          <img class="ProfilePic" src={`images/aryn.jpeg`}/> 
+          <img class="ProfilePic" src={`images/logo2.png`}/> 
             <li><Link className="nav-link" to="/">Home</Link></li>
             {/* <li><Link className="nav-link" to="/notebooks">Notebooks</Link></li> */}
             {/* <li><Link className="nav-link" to="/login">Login</Link></li> */}

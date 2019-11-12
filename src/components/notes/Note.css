@@ -1,32 +1,4 @@
-/* body,
-button,
-input,
-select,
-textarea {
-	color: #404040;
-	font-family: 'Comfortaa', Arial, sans-serif;
-	font-size: 14px;
-	line-height: 1.5;
-}
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Patua One', serif;
-  letter-spacing: 2px;
-}
-
-p {
-  margin-bottom: 1.5em;
-  color: #d6fcff;
-  color: darkslateblue;
-}
-
-strong {
-  font-weight: bold;
-}
-
-address {
-  margin: 0 0 1.5em;
-} */
 
 img {
   display: block;
@@ -34,27 +6,7 @@ img {
   width: 100%;
   height: auto;
 }
-/* 
-.section-content {
-  padding: 1.4em;
-}
 
-.container-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-} */
-
-/* .panel-block {
-  background-color: #EAECEB;
-}
-.panel {
-  border-style: solid;
-  border-color: #FECCC3;
-}
-.panel-heading {
-  background-color: #FECCC3 !important;
-} */
 .note.card{
   width: 65%;
   max-width : 480px;
@@ -140,4 +92,18 @@ justify-content: space-between;
 .panel.notesList {
   margin-left: 20%;
   margin-right: 20%;
+  margin-bottom: 5%;
+}
+
+.panel-block.is-active-hover {
+  background-color: #DAE7DD !important;
+}
+
+.panel-block:hover{
+  background-color: #DAE7DD !important;
+  opacity:90%;
+}
+
+.panel-heading {
+  background-color:#DACAC4 !important;
 }

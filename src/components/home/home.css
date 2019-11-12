@@ -126,3 +126,7 @@
 .box.deadline-card {
     border-radius: 6px;
 }
+
+.panel-block.is-active {
+    color: #DAE7DD;
+  }
