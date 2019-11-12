@@ -184,6 +184,11 @@ img {
     border-style: solid;
     border-color: #DACAC4;
     border-width: thick;
+    border-radius: 6px;
+}
+.tile.is-child.box.task {
+  background-color: #F7C9B6;
+  opacity:70%;
 }
 
 .deadlineImgContainer {
@@ -193,7 +198,9 @@ img {
 
 .deadline-card-content {
     background-color: #DACAC4;
+    opacity: 80%;
     color: black;
+    border-radius: 6px;
 }
 
 .container-card-tasks {
@@ -210,3 +217,7 @@ img {
 /* .buttonNotebook {
     background-color:#F7C9B6 ;
 } */
+
+.box.deadline-card {
+    border-radius: 6px;
+}

@@ -49,8 +49,11 @@
 
 .box.container.task {
   background-color: #F7C9B6;
+  margin-left: 18%;
+  margin-right: 18%;
 box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 9px rgba(10, 10, 10, 0.02);
 }
+
 .title.is-4.task {
   background-color: #DAE7DD;
 }

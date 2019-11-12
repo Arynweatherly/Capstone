@@ -722,6 +722,13 @@
       "date": "2019-11-01",
       "userId": 3,
       "id": 22
+    },
+    {
+      "taskName": "hahaha",
+      "completed": false,
+      "date": "2019-11-14",
+      "userId": 3,
+      "id": 23
     }
   ],
   "deadlines": [
@@ -744,12 +751,6 @@
       "userId": 4
     },
     {
-      "title": "soft demo day- present capstone MVP to class (try to make it look nice)",
-      "date": "2019-11-01",
-      "userId": 3,
-      "id": 8
-    },
-    {
       "title": ".jkgh,fhdg",
       "date": "2019-10-11",
       "userId": 22,
@@ -762,10 +763,10 @@
       "id": 13
     },
     {
-      "title": "class starts again",
-      "date": "2019-11-11",
+      "title": "first day of c#",
+      "date": "2019-11-12",
       "userId": 3,
-      "id": 14
+      "id": 15
     }
   ],
   "friends": [
