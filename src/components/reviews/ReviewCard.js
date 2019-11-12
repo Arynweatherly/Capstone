@@ -36,23 +36,22 @@ class ReviewCard extends Component {
 
     render() {
         return (
-            <div className="card">
-                <div className="card-content review">
+            <div className="box review">
+                <div className="content">
                 <p> <u>username:</u> {this.props.review.username}</p>
                 <p>{this.props.review.ratingTitle}</p>
-                <h3 className="rating">
+                <p className="rating">
                         <Rater
                             total={5}
                             rating={this.props.review.rating}
                             onRate={this.state.rating}
                             onRating={this.state.rating}
                         />
-                    </h3>
-                
+                    </p>
                 <p>{this.props.review.review} </p>
                 <hr />
                 <button type="button" onClick={() => this.props.deleteReview(this.props.review.id)}>Delete</button>
-                {/* <Link to={`/reviews/${this.props.review.id}`}><button>details</button></Link> */}
+
                 </div>
             </div>
         )

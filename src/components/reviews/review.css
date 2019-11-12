@@ -33,3 +33,11 @@ height:100px;
     margin-right: 20%;
     margin-left: 20%
 }
+
+.box.review {
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 5px;
+    border-style: solid;
+    border-color:#DAE7DD;
+}

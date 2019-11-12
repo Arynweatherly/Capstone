@@ -15,7 +15,7 @@ class NavBar extends Component {
       <header className ="navbarHead">
 
 
-        <h1 className="site-title">Pass A Note<br />
+        <h1 className="title is-3">Pass A Note<br />
           <small>The easiest way to share notes online</small>
         </h1>
         <nav>
