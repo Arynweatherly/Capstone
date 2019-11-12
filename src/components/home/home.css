@@ -130,3 +130,8 @@
 .panel-block.is-active {
     color: #DAE7DD;
   }
+
+  .box.friends {
+      background-color: #DBC39A;
+      opacity: 80%;
+  }

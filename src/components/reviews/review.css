@@ -5,7 +5,6 @@
     border-radius: 5px;
 
     color: rgb(255, 255, 255) !important;
-    border: 7px dotted #C6C1BE;
 }
 .review-card-container {
 background-color: #FECCC3;
@@ -22,4 +21,9 @@ flex-direction: column;
 textarea{
 width:250px;
 height:100px;
+}
+
+.card-content.review{
+    border-style:solid;
+    border-color: #DAE7DD;
 }

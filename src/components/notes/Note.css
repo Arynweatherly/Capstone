@@ -76,7 +76,7 @@ justify-content: space-between;
   display: flex;
   justify-content: center;
   justify-self: center;
-  margin-left: 37%;
+  margin-left: 30%;
   background-color: white;
   border-radius: 10%;
 }
@@ -87,6 +87,9 @@ justify-content: space-between;
 
 .box.container.note {
   background-color: #DAE7DD;
+  margin-right: 10%;
+  margin-left:10%;
+  margin-bottom: 5%;
 }
 
 .panel.notesList {
@@ -105,5 +108,11 @@ justify-content: space-between;
 }
 
 .panel-heading {
-  background-color:#DACAC4 !important;
+  background-color:#DAE7DD !important;
 }
+
+/* .noteImg2 {
+  height: auto;
+  width: 45%;
+  margin-left: 25%;
+} */

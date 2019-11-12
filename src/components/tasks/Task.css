@@ -29,10 +29,8 @@
   color: darkslategrey;
 }
 
-.card button {
-  background-color: #DBC39A;
+/* .card button {
   border: none;
-  color: white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -41,7 +39,7 @@
   border-radius: 2px;
   margin: .1em;
   width: 100%;
-}
+} */
 
 .card button:hover {
   background-color: maroon;

@@ -8,14 +8,9 @@ class FriendCard extends Component {
     render() {
         console.log('friend Ids', this.props.friend.id)
         return (
-            // <div className="friendCardNav">
-            // <h4 className="friendHeading">{this.props.friend.user.name}</h4>
-            // {/* <Link className="nav-link" to={`/notebooks/${this.props.friend.user.id}`} ><button type="button" className="view-friend-notes-btn">view notes!</button></Link> */}
-            // <button type="button" className="deleteFriend" onClick={() => this.props.deleteFriend(this.props.friend.id)}>Remove Friend</button>
-            // <button type="button" className="viewNotebooks" onClick={() => this.props.getFriendsNotebooks(this.props.friend.userId)}>View Notebooks</button>
-            // </div>
+            
 
-<div class="box">
+<div class="box friends">
 <article class="media">
   <div class="media-left">
 
@@ -33,11 +28,9 @@ class FriendCard extends Component {
     </div>
 </div>
 </article>
-<footer class="card-footer">
-<button type="button" className="deleteFriend" onClick={() => this.props.deleteFriend(this.props.friend.id)}>Remove Friend</button>
-<button type="button" className="viewNotebooks" onClick={() => this.props.getFriendsNotebooks(this.props.friend.userId)}>View Notebooks</button>
-    {/* <Link to={`/notebooks/${this.props.notebook.id}`}>View Notes</Link> */}
-  </footer>
+<hr />
+<button type="button"  onClick={() => this.props.deleteFriend(this.props.friend.id)}>Unfollow</button>
+<button type="button" onClick={() => this.props.getFriendsNotebooks(this.props.friend.userId)}>View Notebooks</button>
 </div>
 
         )

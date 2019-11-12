@@ -37,6 +37,7 @@ class NotesList extends Component {
         console.log("NotesList: Render");
 
         return(
+          <>
 
 <nav class="panel notesList">
   <p class="panel-heading">
@@ -64,7 +65,8 @@ class NotesList extends Component {
                 onClick={() => {this.props.history.push(`/notes/new/${this.props.match.params.notebookId}`)}}> Add Notes</button>
   </div>
 </nav>
-
+{/* <img className="noteImg2" src={`../images/notes2.png`}/> */}
+</>
 
         )
     }

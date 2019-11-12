@@ -49,15 +49,13 @@
       "rating": 0
     },
     {
-      "title": "Femur-Aryn",
+      "title": "Femur",
       "date": "2019-10-20",
       "topics": "lower limb, femur",
       "instructor": "Dr. Lewis",
       "content": "the fumur is the longest and heavist bone in the body. it's about one fourth of a person's total height. the femur upper end includes:     head: this is the near spherical portion which forms the ball of the ball and socket hip joint,     neck: this is the narrowed are which connects the head to the body of the femur.          greater and lesser trochanter: projections of bones allowing the attachment of muscles.            the long central shaft of the femur is slightly bowed, being concave on its posterior surface.     the lower end of the femur is made up of two enlarged bony processes, the medial and lateral femoral condyles. These carry the smooth cureved surfaces which articulate with the tibia and patella to form the knee joint.      MUSCLES OF THE FEMUR: osme muscles such as the powerful glute shave their origins in the pelvic bones and so cross the hip joint to insert into the femur. when these muscles contract they cause the hip joint to move, allowing the leg to bend, straighten or move sideways. Other muscles originate on the femur itself and pass down across the knee joint to insert on the tibia or fibula. These muscles allow the knee to bend and straighten. ",
       "notebookId": 4,
       "id": 7,
-      "imageURL": "",
-      "uploadedFile": "",
       "rating": 0
     },
     {
@@ -272,54 +270,6 @@
       "content": "-setState() enqueues changes to the component state and tells React that this component and its children need to be re-rendered with the updated state. This is the primary method you use to update the user interface in response to event handlers and server responses.\n\nThink of setState() as a request rather than an immediate command to update the component. For better perceived performance, React may delay it, and then update several components in a single pass. React does not guarantee that the state changes are applied immediately.\n\nsetState() does not always immediately update the component. It may batch or defer the update until later. This makes reading this.state right after calling setState() a potential pitfall. Instead, use componentDidUpdate or a setState callback (setState(updater, callback)), either of which are guaranteed to fire after the update has been applied. If you need to set the state based on the previous state, read about the updater argument below.\n\nsetState() will always lead to a re-render unless shouldComponentUpdate() returns false. If mutable objects are being used and conditional rendering logic cannot be implemented in shouldComponentUpdate(), calling setState() only when the new state differs from the previous state will avoid unnecessary re-renders.\n\nThe first argument is an updater function with the signature:\n(state, props) => stateChange\n\nstate is a reference to the component state at the time the change is being applied. It should not be directly mutated. Instead, changes should be represented by building a new object based on the input from state and props. For instance, suppose we wanted to increment a value in state by props.step:\n\nthis.setState((state, props) => {\n  return {counter: state.counter + props.step};\n});\n\nBoth state and props received by the updater function are guaranteed to be up-to-date. The output of the updater is shallowly merged with state.\nThe second parameter to setState() is an optional callback function that will be executed once setState is completed and the component is re-rendered. Generally we recommend using componentDidUpdate() for such logic instead.\nYou may optionally pass an object as the first argument to setState() instead of a function:\n",
       "notebookId": 18,
       "id": 26,
-      "imageURL": "",
-      "uploadedFile": "",
-      "rating": 0
-    },
-    {
-      "title": "intro to radiology review",
-      "date": "2018-10-15",
-      "topics": "autonomy, morals, allergic reactions",
-      "instructor": "Professor Duncan",
-      "content": "=> Touch someone for: (1) palpation (2) emphasis (3) emotional support. …… => RTR stands for registered technologist (radiography)…….. => How do we know if an NG tube is correctly placed? (1) may verify it with fluoroscopy. (2)auscultation (listen to stomach w/ stethoscope= swooshing sound) (3)Draw back mastic content w/ syringe  (4) take radiograph…… => what do chest tubes remove? ….(1)air (2)fluid (3)blood ……… => describe the diaphragm: Major muscle of ventilation. As you breathe in (inhale) the floor of the diaperagm is pushed down & lungs expand. When you breathe out, releasing air from your lungs causes the diaphragm to move up……. DEFINE AUTONOMY:  Person’s self reliance, independentce, liberty, rights, privacy, indigodual choice, freedom of the will and self contained ability to decide. Refers to the principle which bases action on respect for the indexendence of o/ persons/ the patient decides what is done to his or her own person……. <<<WHATS THE DIFFERENCE B/W HEMATOMA AND EDEMA>>>>> —Hematoma: Localized collection of blood in the tissue . —Edema: Presence of abnormally large amount of fluid In the tissues of the body. <<KNOW THE Difference btwn analgesics and anesthetics>>> (1) Analgesic: Drug that relieves pain without causing loss of consciousness. (2)Anesthetics: Drug that produces loss of feeling or sensation by depressing neuronal function, producing loss of ability to perceive pain and/or o/ sensations. ………BE REALLY CLEAR ON SYMPTOMS OF ANAPHALACTIC SHOCK… (1)Mild reactions are similar to other allergic runs. (2)Pt develop localized itching and urticaria (hives) and may experience nausea and vomiting . (3)The most serious reactions might include laryngeal deems, shock and cardiac arrest ……Anaphylaxisa :Condition of shock caused by hypersensitivity to drug or other substance that results in life threatening respireatory dishes and vascular collapse Type of vasogenic shock resulting from an increase in contrast media \n",
-      "notebookId": 19,
-      "id": 27,
-      "imageURL": "",
-      "uploadedFile": "",
-      "rating": 0
-    },
-    {
-      "title": "ethics, morals, values",
-      "date": "2018-10-08",
-      "topics": "ethics, morals, values",
-      "instructor": "Mrs. Duncan",
-      "content": "True textbook definitions of law, morals, ethics and principles and something else.       ……..Laws: Regulations established by the government and applicable to ppl w/ a certain political subdivision. Morals: Generally accepted customs of right living and conduct and an individual’s practice in relation to these customs.In making ethical decisions we rely heavily on moral rules. Generally accepted customs, principles or habits of right living and conduct in society and the individual’s practice in relation to these. Moral Principle; General, unitersal guides to action that are derived from so called basic moral truths that should be respected unless a morally compelling reason exists not to do so ……..Ethics:Systematicc study of rightness and wrongness of human conduct and character as known by natural reasons . Professional ethics: are the rules of conduct or standards by which a particular group regulates the actions and sets standards for its own members ….Code of Ethics: Articulated statement of role morality as seen by the members of a profession. Ethical theories …Bodies of systematically related moral principles used to resolve ethical dilemmas …Principle based Ethics Use of moral principles as a basis of defending a chosen path of action in resolving an ethical dilemma …Principlism: Belief system based on a set of moral principles that are embedded in a common morality …VALUES: ideals and customs of a society toward which the members of a group have an affective regard; a value may be a quality desirable as an end in itsel\n",
-      "notebookId": 19,
-      "id": 28,
-      "imageURL": "",
-      "uploadedFile": "",
-      "rating": 0
-    },
-    {
-      "title": "10 principles of Radiology",
-      "date": "2018-10-16",
-      "topics": "10 prinicples of radiology",
-      "instructor": "Mrs. Duncan",
-      "content": "(1)Rad tech act in professional manner, respond to pt. needs, support collegeues and associates in providing high quality pt. Care…………(2)Rad tech act to advance principal object. Of profession to provide services to humanity w/ full repsct for dignity of mankind…………(3)..Deliers pt. Care & service unrestricted by concerns of personal attributes or nature of disease or illness and w/o discrimination ………(4) Prictices tech found upon theorytic knowledge and concepts, use equip. & accessory consistent w/ purpose they were designed for and employees apronriate techniques and procedures …………(5)..Assess situations; exercise care, discretion and judgement; assumes responsibility for professional decisions and acts in best interest of pt…………(6) Acts as agent thru observation &commun. To obtain pertinent info for doc. To aid in diagnosis & treatment of pt. And recognize that interp. & diagnosis are outside our scope of practice……….(7)..Use equip and accessories, employ tech and procedures, perform services in accordance w/ accepted standard of practice and demonstrate expertise in min. Radiateon exposure to pt., self, and o/ HC members……….(8)Practice ethical conduct appropriate to profession and protect pt. Right to quality care……..(9)Respect confidences entrusted in course of professional practice, respects pt.’s right to provecy and reveals confidential info only as required by law or to protect welfare of individual or the community.. (10)……Strive to improve knowledge and skills by prarticipating in continued ED & professional activities, sharing knowledge w/ colleagues, and investigating new aspents of professional practice\n",
-      "notebookId": 19,
-      "id": 29,
-      "imageURL": "",
-      "uploadedFile": "",
-      "rating": 0
-    },
-    {
-      "title": "CONTRAST",
-      "date": "2018-11-05",
-      "topics": "contrast, IV",
-      "instructor": "Mrs. Duncan",
-      "content": "HOW TO GIVE A PERSON CONTRAST . Know 2 blood tests checking pt. Every time if there are kidney concerns . The BUN test can reveal whether the urea nitrogen levels are higher than normal, suggesting that the kidneys or liver may not be working properly . High osmolality contrast media can cause the arteries of the kidneys to expand as a result of the osmotic effect. Arterial expansion results in the release of vasoconstrictors. These substances cause constriction of the renal arteries. Therefore injection of the media contrast results indication and the constriction of the renal arteries. The end result is diminished blood supply to the arteries . Increased blood urea nitrodgen (BUN) and creatinine (waste product of metabolism) levels indicate that pt. May have renal disease and are good indicators for possible contrast medium induced renal effects. Creatinine Nitrogenen containing waste product of metabolism excreted by the kidney’s filtration system High blood plasma levels indicate poor filtration of the kidney ……Osmolality Measurement of the number of particles (molecules or ions or cations that can crowd out water molecules in a measure mass (kg) of water .  BUN tests are necessary bc contrast is absorbed by the kidneys and we need to make sure kidneys are capable of filtering the thick contrast out of the body. High creatine levels can lead to renal failure . If a pt. Has symptoms of renal disease, the use of a low Oslolality (nonionic) contrast media is an alternative .Expensive alternative…… 2 to 3 times more expensive ",
-      "notebookId": 19,
-      "id": 30,
       "imageURL": "",
       "uploadedFile": "",
       "rating": 0
@@ -711,6 +661,13 @@
       "date": "2019-01-01",
       "userId": 22,
       "id": 21
+    },
+    {
+      "id": 22,
+      "taskName": "get new laptop charger",
+      "completed": false,
+      "date": "2019-11-10",
+      "userId": 3
     }
   ],
   "deadlines": [
@@ -745,10 +702,10 @@
       "id": 13
     },
     {
-      "title": "first day of c#",
+      "title": "DEMO DAY",
       "date": "2019-11-12",
       "userId": 3,
-      "id": 15
+      "id": 14
     }
   ],
   "friends": [
@@ -1131,11 +1088,6 @@
       "id": 18
     },
     {
-      "id": 19,
-      "subject": "Radiology Intro Notebook",
-      "userId": 3
-    },
-    {
       "subject": "NSS notes and documents",
       "userId": 2,
       "id": 20
@@ -1149,11 +1101,6 @@
       "subject": "React",
       "userId": 7,
       "id": 22
-    },
-    {
-      "id": 23,
-      "subject": "CSS NOTEBOOK",
-      "userId": 3
     },
     {
       "subject": "hahaha",
