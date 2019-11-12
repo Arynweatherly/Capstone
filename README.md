@@ -1,72 +1,70 @@
 Nashville Software School Capstone project: Note taking and sharing app
 
 
+Capstone: Pass A Note
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Contact Info:
+Creator: Aryn Weatherly
+Email Address: Arynweatherly93@gmail.com
+Slack Handle: Aryn Weatherly
+Github: https://github.com/Arynweatherly/Capstone
+Google Doc Link:  https://docs.google.com/document/d/1GOO0aWNQ_evHe1051N7emt-p12735rwfLi8GTKiUqH8/edit
+Pre Proposal:
+Name of Project: Pass A Note
+Brief Proposal: Pass A Note and app that solves a major problem most college students have: missing class and needing to borrow notes. With this app users will be able to add, edit and delete notes, upload pictures, add classmates and rate their classmates notes.
 
-## Available Scripts
+:: Landing Page
+Upon login a user will be directed to their landing (home) page.
 
-In the project directory, you can run:
+:: Notebooks
+Upon login a user will be able to see their individual class notebooks that contain notes for that specific class subject.
 
-### `npm start`
+:: Search
+Upon login a user will be able to search for their fellow classmates, “follow” them, view their notes and rate them
+:: Tasks and Dates
+Upon login a user will be able to add important dates and tasks.
+:: Sessions Storage
+Using session storage to mimic multiple users using the site concurrently.
+Final Proposal:
+Initial ERD
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+MVP Definition:
+User will Sign up/Login
+User-specific CRUD for notes, notebooks, tasks and important dates.
+User can search classmates and add them
+User has the ability to view other user’s notes, rate them and leave comments
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Planning Links:
+ERD - https://dbdiagram.io/d/5da8a6af02e6e93440f25786
+Github Repo: https://github.com/Arynweatherly/Capstone
+https://codepen.io/pen/
+https://reactjs.org/
+https://reactstrap.github.io/ 
 
-### `npm test`
+WireFrames/Data Relationships:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Dependencies used to create Pass A Note:
+Functions
+Databases
+Github
+CSS
+Flexbox
+React
+Reactstrap/Bootstrap
+Bulma
+Adobe XD
+Undraw
+Cloudinary
+Modals
+Data entry/editing
+Relational data
+Session Storage
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+How to Launch Pass A Note:
+Clone the repository from Github
+Open your terminal and type the command "npm install" to install React
+In the main project directory, create a new directory called "API"
+In the API directory, create a file called "database.json"
+Copy the sample data below into database.json
+Run json-server in port 5002 with database.json
+In the terminal, type the command "npm start". You are now ready to use Pass A Note!
