@@ -498,13 +498,9 @@
       "id": 44
     },
     {
-      "title": "khgjkhj",
+      "title": "db diagram pic",
       "date": "2019-11-14",
-      "topics": "ljih",
-      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573055205/capstone/ykoe7so89jrf3eckyovl.png",
-      "uploadedFile": {
-        "path": "erd.png"
-      },
+      "topics": "diagrams ",
       "instructor": "",
       "content": "",
       "notebookId": 22,
@@ -715,13 +711,6 @@
       "date": "2019-01-01",
       "userId": 22,
       "id": 21
-    },
-    {
-      "taskName": "finish the demo quickly",
-      "completed": false,
-      "date": "2019-11-01",
-      "userId": 3,
-      "id": 22
     }
   ],
   "deadlines": [
@@ -889,16 +878,6 @@
       "id": 68
     },
     {
-      "userId": 18,
-      "friendInitiate": 3,
-      "id": 69
-    },
-    {
-      "userId": 10,
-      "friendInitiate": 3,
-      "id": 70
-    },
-    {
       "userId": 21,
       "friendInitiate": 2,
       "id": 71
@@ -932,11 +911,6 @@
       "userId": 12,
       "friendInitiate": 7,
       "id": 77
-    },
-    {
-      "userId": 14,
-      "friendInitiate": 3,
-      "id": 78
     }
   ],
   "users": [
@@ -1177,14 +1151,19 @@
       "id": 22
     },
     {
-      "subject": "Aryn's Javascript Notebook",
-      "userId": 3,
-      "id": 23
+      "id": 23,
+      "subject": "CSS NOTEBOOK",
+      "userId": 3
     },
     {
-      "subject": "physiology",
-      "userId": 3,
+      "subject": "hahaha",
+      "userId": 2,
       "id": 25
+    },
+    {
+      "subject": "anotherone",
+      "userId": 2,
+      "id": 26
     }
   ]
 }

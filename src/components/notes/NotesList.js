@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import NoteCard from './NotesCard'
 import NoteManger from '../../modules/NoteManager'
 import NotebookManager from '../../modules/NotebookManager';
+import "./Note.css";
 
 class NotesList extends Component {
     //define what this component needs to render
