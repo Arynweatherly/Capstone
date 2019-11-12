@@ -55,3 +55,7 @@
   margin-left: 10%;
   margin-right: 10%;
 }
+
+.tile.is-child.box.notebook {
+  background-color:#DAE7DD;
+}

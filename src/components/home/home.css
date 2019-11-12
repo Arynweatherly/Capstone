@@ -1,99 +1,4 @@
-/* .friendsListCard { */
-    /* background-color: #C6C1BE; */
-    /* color:black;
-    justify-content: flex;
-    flex-direction: row;
-    width: 100%;
-} */
-/* .friendCardNav {
-    background-color: white;
-    color: black;
-    display: flex;
-    justify-content: space-between;
-    align-content: space-between;
-    flex-direction: column;
-    margin: 5px;
-    max-width: 200px
-}
-.friends-container-card {
-    max-width: 100%
-}
-.deleteFriend {
-    background-color: #FECCC3;
-    color: black;
 
-} */
-
-/* .container-cards {
-    background-color:#EAECEB;
-    color: black;
-    margin: 2px;
-    display: flex; */
-    /* flex-direction: row; */
-    
-/* } */
-
-/* .tasksCard {
-    display:flex;
-    justify-content: space-between;
-    flex-direction: column;
-    max-width: 700px;
-    min-width: 350px;
-}
-
-
-.friendListContainer {
-    display: flex;
-    justify-content: space-between;
-    align-self: stretch;
-     */
-    /* flex-direction: row; */
-/* } */
-
-/* .notebooksCardContainer {
-    background-color: #C6C1BE;
-    min-height: 300px;
-    align-self: center;
-    min-width: 40%;
-}
-
-.btn-to-notebooks {
-    min-height: 300px;
-    align-self: left;
-}
-.card-deadline {
-    color: black;
-}
-
-
-img {
-    max-height: 20%;
-    max-width: 15%;
-    margin-left: 43%;
-    align-self: center;
-    display: flex;
-    justify-content: center;
-    border-style: solid;
-    border-color: #C6C1BE;
-}
-
-.notebooks-deadline-card
-{
-    display: flex;
-    justify-content: column;
-    margin-left: 10%;
-    margin-right:10%
-}
-
-.deadlineCardContainer {
-    display: flex;
-    max-width: 50%;
-    margin: 0%
-
-}
-.container-card-deadline {
-    min-width:50%
-} */
 
 .column.friends {
     display: flex;
@@ -210,9 +115,9 @@ img {
 
 }
 
-.tile.is-vertical.is-parent.notebook {
+/* .tile.is-vertical.is-parent.notebook {
     background-color: #DAE7DD;
-}
+} */
 
 /* .buttonNotebook {
     background-color:#F7C9B6 ;

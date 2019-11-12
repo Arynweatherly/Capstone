@@ -1165,7 +1165,7 @@
     },
     {
       "id": 19,
-      "subject": "Radiology Notebook",
+      "subject": "Radiology Intro Notebook",
       "userId": 3
     },
     {
@@ -1187,11 +1187,6 @@
       "subject": "Aryn's Javascript Notebook",
       "userId": 3,
       "id": 23
-    },
-    {
-      "subject": "Positioning Notebook",
-      "userId": 3,
-      "id": 24
     }
   ]
 }

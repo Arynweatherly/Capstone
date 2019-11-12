@@ -44,6 +44,7 @@ render(){
                 onClick={() => {this.props.history.push("/notebooks/new")}}>
       Add Notebook
   </button>
+  <p></p>
 </section>
 <hr />
 <div className='home-notebooks'>

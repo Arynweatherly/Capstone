@@ -11,7 +11,7 @@ class NotebookCard extends Component {
 
       <div className="tile is-ancestor card-container">
 <div className= "tile is-vertical is-parent notebook">
-  <div className="tile is-child box">
+  <div className="tile is-child box notebook">
   <h3> <span className="card-notebookSubject">{this.props.notebook.subject}</span></h3>
   < hr/>
   <footer className="buttonsNotebookContainer">
