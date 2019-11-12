@@ -58,3 +58,19 @@ fieldset input, fieldset button {
 fieldset .alignRight {
     text-align: right;
 }
+
+.deadlineImg {
+    height: auto;
+    width: 40%;
+    margin-left: 28%;
+}
+
+.box.container.deadline {
+    margin-right: 16%;
+    margin-left: 16%;
+    background-color: #F4EAE6;
+}
+
+.title.is-4.deadlineForm {
+    background-color: #DBC39A !important;
+}
