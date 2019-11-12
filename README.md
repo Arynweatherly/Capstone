@@ -7,10 +7,14 @@ Contact Info:
 Creator: Aryn Weatherly
 Email Address: Arynweatherly93@gmail.com
 Slack Handle: Aryn Weatherly
+
 Github: https://github.com/Arynweatherly/Capstone
 Google Doc Link:  https://docs.google.com/document/d/1GOO0aWNQ_evHe1051N7emt-p12735rwfLi8GTKiUqH8/edit
+
 Pre Proposal:
+
 Name of Project: Pass A Note
+
 Brief Proposal: Pass A Note and app that solves a major problem most college students have: missing class and needing to borrow notes. With this app users will be able to add, edit and delete notes, upload pictures, add classmates and rate their classmates notes.
 
 :: Landing Page
@@ -21,10 +25,13 @@ Upon login a user will be able to see their individual class notebooks that cont
 
 :: Search
 Upon login a user will be able to search for their fellow classmates, “follow” them, view their notes and rate them
+
 :: Tasks and Dates
 Upon login a user will be able to add important dates and tasks.
+
 :: Sessions Storage
 Using session storage to mimic multiple users using the site concurrently.
+
 Final Proposal:
 Initial ERD
 
