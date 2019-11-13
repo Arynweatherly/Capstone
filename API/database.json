@@ -494,6 +494,19 @@
       "content": "",
       "notebookId": 4,
       "id": 50
+    },
+    {
+      "title": "haha",
+      "date": "2019-11-20",
+      "topics": "",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573613021/capstone/jcjfhhuagaoxl3llrrws.jpg",
+      "uploadedFile": {
+        "path": "aryn.jpg"
+      },
+      "instructor": "haha",
+      "content": "mjhgfjdhm,iPh",
+      "notebookId": 4,
+      "id": 51
     }
   ],
   "reviews": [
@@ -586,6 +599,15 @@
       "review": "keep up the good work! thanks for sharing these awesome notes!",
       "noteId": 42,
       "id": 19
+    },
+    {
+      "ratingTitle": "wow",
+      "userId": 3,
+      "username": "aryn",
+      "rating": 5,
+      "review": "really great notes, thank you",
+      "noteId": 42,
+      "id": 20
     }
   ],
   "tasks": [
@@ -844,6 +866,11 @@
       "userId": 12,
       "friendInitiate": 7,
       "id": 77
+    },
+    {
+      "userId": 7,
+      "friendInitiate": 3,
+      "id": 78
     }
   ],
   "users": [
@@ -1092,6 +1119,11 @@
       "subject": "Javascript Notebook",
       "userId": 3,
       "id": 28
+    },
+    {
+      "subject": "hah",
+      "userId": 3,
+      "id": 29
     }
   ]
 }

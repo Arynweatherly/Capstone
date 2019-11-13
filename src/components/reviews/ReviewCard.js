@@ -36,7 +36,7 @@ class ReviewCard extends Component {
 
     render() {
         return (
-            <div className="box review">
+            <div className="box review reviewForm">
                 <div className="content">
                 <p> <u>username:</u> {this.props.review.username}</p>
                 <p>{this.props.review.ratingTitle}</p>
