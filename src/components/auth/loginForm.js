@@ -23,7 +23,7 @@ export default class LoginForm extends Component {
         user.username === this.state.username &&
         user.password === this.state.password
       ) {
-        console.log("here");
+    
         let credentials = user.id
         let box = document.querySelector(".remember");
         if(box.checked === true){
@@ -34,7 +34,7 @@ export default class LoginForm extends Component {
           this.props.history.push("/");
         }
       } else {
-          console.log("last else")
+      
         // return this.props.history.push("/login/register-form");
       }
     });
