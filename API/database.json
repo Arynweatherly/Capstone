@@ -507,6 +507,19 @@
       "content": "mjhgfjdhm,iPh",
       "notebookId": 4,
       "id": 51
+    },
+    {
+      "title": "brachial plexus",
+      "date": "2019-11-13",
+      "topics": "anatomy, nervous system",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573749433/capstone/kqaod55qinu4xxahxraa.png",
+      "uploadedFile": {
+        "path": "brachial plexus.png"
+      },
+      "instructor": "Dr. lewis",
+      "content": "Runs from the lateral border of the 1st rib to the inferior border of the teres major. It is divided into 3 different divisions based on relationship to pectorals minor. … PART 1. It is superior to the pic minor and has one branch (superior thoracic) …. PART 2. It is deep to the pec minor and has 2 branches (1). Thoracoacromial branch and (2.) the lateral thoracic branch….. PART 3: inferior to pec minor. It has 3 branches…. (1) Subscapular branch which contains (circumflex scapular, thoracodorsal bb.) (2) Anterior Circumflex Humeral (3) Posterior Circumflex Humeral…… Axillary artery is a continuation of the Subclavian artery. The three parts are also known as the proximal: enclosed in a sheath with veins and brachioplexus. Posterior: deep to pec minor and Distal which is from pec minor to inf. Border of the trees major",
+      "notebookId": 4,
+      "id": 53
     }
   ],
   "reviews": [
@@ -666,6 +679,13 @@
       "completed": false,
       "date": "2019-11-10",
       "userId": 3
+    },
+    {
+      "taskName": "meet with teachers",
+      "completed": false,
+      "date": "2019-11-14",
+      "userId": 3,
+      "id": 23
     }
   ],
   "deadlines": [
@@ -700,10 +720,16 @@
       "id": 13
     },
     {
-      "title": "DEMO DAY",
-      "date": "2019-11-13",
+      "title": "thanksgiving day",
+      "date": "2019-11-28",
       "userId": 3,
       "id": 14
+    },
+    {
+      "title": "thanksgiving break",
+      "date": "2019-11-27",
+      "userId": 3,
+      "id": 15
     }
   ],
   "friends": [
@@ -871,6 +897,11 @@
       "userId": 7,
       "friendInitiate": 3,
       "id": 78
+    },
+    {
+      "userId": 5,
+      "friendInitiate": 3,
+      "id": 79
     }
   ],
   "users": [
@@ -1116,14 +1147,9 @@
       "id": 26
     },
     {
-      "subject": "Javascript Notebook",
+      "subject": "physiology",
       "userId": 3,
-      "id": 28
-    },
-    {
-      "subject": "hah",
-      "userId": 3,
-      "id": 29
+      "id": 27
     }
   ]
 }
