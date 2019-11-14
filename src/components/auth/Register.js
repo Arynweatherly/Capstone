@@ -54,14 +54,21 @@ class Registration extends Component {
 		return (
 			<>
 			<Header />
-
+				<div className="box container login">
+					<section className="is-centered">
+						<p className="title is-4">Join Pass A Note:</p>
+						<img className= "loginImg" src={`/images/Login54.png`}/>
+					</section>
+				
 				<form
 					onSubmit={this.handleRegistration}
 					id='loginForm'
 					className='login-form'
 				>
-					<div className='formField'>
+					<div className="field">
+						<div className="control">
 						<input
+						className="input"
 							onChange={this.handleFieldChange}
 							id='regUserName'
 							type='username'
@@ -69,9 +76,12 @@ class Registration extends Component {
 							required=''
 							autoFocus=''
 						/>
+						</div>
 					</div>
-					<div className='formField'>
+					<div className="field">
+						<div className="control">
 						<input
+						className="input"
 							onChange={this.handleFieldChange}
 							type='name'
 							id='regName'
@@ -79,35 +89,49 @@ class Registration extends Component {
 							required=''
 							autoFocus=''
 						/>
+						</div>
 					</div>
-					<div className='formField'>
+
+					<div className="field">
+						<div className="control">
 						<input
+						className="input"
 							onChange={this.handleFieldChange}
 							type='password'
 							id='regPassword'
 							placeholder='Password'
 							required=''
 						/>
+						</div>
 					</div>
-					<div className='formField'>
+
+					<div className="field">
+						<div className="control">
 						<input
+						className="input"
 							onChange={this.handleFieldChange}
 							type='password'
 							id='regPasswordConfirm'
 							placeholder='Confirm Password'
 							required=''
 						/>
+						</div>
 					</div>
-					<div className='formField'>
-						{/* <Checkbox>Remember me</Checkbox> */}
+			
+					<div className='field'>
+						<div className="control">
 						<button type='submit' className='login-form-button'>
 							Log in
 						</button>
 						<p className='regLink' onClick={this.props.hideReg} href=''>
 							Go back to Login!
 						</p>
+						</div>
+						{/* <Checkbox>Remember me</Checkbox> */}
+				
 					</div>
 				</form>
+				</div>
 			</>
 		);
 	}
