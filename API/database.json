@@ -520,6 +520,32 @@
       "content": "Runs from the lateral border of the 1st rib to the inferior border of the teres major. It is divided into 3 different divisions based on relationship to pectorals minor. … PART 1. It is superior to the pic minor and has one branch (superior thoracic) …. PART 2. It is deep to the pec minor and has 2 branches (1). Thoracoacromial branch and (2.) the lateral thoracic branch….. PART 3: inferior to pec minor. It has 3 branches…. (1) Subscapular branch which contains (circumflex scapular, thoracodorsal bb.) (2) Anterior Circumflex Humeral (3) Posterior Circumflex Humeral…… Axillary artery is a continuation of the Subclavian artery. The three parts are also known as the proximal: enclosed in a sheath with veins and brachioplexus. Posterior: deep to pec minor and Distal which is from pec minor to inf. Border of the trees major",
       "notebookId": 4,
       "id": 53
+    },
+    {
+      "title": "brachial plexus ",
+      "date": "",
+      "topics": "axillary artery, anatmoy, nervous system",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573753359/capstone/sjyihpy7mfa7jibvimwv.png",
+      "uploadedFile": {
+        "path": "axillary artery.png"
+      },
+      "instructor": "dr lewis",
+      "content": "Runs from the lateral border of the 1st rib to the inferior border of the teres major. It is divided into 3 different divisions based on relationship to pectorals minor. … PART 1. It is superior to the pic minor and has one branch (superior thoracic) …. PART 2. It is deep to the pec minor and has 2 branches (1). Thoracoacromial branch and (2.) the lateral thoracic branch….. PART 3: inferior to pec minor. It has 3 branches…. (1) Subscapular branch which contains (circumflex scapular, thoracodorsal bb.) (2) Anterior Circumflex Humeral (3) Posterior Circumflex Humeral…… Axillary artery is a continuation of the Subclavian artery. The three parts are also known as the proximal: enclosed in a sheath with veins and brachioplexus. Posterior: deep to pec minor and Distal which is from pec minor to inf. Border of the trees major",
+      "notebookId": 4,
+      "id": 54
+    },
+    {
+      "title": "axillary artery",
+      "date": "2019-11-14",
+      "topics": "brachial plexus, anatomy, arteries",
+      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1573753775/capstone/tzc2oi8ickpv9zxaljg0.png",
+      "uploadedFile": {
+        "path": "axillary artery.png"
+      },
+      "instructor": "Dr. Lewis",
+      "content": "Runs from the lateral border of the 1st rib to the inferior border of the teres major. It is divided into 3 different divisions based on relationship to pectorals minor. … PART 1. It is superior to the pic minor and has one branch (superior thoracic) …. PART 2. It is deep to the pec minor and has 2 branches (1). Thoracoacromial branch and (2.) the lateral thoracic branch….. PART 3: inferior to pec minor. It has 3 branches…. (1) Subscapular branch which contains (circumflex scapular, thoracodorsal bb.) (2) Anterior Circumflex Humeral (3) Posterior Circumflex Humeral…… Axillary artery is a continuation of the Subclavian artery. The three parts are also known as the proximal: enclosed in a sheath with veins and brachioplexus. Posterior: deep to pec minor and Distal which is from pec minor to inf. Border of the trees major",
+      "notebookId": 28,
+      "id": 55
     }
   ],
   "reviews": [
@@ -621,6 +647,15 @@
       "review": "really great notes, thank you",
       "noteId": 42,
       "id": 20
+    },
+    {
+      "ratingTitle": "great notes",
+      "userId": 3,
+      "username": "aryn",
+      "rating": 4,
+      "review": "thanks for adding these notes. missed this day of class",
+      "noteId": 40,
+      "id": 21
     }
   ],
   "tasks": [
@@ -681,11 +716,18 @@
       "userId": 3
     },
     {
-      "taskName": "meet with teachers",
+      "taskName": "meet w/ advisor",
       "completed": false,
       "date": "2019-11-14",
       "userId": 3,
       "id": 23
+    },
+    {
+      "taskName": "finish this demo",
+      "completed": false,
+      "date": "2019-11-14",
+      "userId": 3,
+      "id": 24
     }
   ],
   "deadlines": [
@@ -714,20 +756,14 @@
       "id": 12
     },
     {
-      "title": "back to school",
-      "date": "2019-11-11",
-      "userId": 3,
-      "id": 13
-    },
-    {
-      "title": "thanksgiving day",
-      "date": "2019-11-28",
+      "title": "thanksgiving break starts",
+      "date": "2019-11-27",
       "userId": 3,
       "id": 14
     },
     {
-      "title": "thanksgiving break",
-      "date": "2019-11-27",
+      "title": "thanksgiving day",
+      "date": "2019-11-28",
       "userId": 3,
       "id": 15
     }
@@ -849,16 +885,6 @@
       "id": 66
     },
     {
-      "userId": 2,
-      "friendInitiate": 3,
-      "id": 67
-    },
-    {
-      "userId": 6,
-      "friendInitiate": 3,
-      "id": 68
-    },
-    {
       "userId": 21,
       "friendInitiate": 2,
       "id": 71
@@ -897,11 +923,6 @@
       "userId": 7,
       "friendInitiate": 3,
       "id": 78
-    },
-    {
-      "userId": 5,
-      "friendInitiate": 3,
-      "id": 79
     }
   ],
   "users": [
@@ -1058,6 +1079,24 @@
       "name": "david",
       "url": "david.png",
       "id": 23
+    },
+    {
+      "username": "alex",
+      "password": "alex",
+      "name": "alex",
+      "id": 24
+    },
+    {
+      "username": "alex",
+      "password": "alex",
+      "name": "alex",
+      "id": 25
+    },
+    {
+      "username": "seth",
+      "password": "seth",
+      "name": "seth",
+      "id": 26
     }
   ],
   "notebooks": [
@@ -1150,6 +1189,11 @@
       "subject": "physiology",
       "userId": 3,
       "id": 27
+    },
+    {
+      "subject": "anatomy 2",
+      "userId": 3,
+      "id": 28
     }
   ]
 }
