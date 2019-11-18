@@ -122,7 +122,7 @@ class NoteForm extends Component {
             </div>
 
             <div className="field is-right">
-              <label className="label"></label>
+              <label className="label">Main Topics:</label>
               <div className="control">
                 <input
                   className="input"
