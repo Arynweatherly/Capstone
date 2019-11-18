@@ -119,7 +119,7 @@ class Registration extends Component {
 
             <div className="field">
               <div className="control">
-                <button type="submit" className="login-form-button">
+                <button type="submit" className="register-form-button">
                   Log in
                 </button>
                 <p className="regLink" onClick={this.props.hideReg} href="">
