@@ -126,7 +126,6 @@ class Registration extends Component {
                   Go back to Login!
                 </p>
               </div>
-              {/* <Checkbox>Remember me</Checkbox> */}
             </div>
           </form>
         </div>
