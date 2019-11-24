@@ -561,17 +561,13 @@
       "id": 56
     },
     {
-      "title": "state hand written notes",
-      "date": "2019-11-21",
-      "topics": "hand, wrist, arm",
-      "imageURL": "https://res.cloudinary.com/dicoaixm8/image/upload/v1574480868/capstone/aslx8uvsei0kykficgpx.jpg",
-      "uploadedFile": {
-        "path": "aryn.jpg"
-      },
-      "instructor": "Mrs. Hobby ",
-      "content": "jlih;ugliyfutckvbh.jl/",
-      "notebookId": 30,
-      "id": 57
+      "title": "Upper Limb",
+      "date": "2019-11-22",
+      "topics": "dependencies, diagramns, ",
+      "instructor": "Brenda",
+      "content": "login dependencies for taco truck app",
+      "notebookId": 4,
+      "id": 58
     }
   ],
   "reviews": [
@@ -691,6 +687,15 @@
       "review": "these sucked",
       "noteId": 43,
       "id": 24
+    },
+    {
+      "ratingTitle": "thanks",
+      "userId": 3,
+      "username": "aryn",
+      "rating": 5,
+      "review": "thanks for posting, missed this day in class.",
+      "noteId": 39,
+      "id": 25
     }
   ],
   "tasks": [
@@ -751,18 +756,11 @@
       "userId": 3
     },
     {
-      "taskName": "meet w/ advisor",
+      "taskName": "study c#",
       "completed": false,
-      "date": "2019-11-14",
+      "date": "2019-11-26",
       "userId": 3,
-      "id": 23
-    },
-    {
-      "taskName": "finish this demo",
-      "completed": false,
-      "date": "2019-11-14",
-      "userId": 3,
-      "id": 24
+      "id": 25
     }
   ],
   "deadlines": [
@@ -797,10 +795,16 @@
       "userId": 3
     },
     {
-      "title": "picture daay",
-      "date": "2019-11-21",
+      "title": "thanksgiving",
+      "date": "2019-11-28",
       "userId": 3,
       "id": 16
+    },
+    {
+      "title": "break starts",
+      "date": "2019-11-22",
+      "userId": 3,
+      "id": 17
     }
   ],
   "friends": [
@@ -955,19 +959,19 @@
       "id": 77
     },
     {
+      "userId": 14,
+      "friendInitiate": 3,
+      "id": 80
+    },
+    {
       "userId": 7,
       "friendInitiate": 3,
-      "id": 78
+      "id": 82
     },
     {
       "userId": 5,
       "friendInitiate": 3,
-      "id": 79
-    },
-    {
-      "userId": 14,
-      "friendInitiate": 3,
-      "id": 80
+      "id": 83
     }
   ],
   "users": [
@@ -1244,11 +1248,6 @@
       "subject": "Nursing Informatics",
       "userId": 3,
       "id": 29
-    },
-    {
-      "subject": "personal training",
-      "userId": 3,
-      "id": 30
     }
   ]
 }

@@ -62,7 +62,6 @@ class Login extends Component {
             <div className="box container login">
               <section className="is-centered">
                 <p className="title is-3">User Login:</p>
-                {/* <img src={`../../images/signIn.svg`}/> */}
                 <img className="loginImg" src={`/images/Login54.png`} />
               </section>
               <form
