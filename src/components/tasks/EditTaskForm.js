@@ -59,7 +59,7 @@ class TaskEditForm extends Component {
         <div className="box container task">
           <section className="is-left">
             <p className="title is-4 task">Edit Task</p>
-            {/* <img src={`../../images/signIn.svg`}/> */}
+
             <img className="noteImg" src={`/images/Group 4.png`} />
           </section>
           <form>
