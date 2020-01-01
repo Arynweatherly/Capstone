@@ -696,6 +696,24 @@
       "review": "thanks for posting, missed this day in class.",
       "noteId": 39,
       "id": 25
+    },
+    {
+      "ratingTitle": "great job",
+      "userId": 3,
+      "username": "aryn",
+      "rating": 5,
+      "review": "thank  you for addimg these notes",
+      "noteId": 39,
+      "id": 26
+    },
+    {
+      "ratingTitle": "yayyyyy",
+      "userId": 3,
+      "username": "aryn",
+      "rating": 5,
+      "review": "so good",
+      "noteId": 40,
+      "id": 27
     }
   ],
   "tasks": [
@@ -799,12 +817,6 @@
       "date": "2019-11-28",
       "userId": 3,
       "id": 16
-    },
-    {
-      "title": "break starts",
-      "date": "2019-11-22",
-      "userId": 3,
-      "id": 17
     }
   ],
   "friends": [
@@ -959,19 +971,9 @@
       "id": 77
     },
     {
-      "userId": 14,
-      "friendInitiate": 3,
-      "id": 80
-    },
-    {
       "userId": 7,
       "friendInitiate": 3,
-      "id": 82
-    },
-    {
-      "userId": 5,
-      "friendInitiate": 3,
-      "id": 83
+      "id": 84
     }
   ],
   "users": [
@@ -1248,6 +1250,11 @@
       "subject": "Nursing Informatics",
       "userId": 3,
       "id": 29
+    },
+    {
+      "subject": "math",
+      "userId": 3,
+      "id": 30
     }
   ]
 }
